@@ -1,4 +1,4 @@
-![](https://raw.githubusercontent.com/snpptsdev/snppts/master/src/Snppts/wwwroot/img/snppts_logo.png)
+<img src="https://raw.githubusercontent.com/snpptsdev/snppts/master/src/Snppts/wwwroot/img/snppts_logo.png" width="300px" />
 
 # Welcome
 
