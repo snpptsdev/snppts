@@ -35,7 +35,7 @@ A few pointers:
 
 # Add your first snippet
 
-To add a snippet you can fork this project, add your snippet to the Snippets folder as a class, implementing the `IAmASnippet` interface. If you are doing this via the GitHub editor, don't forget to add the class to the .csproj.
+To add a snippet you can fork this project, add your snippet to the [Snippets folder](https://github.com/snpptsdev/snppts/tree/master/src/Snppts/Snippets) as a class, implementing the `IAmASnippet` interface. If you are doing this via the GitHub editor, don't forget to add the class to the .csproj.
 
 The result should look something like this:
 
