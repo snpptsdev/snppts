@@ -1,0 +1,321 @@
+.user-buttons {
+    margin-top: 20px;
+}
+
+.nav-small > li > a {
+    font-size: 1.2rem;
+}
+
+.nav-pills.nav-stacked:not(.list-style-icons) > li > a:after {
+    font-size: 1.2rem;
+    top: 4px;
+}
+
+.margin-bottom-20 {
+    margin-bottom: 20px;
+}
+
+.platform-icons {
+    margin-top: -10px;
+}
+
+.pager .pagination li a {
+    height: 60px !important;
+    width: 60px !important;
+    font-size: 4rem;
+    text-align: center;
+    line-height: 50px;
+}
+
+.margin-right-10 {
+    margin-right: 10px;
+}
+
+.sidebar .title {
+    margin-top: 0;
+}
+
+.platform-icons i {
+    padding: 5px;
+}
+
+.fa-android {
+    color: #A4C639;
+}
+
+.fa-windows {
+    color: #0078D6;
+}
+
+.tags {
+    display: block;
+    color: #808080;
+    margin-top: -5px;
+    font-size: 1.2rem;
+}
+
+.footer {
+    padding: 10px 0;
+    background-color: #fafafa;
+}
+
+.about-logo {
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+
+.logo-sized {
+    max-width: 50%;
+}
+
+.welcome {
+    font-size: 1.2rem;
+    font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
+}
+
+.profile-links {
+    font-size: 1.2rem;
+    font-family: 'Nunito Sans', Arial, Helvetica, sans-serif !important;
+}
+
+.table-snppts td {
+    vertical-align: middle !important;
+}
+
+.table-snppts .btn-sm {
+    margin: 0 !important;
+}
+
+.img-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.validation-summary-errors {
+    margin: 20px 0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: none;
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    padding: 15px;
+}
+
+    .validation-summary-errors ul {
+        margin: 0;
+    }
+
+        .validation-summary-errors ul li {
+            text-align: left;
+            padding-left: 20px;
+        }
+
+.required {
+    color: #ff0000;
+    margin-top: -5px;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+/*body {
+    margin-bottom: 280px;
+}*/
+
+#footer {
+    /*position: absolute;*/
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 280px;
+    background-color: #f5f5f5;
+}
+
+.platformCheck:hover {
+    /*border: 1px solid rgba(0, 0, 0, 0.3);*/
+}
+
+    .platformCheck:hover span.fa {
+        opacity: 0.3;
+    }
+
+.platformCheck span.fa {
+    opacity: 0.1;
+    color: #000;
+    padding: 5px;
+}
+
+.platformCheck.active span.fa {
+    opacity: 1;
+    color: #5cb85c;
+}
+
+.platformCheck.btn.active, .platformCheck.btn:hover {
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.snppts-meta {
+    font-size: 1.2rem;
+    margin-left: 10px;
+    line-height: 36px;
+}
+
+    .snppts-meta .author {
+        font-weight: bold;
+    }
+
+.github-widget {
+    margin-top: 20px;
+}
+
+#disqus_thread {
+    margin-top: 50px;
+}
+
+.disqus_block {
+    min-height: 300px;
+}
+
+.snippet-current-screens {
+    min-height: 130px;
+    text-align: center;
+    clear: both;
+    overflow: hidden;
+}
+
+.snippet-screen-thumb {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    position: relative;
+    float: left;
+    margin: 10px;
+}
+
+    .snippet-screen-thumb .remove {
+        background-color: #d9534f;
+        width: 20px;
+        height: 20px;
+        display: block;
+        color: #fff;
+        position: absolute;
+        right: 2px;
+        bottom: 2px;
+    }
+
+        .snippet-screen-thumb .remove:hover {
+            background-color: #c9302c;
+            cursor: pointer;
+        }
+
+.snippet-beta {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+}
+
+.snippet-loading-screen {
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    font-size: 2.4rem;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    vertical-align: middle;
+    line-height: 100px;
+}
+
+@media (max-width: 991px) {
+    .logo-sized {
+        max-width: 20%;
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar-nav {
+        float: right;
+    }
+}
+
+/** SLOWLY REDOING THE CSS FOR THIS AS ITS A MESS. NEW STUFF BELOW **/
+
+.description__section {
+    margin-bottom: 4rem;
+}
+
+.author__gravatar {
+    width: 36px;
+    height: 36px;
+    margin-right: 1rem;
+}
+
+.snippet__screenshot{
+    margin-bottom: 2rem;
+}
+
+.snippet__screenshot img {
+    border: 1px solid #ddd;
+}
+
+.snippet__img {
+    border: 1px solid #ddd;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta {
+    font-weight: 700;
+    color: #21bb9d !important;
+    cursor: pointer;
+}
+
+    .cta::after {
+        border-bottom: 6px solid #21bb9d;
+        opacity: 0.2;
+        display: block;
+        margin: -6px 0 0 0;
+        content: " ";
+        cursor: pointer;
+    }
+
+/** THE THEME DOES SOME WEIRD THINGS TO, RESETTING SOME STUFF HERE **/
+body {
+    font-size: 1.6rem;
+    line-height: 3rem;
+}
+
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.scrollToTop{
+    bottom: 2rem;
+    right: 2rem;
+}
+
+.mb-40{
+    margin-bottom: 4rem;
+}
+
+.nav-pills li {
+    line-height: 2rem;
+}
+
+.tag a {
+    font-size: 1.3rem;
+}

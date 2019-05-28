@@ -1,0 +1,112 @@
+﻿@using Microsoft.AspNetCore.Http.Extensions;
+
+@{
+    var url = Context.Request.GetDisplayUrl();
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="Snppts - A Xamarin Forms UI snippet library">
+    <meta name="author" content="snppts.dev">
+    <meta name="keywords" content="Xamarin, Forms, Xaml, code, snippets, design, UI, snppts, share, developers">
+    <meta name="robots" content="index, follow" />
+    <meta name="revisit-after" content="7 days" />
+
+
+    <!-- OpenGraph tags -->
+    <meta property="og:title" content="@ViewBag.Title" />
+    <meta property="og:url" content="@url" />
+    <meta property="og:description" content="@ViewBag.Description" />
+    <meta property="og:image" content="https://www.snppts.dev/img/social.png" )" />
+
+    <!-- Twitter tags -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:creator" content="@("@")snpptsio)" />
+    <meta name="twitter:site" content="@("@")snpptsio)" />
+    <meta name="twitter:title" content="@ViewBag.Title" />
+    <meta name="twitter:url" content="@url" />
+    <meta name="twitter:description" content="@ViewBag.Description" />
+    <meta name="twitter:image" content="https://www.snppts.dev/img/social.png" )" />
+
+
+    <link href='//fonts.googleapis.com/css?family=Nunito+Sans:700,400,300' rel='stylesheet' type='text/css'>
+
+    <title>Snppts - @ViewBag.Title</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="~/fonts/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/fonts/fontello/css/fontello.css" />
+
+    <link href="~/css/project/style.css" rel="stylesheet" />
+    <link href="~/css/project/cool_green.css" rel="stylesheet" />
+    <link href="~/css/project/animate.css" rel="stylesheet" />
+    <link href="~/css/project/animations.css" rel="stylesheet" />
+    <link href="~/css/project/hover-min.css" rel="stylesheet" />
+    <link href="~/css/project/custom.css" rel="stylesheet" />
+
+    @RenderSection("styles", required: false)
+</head>
+<body class="no-trans transparent-header">
+    <img src="~/img/beta.png" class="snippet-beta" />
+
+    <!-- scrollToTop -->
+    <!-- ================ -->
+    <div class="scrollToTop circle"><i class="icon-up-open-big"></i></div>
+
+    <!-- page wrapper start -->
+    <!-- ================ -->
+    <div class="page-wrapper">
+        <partial name="Partials/_Header" />
+        <section class="main-container">
+            <div class="container snippet-main-container">
+                <div class="row">
+                    <aside class="col-md-2 hidden-sm">
+                        <div class="sidebar">
+                            <div class="block clearfix">
+                                @await Component.InvokeAsync("AllCategories")
+                            </div>
+                        </div>
+                    </aside>
+                    <div class="main col-md-10">
+                        @RenderBody()
+                    </div>
+                    <aside class="col-md-2 visible-sm">
+                        <div class="sidebar">
+                            <div class="block clearfix">
+                                @await Component.InvokeAsync("AllCategories")
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <partial name="Partials/_Footer" />
+    </div>
+
+    <script src="//code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <!-- SmoothScroll javascript -->
+    <script type="text/javascript" src="~/plugins/jquery.browser.js"></script>
+    <script type="text/javascript" src="~/plugins/SmoothScroll.js"></script>
+
+    <!-- Initialization of Plugins -->
+    <script type="text/javascript" src="~/plugins/modernizr.js"></script>
+    <script type="text/javascript" src="~/js/template.js"></script>
+
+    <!-- Custom Scripts -->
+    <script type="text/javascript" src="~/js/custom.js"></script>
+
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

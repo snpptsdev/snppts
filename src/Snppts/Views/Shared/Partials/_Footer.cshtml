@@ -1,0 +1,68 @@
+﻿<footer id="footer" class="clearfix ">
+    <!-- .footer start -->
+    <!-- ================ -->
+    <div class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="footer-content">
+                            <div class="logo-footer"><img id="logo-footer" class="logo-sized" src="~/img/snppts_logo.png" alt=""></div>
+                            <p>
+                                Snppts lets Xamarin.Forms developers and designers share interface snippets to enable each other to
+                                quickly create great looking mobile apps for Android, iOS and UWP.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="footer-content">
+                            <h2 class="title">Learn more</h2>
+                            <div class="separator-2"></div>
+                            <nav>
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
+                                    <li><a href="https://twitter.com/snppts">Twitter</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="footer-content">
+                            <h2 class="title">On this site</h2>
+                            <div class="separator-2"></div>
+                            <nav>
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Snippets</a></li>
+                                    <li><a asp-area="" asp-controller="Snippets" asp-action="Random">Surprise me!</a></li>
+                                    <li><a asp-area="" asp-controller="Home" asp-action="Contributing">How to Contribute</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="footer-content">
+                            <h2 class="title">Popular categories</h2>
+                            <div class="separator-2"></div>
+                            @await Component.InvokeAsync("PopularCategories")
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- .footer end -->
+    <!-- .subfooter start -->
+    <!-- ================ -->
+    <div class="subfooter dark-bg">
+        <div class="container">
+            <div class="subfooter-inner">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="text-center">Copyright &copy; 2017-@DateTime.Now.Year Snppts by <a target="_blank" class="link-light" href="http://www.snppts.dev">snppts.dev</a>. All Rights Reserved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- .subfooter end -->
+</footer>

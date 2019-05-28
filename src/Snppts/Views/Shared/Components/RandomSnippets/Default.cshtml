@@ -1,0 +1,15 @@
+﻿@using Snppts.Infrastructure;
+
+@model IEnumerable<IAmASnippet>
+
+<div class="separator-2 mb-40"></div>
+
+<div class="main col-md-12">
+
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <partial name="Partials/_SnippetListItem" model="@item" />
+        }
+    </div>
+</div>

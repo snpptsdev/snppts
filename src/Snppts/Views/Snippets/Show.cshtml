@@ -1,0 +1,60 @@
+﻿@using Snppts.Extensions;
+
+@model Snppts.Infrastructure.IAmASnippet
+
+@{
+    ViewBag.Title = Model.Title;
+    ViewBag.Description = string.Format("Details of the '{0}' snippet", Model.Title);
+}
+
+<div class="row">
+    <div class="clearfix">
+        <h3 class="title pull-left">@Model.Title</h3>
+    </div>
+    <div class="separator-2"></div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="description__section">
+            <div>
+                <img src="@Model.AuthorInfo.GravatarImage()" class="circle pull-left author__gravatar" />
+                <div class="snppts-meta">
+                    <span class="createdby">Created by</span>
+                    <span class="author">@Model.AuthorInfo.FirstName @Model.AuthorInfo.LastName</span>
+                </div>
+            </div>
+        </div>
+        <div class="description__section">
+            <h5>Description</h5>
+            @Html.Raw(Model.Description)
+        </div>
+        <div class="description__section">
+            <h5>Platforms</h5>
+            @if (Model.ContainsAndroidSample)
+            {
+                <i class="fa fa-android fa-2x"></i>
+            }
+            @if (Model.ContainsiOSSample)
+            {
+                <i class="fa fa-apple fa-2x"></i>
+            }
+            @if (Model.ContainsUWPSample)
+            {
+                <i class="fa fa-windows fa-2x"></i>
+            }
+        </div>
+        <div class="description__section">
+            <h5> Check out the code</h5>
+            <div class="github-widget" data-repo="@Model.GithubRepoName">
+            </div>
+        </div>
+
+        <partial name="Partials/_ScreenshotSlider" model="@Model.ImageUris">
+    </div>
+</div>
+
+@section scripts
+{
+    <script type="text/javascript" src="~/plugins/githubRepoWidget/jquery.githubRepoWidget.js"></script>
+}

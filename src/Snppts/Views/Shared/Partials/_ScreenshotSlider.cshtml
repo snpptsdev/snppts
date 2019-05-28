@@ -1,0 +1,16 @@
+﻿@model IEnumerable<Uri>
+
+<div class="description__section">
+    <h5>Screenshots</h5>
+
+    <div class="row">
+        @foreach (var screenshot in Model)
+        {
+            <div class="col-md-3 snippet__screenshot">
+                <a href="@screenshot.AbsoluteUri" target="_blank">
+                    <img src="@screenshot.AbsoluteUri" alt="">
+                </a>
+            </div>
+        }
+    </div>
+</div>

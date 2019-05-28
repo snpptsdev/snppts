@@ -1,0 +1,58 @@
+﻿<!-- header-container start -->
+<div class="header-container">
+    <header class="header fixed clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="header-left clearfix">
+
+                        <div id="logo" class="logo">
+                            <a  asp-area="" asp-controller="Home" asp-action="Index"><img id="logo_img" class="logo-sized" src="~/img/snppts_logo.png" alt="Snppts"></a>
+                        </div>
+
+                        <div class="site-slogan">
+                            Xamarin.Forms UI Snippets
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="header-right clearfix">
+                        <div class="main-navigation  animated">
+                            <nav class="navbar navbar-default" role="navigation">
+                                <div class="container-fluid">
+                                    <div class="navbar-header">
+                                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+                                            <span class="sr-only">Toggle navigation</span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                        </button>
+                                    </div>
+                                    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                                        <ul class="nav navbar-nav ">
+                                            <li>
+                                                <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                                            </li>
+                                            <li>
+                                                <a asp-area="" asp-controller="Snippets" asp-action="Random">Surprise me!</a>
+                                            </li>
+                                            <li>
+                                                <a asp-area="" asp-controller="Home" asp-action="Contributing">How to Contribute</a>
+                                            </li>
+                                            <li>
+                                                <a asp-area="" asp-controller="Home" asp-action="About">About</a>
+                                            </li>
+                                            <li>
+                                                <a class="cta" href="https://www.github.com/snpptsdev/snppts" target="_blank">Contribute now!</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</div>

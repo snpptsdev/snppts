@@ -1,0 +1,30 @@
+﻿@model Snppts.Infrastructure.IAmASnippet
+
+<div class="col-lg-4 col-md-4 col-sm-6 margin-bottom-20 snppt">
+
+    @if (Model.ImageUris.Any())
+    {
+        <a asp-area="" asp-controller="Snippets" asp-action="Show" asp-route-slug="@Model.Slug"><img class="snippet__img" src="@Model.ImageUris.FirstOrDefault().AbsoluteUri" /></a>
+    }
+
+    <h4 class="text-center"><a asp-area="" asp-controller="Snippets" asp-action="Show" asp-route-slug="@Model.Slug">@Model.Title</a></h4>
+
+    <p class="tags text-center">
+        @string.Join(", ", Model.Categories).ToUpper()
+    </p>
+
+    <div class="text-center margin-bottom-20 platform-icons">
+        @if (Model.ContainsiOSSample)
+        {
+            <i class="fa fa-apple"></i>
+        }
+        @if (Model.ContainsAndroidSample)
+        {
+            <i class="fa fa-android"></i>
+        }
+        @if (Model.ContainsUWPSample)
+        {
+            <i class="fa fa-windows"></i>
+        }
+    </div>
+</div>

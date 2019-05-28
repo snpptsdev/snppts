@@ -1,0 +1,60 @@
+﻿@using X.PagedList.Mvc.Core;
+@using X.PagedList.Mvc.Common
+@using X.PagedList;
+
+@model IEnumerable<Snppts.Infrastructure.IAmASnippet>
+
+@{
+    ViewBag.Title = "Our snippets";
+    ViewBag.Description = "A selection of Snppts";
+}
+
+@if (Model.Count() > 0)
+{
+    <div class="row">
+        <h3 class="title">Our snippets</h3>
+        @{
+            var count = 0;
+        }
+
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                if (count % 3 == 0)
+                {
+                    @Html.Raw("</div><div class=\"row\">")
+                }
+
+                count += 1;
+
+                <partial name="Partials/_SnippetListItem" model="@item" />
+            }
+        </div>
+    </div>
+    <div class="row pager">
+        @Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page }), new PagedListRenderOptions()
+        {
+            LinkToNextPageFormat = "»",
+            LinkToPreviousPageFormat = "«",
+            DisplayLinkToFirstPage = PagedListDisplayMode.Never,
+            DisplayLinkToPreviousPage = PagedListDisplayMode.IfNeeded,
+            DisplayLinkToLastPage = PagedListDisplayMode.Never,
+            DisplayLinkToNextPage = PagedListDisplayMode.IfNeeded,
+            MaximumPageNumbersToDisplay = 0,
+            DisplayEllipsesWhenNotShowingAllPageNumbers = false
+        })
+    </div>
+}
+else
+{
+    <div class="row">
+        <div class="main col-md-6 col-md-offset-3 pv-40">
+            <h2>Oops... No snippets found!</h2>
+            <p>
+                We searched high and low but absolutely no snippets were found. You can always submit your own snippets!
+                Want to know how? Learn more on our "How to Contribute" page.
+            </p>
+            <a asp-area="" asp-controller="Index" asp-action="Contributing" class="btn btn-default btn-animated">Contribute <i class="fa fa-edit"></i></a>
+        </div>
+    </div>
+}

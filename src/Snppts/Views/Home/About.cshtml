@@ -1,0 +1,68 @@
+﻿@{
+    ViewBag.Title = "About";
+    ViewBag.Description = "This is Snppts! About us.";
+    Layout = "~/Views/Shared/_LayoutNoSidebar.cshtml";
+}
+
+<section class="main-container">
+    <div class="container">
+        <div class="row">
+            <!-- main start -->
+            <!-- ================ -->
+            <div class="main col-md-12">
+
+                <!-- page-title start -->
+                <!-- ================ -->
+                <h1 class="page-title">About Us</h1>
+                <div class="separator-2 mb-20"></div>
+                <!-- page-title end -->
+
+                <div class="row mb-40">
+                    <div class="col-md-12">
+                        <p>
+                            Snppts was founded by two Xamarin addicts from the Netherlands. You know... That place near Holland. We take a great
+                            interest in creating (re)useable and sexy UI designs and in recent times the Xamarin community seems to have done the same.
+                            Therefore, we decided to create a platform where developers and designers from all over the world can come together and share their beautiful work.
+                            That way all of us can benefit and we can spread the Xamarin message even further!
+                        </p>
+                        <p>
+                            We hope that you will enjoy using Snppts and will join us in creating awesome UIs for mobile apps and share your knowledge with the rest of the world.
+                            If there is anything you would like to see changed, compliment us or just want to say hi you can reach us on Twitter.
+                        </p>
+                        <p>
+                            Snppts is founded by Steven Thewissen (<a href="https://twitter.com/devnl" target="_blank">@@devnl</a>) and Gerald Versluis (<a href="https://twitter.com/jfversluis" target="_blank">@@jfversluis</a>).
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    @await Component.InvokeAsync("RandomSnippets")
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+@section precontent
+    {
+    <!-- banner start -->
+    <!-- ================ -->
+    <div class="banner dark-translucent-bg" style="background-image:url('img/background.jpg'); background-position: 50% 27%;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 text-center col-md-offset-2 pv-20">
+                    <img src="~/img/snppts_logo_white.png" class="title about-logo object-non-visible" data-animation-effect="fadeIn" data-effect-delay="100" />
+                    <div class="separator object-non-visible mt-10" data-animation-effect="fadeIn" data-effect-delay="100"></div>
+                    <p class="text-center object-non-visible" data-animation-effect="fadeIn" data-effect-delay="100">
+                        So you want to know more about us? Even get to know us? You've come to the right place!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner end -->
+}
+
+@section scripts{
+    <script type="text/javascript" src="~/plugins/waypoints/jquery.waypoints.min.js"></script>
+}

@@ -1,0 +1,77 @@
+﻿@{
+    ViewBag.Title = "How to Contribute";
+    ViewBag.Description = "Want to submit your own Snppts? Here's how!";
+    Layout = "~/Views/Shared/_LayoutNoSidebar.cshtml";
+}
+
+<section class="main-container">
+    <div class="container">
+        <div class="row">
+            <!-- main start -->
+            <!-- ================ -->
+            <div class="main col-md-12">
+
+                <!-- page-title start -->
+                <!-- ================ -->
+                <h1 class="page-title">How to Contribute</h1>
+                <div class="separator-2 mb-20"></div>
+                <!-- page-title end -->
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>If you create cool UIs in Xamarin, this is the place to be! You're welcome to add your created UIs and become part of our ever-growing library of content! Please keep in mind that what you are sharing does not violate the community <a href="">code of conduct</a>.</p>
+
+                        <h3>Add yourself as an author</h3>
+                        <div class="separator-2 mb-20"></div>
+                        <p>To add yourself as a Snppts author you can fork this project, add yourself to the authors folder as a class, implementing the <strong>IAmAnAuthor</strong> interface. If you are doing this via the GitHub editor, don't forget to add the class to the .csproj.</p>
+                        <p>The result should look something like this:</p>
+                        <script src="https://gist.github.com/sthewissen/83e363a44d6fb573edbaefae43c6daba.js"></script>
+                        <p>
+                            A few pointers:
+                            <ul>
+                                <li>Name the class after your first and lastname with PascalCase.</li>
+                                <li>The FirstName and LastName property should resemble that same name.</li>
+                                <li>EmailAddress, TwitterHandle and GitHubHandle should be pretty clear, TwitterHandle without the leading @@.</li>
+                                <li>The Website property can be your global website or whatever you want people to look at.</li>
+                                <li>If you want to show your Gravatar go to https://en.gravatar.com/site/check/ and get your hash! If you don't fill the hash, you will be viewed as a silhouette.</li>
+                            </ul>
+                        </p>
+                        <h3>Add your first snippet</h3>
+                        <div class="separator-2 mb-20"></div>
+                        <p>
+                            To add a snippet you can fork this project, add your snippet to the <strong>Snippets</strong> folder as a class, implementing the <strong>IAmASnippet</strong> interface. If you are doing this via the GitHub editor, don't forget to add the class to the .csproj.
+                        </p>
+                        <p>
+                            The result should look something like this:
+                        </p>
+                        <script src="https://gist.github.com/sthewissen/461644f3b6b0bc84c194bdaa62c91001.js"></script>
+                        <p>
+                            A few pointers:
+                            <ul>
+                                <li>Name the class after the title of your snippet with PascalCase.</li>
+                                <li>Provide a slug where your creation should be permalinked on Snppts.</li>
+                                <li>Link your <strong>IAmAnAuthor</strong> object by creating a new instance of it. This allows you to post more snippets in the future!</li>
+                                <li>Choose one or more appropriate categories for your creation. If there's no existing category that fits your creation you're allowed to add one but it will be reviewed upon submitting your PR.</li>
+                                <li>With ImageUris you can supply one or more URIs showing off screenshots of your creation. Please make sure that these screenshots are all of a single screen, so no compilations.</li>
+                            </ul>
+                        </p>
+                        <h3>Xamarin only please</h3>
+                        <div class="separator-2 mb-20"></div>
+                        <p>
+                            This site is dedicated to Xamarin, so samples in Swift, Java, Objective-C and the likes will not be accepted. Since we will be looking at each PR we will reject any that are not about Xamarin.
+                        </p>
+                        <h3>The last step</h3>
+                        <div class="separator-2 mb-20"></div>
+                        <p>
+                            A big step for monkeykind 🐵! Last thing that remains is submit a Pull Request to us and whenever it gets merged 🎉! You're on Snppts now!
+                        </p>
+                        <img class="mb-20" src="~/img/snppts-badge.jpg" />
+                        <p>
+                            Don't forget to incorporate the <strong>Featured on Snppts</strong> badge on your blog and link back to us! Enjoy all of our great content! Of course you are more than welcome to submit other features and bugfixes as well.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
