@@ -87,5 +87,5 @@ And it truly is a big step for monkeykind 🐵! Last thing that remains is submi
 Don't forget to incorporate the Featured on Snppts badge on your blog and link back to us! Enjoy all of our great content! Of course you are more than welcome to submit other features and bugfixes as well.
 
 # Acknowledgements
-* Thanks to PlanetXamarin for the inspiration on how to create Snppts.
+* Thanks to [PlanetXamarin](https://www.planetxamarin.com) for the inspiration on how to create Snppts.
 * Thanks to [our awesome contributors](https://github.com/snpptsdev/snppts/graphs/contributors) and our [community of authors](https://github.com/snpptsdev/snppts/tree/master/src/Snppts/Authors) who make this all possible.
