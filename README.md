@@ -1,3 +1,5 @@
+![](https://raw.githubusercontent.com/snpptsdev/snppts/master/src/Snppts/wwwroot/img/snppts_logo.png)
+
 # Welcome
 
 Hi! Welcome to Snppts.dev!
