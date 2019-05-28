@@ -15,6 +15,15 @@
     <meta name="robots" content="index, follow" />
     <meta name="revisit-after" content="7 days" />
 
+    <link rel="apple-touch-icon" sizes="180x180" href="~/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="~/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="~/img/favicon-16x16.png">
+    <link rel="manifest" href="~/img/site.webmanifest">
+    <link rel="mask-icon" href="~/img/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="~/img/favicon.ico">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="msapplication-config" content="~/img/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
 
     <!-- OpenGraph tags -->
     <meta property="og:title" content="@ViewBag.Title" />
@@ -66,7 +75,7 @@
         <section class="main-container">
             <div class="container snippet-main-container">
                 <div class="row">
-                    <aside class="col-md-2 hidden-sm">
+                    <aside class="col-md-2 hidden-sm hidden-xs">
                         <div class="sidebar">
                             <div class="block clearfix">
                                 @await Component.InvokeAsync("AllCategories")
@@ -76,7 +85,7 @@
                     <div class="main col-md-10">
                         @RenderBody()
                     </div>
-                    <aside class="col-md-2 visible-sm">
+                    <aside class="col-md-2 hidden-md hidden-lg">
                         <div class="sidebar">
                             <div class="block clearfix">
                                 @await Component.InvokeAsync("AllCategories")

@@ -283,15 +283,6 @@ html {
     cursor: pointer;
 }
 
-    .cta::after {
-        border-bottom: 6px solid #21bb9d;
-        opacity: 0.2;
-        display: block;
-        margin: -6px 0 0 0;
-        content: " ";
-        cursor: pointer;
-    }
-
 /** THE THEME DOES SOME WEIRD THINGS TO, RESETTING SOME STUFF HERE **/
 body {
     font-size: 1.6rem;
