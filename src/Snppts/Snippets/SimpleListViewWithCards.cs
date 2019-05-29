@@ -9,7 +9,7 @@ namespace Snppts.Snippets
     {
         public string Slug => "simple-listview-with-cards";
         public string Title => "Simple ListView with Cards";
-        public string GithubRepoName => "sthewissen/KickassUI.Runkeeper";
+        public string GithubRepoName => "WashingtonMorais/Xamarin-Forms-Cards";
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;
