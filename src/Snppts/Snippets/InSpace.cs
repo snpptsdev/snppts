@@ -20,10 +20,8 @@ namespace Snppts.Snippets
 
         public IEnumerable<Uri> ImageUris => new List<Uri>
         {
-            new Uri(),
-            new Uri(),
-            new Uri(),
-            new Uri()
+            new Uri("https://raw.githubusercontent.com/sthewissen/KickassUI.InSpace/master/ios.png"),
+            new Uri("https://raw.githubusercontent.com/sthewissen/KickassUI.InSpace/master/droid.jpg")
         };
 
         public IList<Category> Categories => new List<Category>
