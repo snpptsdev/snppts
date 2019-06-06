@@ -34,14 +34,19 @@ namespace Snppts.Controllers
                 return RedirectToAction("Show", new { slug = randomSnip.Slug });
 
             // No luck, so back home.
-            return RedirectToAction("Home", "Index");
+            return RedirectToAction("Index", "Home");
         }
 
         [Route("snippet/{slug}")]
         public IActionResult Show(string slug)
         {
             var viewModel = _snippets.FirstOrDefault(x => x.Slug == slug);
-            return View(viewModel);
+
+            if (viewModel != null)
+                return View(viewModel);
+
+            // No luck, so back home.
+            return RedirectToAction("Index", "Home");
         }
     }
 }
