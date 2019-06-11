@@ -13,8 +13,8 @@ public class AvatarLogin : IAmASnippet
 
     public IEnumerable<Uri> ImageUris => new List<Uri>
     {
-        new Uri("https://i.imgur.com/faN2yIY.png"),
-        new Uri("https://i.imgur.com/OeWphmG.gif") 
+        new Uri("https://i.imgur.com/8hQyajs.jpg"),
+        new Uri("https://i.imgur.com/faN2yIY.png") 
     };
 
     public IList<Category> Categories => new List<Category>
