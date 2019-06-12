@@ -53,5 +53,6 @@ namespace Snppts.Infrastructure
         TIMELINE = 30,
         WALKTHROUGHS = 31,
         WIDGETS = 32,
+        DATAGRID = 33,
     }
 }
