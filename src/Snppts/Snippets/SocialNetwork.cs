@@ -20,7 +20,7 @@ namespace Snppts.Snippets
 
         public IEnumerable<Uri> ImageUris => new List<Uri>
         {
-            new Uri("https://github.com/kphillpotts/XamarinFormsLayoutChallenges/blob/master/SocialNetwork/Screenshots/iPhone6-33.png?raw=true")
+            new Uri("https://raw.githubusercontent.com/kphillpotts/XamarinFormsLayoutChallenges/master/SocialNetwork/Screenshots/iPhone6-33.png")
         };
 
         public IList<Category> Categories => new List<Category>
