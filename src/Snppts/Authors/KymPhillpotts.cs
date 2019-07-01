@@ -7,7 +7,7 @@ namespace Snppts.Authors
     {
         public string FirstName => "Kym";
         public string LastName => "Phillpotts";
-        public Uri Website => new Uri("https://www.kymphillpotts.com");
+        public Uri Website => new Uri("https://kymphillpotts.com");
         public string TwitterHandle => "kphillpotts";
         public string GitHubHandle => "kphillpotts";
         public string GravatarHash => "3218e66502c6f0836dfd0f02f210ba0b";
