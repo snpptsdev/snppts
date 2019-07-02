@@ -14,7 +14,7 @@ namespace Snppts.Snippets
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;
 
-        public string Description => "A Xamarin.Forms version of the Twitter app to prove you can create goodlooking UI with Xamarin.Forms as talked about in my blogpost on: <a href=\"https://www.thewissen.io/kickass-ui-xamarin-forms-twitter\" target=\"_blank\">https://www.thewissen.io/kickass-ui-xamarin-forms-twitter</a>";
+        public string Description => "A Xamarin.Forms version of the Twitter app to prove you can create goodlooking UI with Xamarin.Forms as talked about in my blogpost.";
 
         public IAmAnAuthor AuthorInfo => new StevenThewissen();
 
@@ -30,5 +30,7 @@ namespace Snppts.Snippets
         {
             Category.ACTIVITYFEEDS, Category.NAVIGATIONS, Category.SIDEBARS
         };
+
+        public Uri ExternalUri => new Uri("https://www.thewissen.io/kickass-ui-xamarin-forms-twitter");
     }
 }

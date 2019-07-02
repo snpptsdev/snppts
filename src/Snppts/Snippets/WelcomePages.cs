@@ -34,5 +34,7 @@ namespace Snppts.Snippets
         {
             Category.WALKTHROUGHS
         };
+
+        public Uri ExternalUri => null;
     }
 }

@@ -14,7 +14,7 @@ namespace Snppts.Snippets
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;
 
-        public string Description => "Simple and beautiful introduction Page. More Info: <a href=\"https://xamgirl.com/cool-introduction-page-using-xamarin-forms\" target=\"_blank\">https://xamgirl.com/cool-introduction-page-using-xamarin-forms</a>";
+        public string Description => "Simple and beautiful introduction Page.";
 
         public IAmAnAuthor AuthorInfo => new CharlinAgramonte();
 
@@ -28,5 +28,7 @@ namespace Snppts.Snippets
         {
             Category.LAUNCHSCREEN
         };
+
+        public Uri ExternalUri => new Uri("https://xamgirl.com/cool-introduction-page-using-xamarin-forms");
     }
 }

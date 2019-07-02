@@ -10,6 +10,7 @@ namespace Snppts.Infrastructure
         string Description { get; }
 
         string GithubRepoName { get; }
+        Uri ExternalUri { get; }
         bool ContainsAndroidSample { get; }
         bool ContainsiOSSample { get; }
         bool ContainsUWPSample { get; }

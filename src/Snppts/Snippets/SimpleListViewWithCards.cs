@@ -27,5 +27,7 @@ namespace Snppts.Snippets
         {
             Category.CARDS, Category.LISTS
         };
+
+        public Uri ExternalUri => null;
     }
 }

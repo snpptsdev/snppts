@@ -28,5 +28,7 @@ namespace Snppts.Snippets
         {
             Category.LOGIN
         };
+
+        public Uri ExternalUri => null;
     }
 }

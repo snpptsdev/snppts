@@ -14,7 +14,7 @@ namespace Snppts.Snippets
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;
 
-        public string Description => "A simple but good looking Xamarin.Forms UI screen as talked about in my blogpost on: <a href=\"https://www.thewissen.io/xamarin-forms-in-space\" target=\"_blank\">https://www.thewissen.io/xamarin-forms-in-space</a>";
+        public string Description => "A simple but good looking Xamarin.Forms UI screen as talked about in my blogpost.";
 
         public IAmAnAuthor AuthorInfo => new StevenThewissen();
 
@@ -28,5 +28,7 @@ namespace Snppts.Snippets
         {
             Category.CALCULATORS, Category.CARDS
         };
+
+        public Uri ExternalUri => new Uri("https://www.thewissen.io/xamarin-forms-in-space");
     }
 }

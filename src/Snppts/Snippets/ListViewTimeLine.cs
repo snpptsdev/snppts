@@ -14,7 +14,7 @@ namespace Snppts.Snippets
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;
 
-        public string Description => "A simple timeline implementation using ListViews with ViewCells, Headers and Footers. But the effect is nice ;-) Blog article that walks through the design: <a href=\"https://kymphillpotts.com/xamarin-forms-layout-challenges-timeline/\" target=\"_blank\">https://www.kymphillpotts.com/xamarin-forms-layout-challenges-timeline/</a>";
+        public string Description => "A simple timeline implementation using ListViews with ViewCells, Headers and Footers. But the effect is nice ;-)";
 
         public IAmAnAuthor AuthorInfo => new KymPhillpotts();
 
@@ -28,5 +28,7 @@ namespace Snppts.Snippets
         {
             Category.TIMELINE, Category.ACTIVITYFEEDS, Category.LISTS
         };
+
+        public Uri ExternalUri => new Uri("https://kymphillpotts.com/xamarin-forms-layout-challenges-timeline");
     }
 }
