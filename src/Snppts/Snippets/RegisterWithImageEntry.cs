@@ -14,7 +14,7 @@ namespace Snppts.Snippets
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;
 
-        public string Description => "SignUp UI. NOTE: Check I'm using a custom renderer, the implementation is in the Android/iOS project. <a href=\"https://xamgirl.com/image-entry-in-xamarin-forms\" target=\"_blank\">https://xamgirl.com/image-entry-in-xamarin-forms</a>.";
+        public string Description => "SignUp UI. NOTE: Check I'm using a custom renderer, the implementation is in the Android/iOS project.";
 
         public IAmAnAuthor AuthorInfo => new CharlinAgramonte();
 
@@ -27,5 +27,7 @@ namespace Snppts.Snippets
         {
             Category.SIGNUPS
         };
+
+        public Uri ExternalUri => new Uri("https://xamgirl.com/image-entry-in-xamarin-forms");
     }
 }

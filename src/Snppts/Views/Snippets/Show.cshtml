@@ -44,6 +44,13 @@
                 <i class="fa fa-windows fa-2x"></i>
             }
         </div>
+        @if (Model.ExternalUri != null)
+        {
+            <div class="description__section">
+                <h5>External link</h5>
+                <a href="@Model.ExternalUri.AbsoluteUri" target="_blank">Read more about this Snippet</a>
+            </div>
+        }
         <div class="description__section">
             <h5> Check out the code</h5>
             <div class="github-widget" data-repo="@Model.GithubRepoName">
@@ -55,6 +62,6 @@
 </div>
 
 @section scripts
-{
+    {
     <script type="text/javascript" src="~/plugins/githubRepoWidget/jquery.githubRepoWidget.js"></script>
 }

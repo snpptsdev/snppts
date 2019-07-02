@@ -14,7 +14,7 @@ namespace Snppts.Snippets
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => true;
 
-        public string Description => "A simple Social Network profile type page in Xamarin.Form. Blog article that walks through the design: <a href=\"https://kymphillpotts.com/social-network-app-layout-design-in-xamarin-forms/\" target=\"_blank\">https://kymphillpotts.com/social-network-app-layout-design-in-xamarin-forms/</a>";
+        public string Description => "A simple Social Network profile type page in Xamarin.Forms.";
 
         public IAmAnAuthor AuthorInfo => new KymPhillpotts();
 
@@ -27,5 +27,7 @@ namespace Snppts.Snippets
         {
             Category.PHOTOS, Category.ABOUT, Category.FRIENDS
         };
+
+        public Uri ExternalUri => new Uri("https://kymphillpotts.com/social-network-app-layout-design-in-xamarin-forms");
     }
 }

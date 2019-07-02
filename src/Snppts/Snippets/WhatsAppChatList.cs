@@ -32,5 +32,7 @@ namespace Snppts.Snippets
         {
             Category.MESSAGING
         };
+
+        public Uri ExternalUri => null;
     }
 }

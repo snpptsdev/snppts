@@ -28,5 +28,7 @@ namespace Snppts.Snippets
         {
             Category.TIMELINE
         };
+
+        public Uri ExternalUri => null;
     }
 }

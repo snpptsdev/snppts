@@ -14,7 +14,7 @@ namespace Snppts.Snippets
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;
 
-        public string Description => "A Xamarin.Forms version of a parallax carousel to prove you can create goodlooking UI with Xamarin.Forms as talked about in my blogpost on: <a href=\"https://www.thewissen.io/creating-a-parallax-carousel-in-xamarin-forms\" target=\"_blank\">https://www.thewissen.io/creating-a-parallax-carousel-in-xamarin-forms</a>";
+        public string Description => "A Xamarin.Forms version of a parallax carousel to prove you can create goodlooking UI with Xamarin.Forms as talked about in my blogpost.";
 
         public IAmAnAuthor AuthorInfo => new StevenThewissen();
 
@@ -30,5 +30,7 @@ namespace Snppts.Snippets
         {
             Category.WALKTHROUGHS, Category.CARDS
         };
+
+        public Uri ExternalUri => new Uri("https://www.thewissen.io/creating-a-parallax-carousel-in-xamarin-forms");
     }
 }
