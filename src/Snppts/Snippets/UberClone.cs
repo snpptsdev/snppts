@@ -34,3 +34,4 @@ namespace Snppts.Snippets
 
         public Uri ExternalUri => new Uri("https://www.xamboy.com/2019/07/03/introducing-xuber-uber-clone-using-xamarin-forms/");
     }
+}
