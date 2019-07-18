@@ -1,6 +1,11 @@
-public class Translator : IAmASnippet
+using System;
+using System.Collections.Generic;
+using Snppts.Authors;
+using Snppts.Infrastructure;
+
+public class XamTranslator : IAmASnippet
 {
-    public string Slug => "XF Translator";
+    public string Slug => "xam-translator";
     public string Title => "Xam Translator";
     public string GithubRepoName => "aimore/XFTranslator";
     public bool ContainsAndroidSample => true;
