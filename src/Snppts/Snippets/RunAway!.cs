@@ -20,10 +20,10 @@ namespace Snppts.Snippets
 
         public IEnumerable<Uri> ImageUris => new List<Uri>
         {
-            new Uri("https://github.com/roubachof/SkiaSharpnado/blob/master/__Docs__/activity_page_android_4dp.png"),
-            new Uri("https://github.com/roubachof/SkiaSharpnado/blob/master/__Docs__/activity_header_page_ios.png"),
-            new Uri("https://github.com/roubachof/SkiaSharpnado/blob/master/__Docs__/activity_page_ios_4dp.png"),
-            new Uri("https://github.com/roubachof/SkiaSharpnado/blob/master/__Docs__/glenn_thick.png")
+            new Uri("https://raw.githubusercontent.com/roubachof/SkiaSharpnado/master/__Docs__/activity_page_android_4dp.png"),
+            new Uri("https://raw.githubusercontent.com/roubachof/SkiaSharpnado/master/__Docs__/activity_header_page_ios.png"),
+            new Uri("https://raw.githubusercontent.com/roubachof/SkiaSharpnado/master/__Docs__/activity_page_ios_4dp.png"),
+            new Uri("https://raw.githubusercontent.com/roubachof/SkiaSharpnado/master/__Docs__/glenn_thick.png")
         };
 
         public IList<Category> Categories => new List<Category>
