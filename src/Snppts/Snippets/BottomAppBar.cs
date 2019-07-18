@@ -1,4 +1,9 @@
-public class PinBasedLogin : IAmASnippet
+using System;
+using System.Collections.Generic;
+using Snppts.Authors;
+using Snppts.Infrastructure;
+
+public class BottomAppBar : IAmASnippet
 {
     public string Slug => "bottomappbar-material";
     public string Title => "BottomAppBar Material";
@@ -10,7 +15,7 @@ public class PinBasedLogin : IAmASnippet
     public string Description => "This snippet was created to reproduce the Material BottomAppBar, originally from android using custom renderers and Xamarin.Forms Visual.Material.";
 
     public IAmAnAuthor AuthorInfo => new AimoreSa();
-    
+
     public Uri ExternalUri => new Uri("https://github.com/aimore/XamUI/tree/master/XamFood");
 
     public IEnumerable<Uri> ImageUris => new List<Uri>
