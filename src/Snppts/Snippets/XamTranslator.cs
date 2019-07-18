@@ -7,7 +7,7 @@ public class XamTranslator : IAmASnippet
 {
     public string Slug => "xam-translator";
     public string Title => "Xam Translator";
-    public string GithubRepoName => "aimore/XFTranslator";
+    public string GithubRepoName => "aimore/XamUI";
     public bool ContainsAndroidSample => true;
     public bool ContainsiOSSample => true;
     public bool ContainsUWPSample => false;
