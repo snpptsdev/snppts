@@ -47,6 +47,6 @@ namespace Snppts.Snippets
             Category.ABOUT, Category.LAUNCHSCREEN, Category.LOGIN, Category.MESSAGING, Category.NAVIGATIONS, Category.PRODUCTS, Category.SIGNUPS, Category.WALKTHROUGHS, Category.ARTICLES, Category.ERRORS, Category.PROFILES
         };
 
-        public Uri ExternalUri => null;
+        public Uri ExternalUri => new Uri("https://www.syncfusion.com/xamarin-ui-controls");
     }
 }
