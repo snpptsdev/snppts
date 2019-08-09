@@ -20,16 +20,26 @@ namespace Snppts.Snippets
 
         public IEnumerable<Uri> ImageUris => new List<Uri>
         {
-            new Uri("https://raw.githubusercontent.com/syncfusion/xamarin-showcase-emi-calculator/master/images/Android/home.png"),
-            new Uri("https://raw.githubusercontent.com/syncfusion/xamarin-showcase-emi-calculator/master/images/Android/chart.png"),
-            new Uri("https://raw.githubusercontent.com/syncfusion/xamarin-showcase-emi-calculator/master/images/Android/grid.png"),
-            new Uri("https://raw.githubusercontent.com/syncfusion/xamarin-showcase-emi-calculator/master/images/Android/share.png"),
-            new Uri("https://raw.githubusercontent.com/syncfusion/xamarin-showcase-emi-calculator/master/images/Android/excel.png"),
-            new Uri("https://raw.githubusercontent.com/syncfusion/xamarin-showcase-emi-calculator/master/images/iOS/home.png"),
-            new Uri("https://raw.githubusercontent.com/syncfusion/xamarin-showcase-emi-calculator/master/images/iOS/chart.png"),
-            new Uri("https://raw.githubusercontent.com/syncfusion/xamarin-showcase-emi-calculator/master/images/iOS/grid.png"),
-            new Uri("https://raw.githubusercontent.com/syncfusion/xamarin-showcase-emi-calculator/master/images/iOS/share.png"),
-            new Uri("https://raw.githubusercontent.com/syncfusion/xamarin-showcase-emi-calculator/master/images/iOS/excel.png")
+            //Android
+            new Uri("https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/screenshots/android/Cart%20Page.jpg"),
+            new Uri("https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/screenshots/android/Detail%20page.jpg"),
+            new Uri("https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/screenshots/android/Location%20denied%20page.jpg"),
+            new Uri("https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/screenshots/android/Login%20page.jpg"),
+            new Uri("https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/screenshots/android/Onboarding.jpg"),
+
+            //iOS
+            new Uri("https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/screenshots/ios/Cart%20page.jpg"),
+            new Uri("https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/screenshots/ios/Detail%20page.jpg"),
+            new Uri("https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/screenshots/ios/Location%20denied%20page.jpg"),
+            new Uri("https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/screenshots/ios/Login%20page.jpg"),
+            new Uri("https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/screenshots/ios/Onboarding.jpg"),
+
+            //UWP
+            new Uri("https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/screenshots/uwp/Cart%20page.jpg"),
+            new Uri("https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/screenshots/uwp/Detail.jpg"),
+            new Uri("https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/screenshots/uwp/Location%20denied%20page.jpg"),
+            new Uri("https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/screenshots/uwp/Login%20page.jpg"),
+            new Uri("https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/screenshots/uwp/Onboarding%20page.jpg"),
         };
 
         public IList<Category> Categories => new List<Category>
