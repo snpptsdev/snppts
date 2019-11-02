@@ -28,7 +28,7 @@ namespace Snppts.Snippets
 
         public IList<Category> Categories => new List<Category>
         {
-            Category.MAPS, Category.NAVIGATIONS, Category.DASHBOARD
+            Category.MAPS, Category.NAVIGATIONS, Category.DASHBOARD, Category.APPCLONE
         };
 
         public Uri ExternalUri => new Uri("https://www.thewissen.io/xamarin-forms-ui-runkeeper");
