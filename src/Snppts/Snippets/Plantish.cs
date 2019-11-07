@@ -13,7 +13,7 @@ namespace Snppts.Snippets
         public string Title => "Plantish - Manage your plants";
 
         public string Description =>
-            "This app was created to easily manage my plants in my house. The idea is to add your plants, provide a watering frequency and when you last gave your plant water. When the water needs water, the app will notify you and you will have to tell the app that you have watered it.";
+            "This app was created to easily manage my plants in my house. The idea is to add your plants, provide a watering frequency and when you last gave your plant water. When the plants need water, the app will notify you and you will have to tell the app that you have watered it.";
 
         public string GithubRepoName => "haavamoa/Plantish";
         public Uri ExternalUri => null;
