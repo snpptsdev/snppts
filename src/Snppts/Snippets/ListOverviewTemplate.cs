@@ -11,7 +11,7 @@ namespace Snppts.Snippets
     {
         public string Slug => "Listview-Item-Template";
         public string Title => "Listview General Item Template";
-        public string GithubRepoName => "ListViewTemplate";
+        public string GithubRepoName => "attrib75/ListViewTemplate";
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;
