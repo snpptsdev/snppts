@@ -16,7 +16,7 @@ namespace Snppts.Snippets
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;
 
-        public string Description => "Listview tempalte for displaying item image and details";
+        public string Description => "Listview template for displaying item image and details";
 
         public IAmAnAuthor AuthorInfo => new PatrickGoode();
 
