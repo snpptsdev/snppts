@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Snippets\" />
+    <Folder Include="Snippets\" />
     <Folder Include="Infrastructure\" />
     <Folder Include="Extensions\" />
     <Folder Include="AutofacModules\" />
