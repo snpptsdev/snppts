@@ -1,3 +1,6 @@
+﻿using System;
+using Snppts.Infrastructure;
+
 public class EricLeija : IAmAnAuthor
 {
     public string FirstName => "Eric";
