@@ -8,14 +8,14 @@ namespace Snppts.Snippets
     {
         public string Slug => "simple-login";
         public string Title => "Simple Login";
-        public string Description { get; }
-        public string GithubRepoName { get; }
+        public string Description => "A simple login with option to continue as guest.";
+        public string GithubRepoName => "leijae/SimpleLogin";
         public Uri ExternalUri { get; }
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;
         public IAmAnAuthor AuthorInfo => new EricLeija();
-        public IEnumerable<Uri> ImageUris { get; }
-        public IList<Category> Categories { get; }
+        public IEnumerable<Uri> ImageUris => new List<Uri> { new Uri("https://imgur.com/a/NbRLpp6") };
+        public IList<Category> Categories => new List<Category> { Category.LOGIN };
     }
 }
