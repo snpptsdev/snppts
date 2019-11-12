@@ -33,4 +33,3 @@ namespace Snppts.Snippets
         public Uri ExternalUri => new Uri("https://lioncoding.com/2019/04/08/2019-04-08-UI-Concevoir-un-Timeline-dans-Xamarin-Forms/");
     }
 }
-}
