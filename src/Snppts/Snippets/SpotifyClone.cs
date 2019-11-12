@@ -28,7 +28,7 @@ namespace Snppts.Snippets
 
         public IList<Category> Categories => new List<Category>
         {
-            Category.PLAYBACK, Category.LISTS, Category.DASHBOARD
+            Category.PLAYBACK, Category.LISTS, Category.DASHBOARD, Category.APPCLONE
         };
 
         public Uri ExternalUri => new Uri("https://www.thewissen.io/xamarin-forms-ui-spotify");
