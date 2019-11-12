@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using Snppts.Authors;
+using Snppts.Infrastructure;
+
+public class XamTranslator : IAmASnippet
+{
+    public string Slug => "xam-translator";
+    public string Title => "Xam Translator";
+    public string GithubRepoName => "aimore/XamUI";
+    public bool ContainsAndroidSample => true;
+    public bool ContainsiOSSample => true;
+    public bool ContainsUWPSample => false;
+
+    public string Description => "This snippet was created to reproduce an Dictionary/Translator App using some Material design components.";
+
+    public IAmAnAuthor AuthorInfo => new AimoreSa();
+    
+    public Uri ExternalUri => new Uri("https://github.com/aimore/XamUI/tree/master/XFTranslator");
+
+    public IEnumerable<Uri> ImageUris => new List<Uri>
+    {
+        new Uri("https://i.imgur.com/o2ATjel.png"),
+        new Uri("https://i.imgur.com/E7rpRav.png")
+    };
+
+    public IList<Category> Categories => new List<Category>
+    {
+        Category.CARDS
+    };
+}

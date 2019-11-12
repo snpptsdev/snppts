@@ -27,7 +27,7 @@ namespace Snppts.Snippets
 
         public IList<Category> Categories => new List<Category>
         {
-            Category.LISTS, Category.NAVIGATIONS, Category.WIDGETS
+            Category.LISTS, Category.NAVIGATIONS, Category.WIDGETS, Category.APPCLONE
         };
 
         public Uri ExternalUri => null;
