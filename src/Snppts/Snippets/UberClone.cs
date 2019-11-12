@@ -29,7 +29,7 @@ namespace Snppts.Snippets
 
         public IList<Category> Categories => new List<Category>
         {
-            Category.MAPS, Category.SEARCH, Category.WIDGETS
+            Category.MAPS, Category.SEARCH, Category.WIDGETS, Category.APPCLONE
         };
 
         public Uri ExternalUri => new Uri("https://www.xamboy.com/2019/07/03/introducing-xuber-uber-clone-using-xamarin-forms/");
