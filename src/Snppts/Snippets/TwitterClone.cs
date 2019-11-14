@@ -28,7 +28,7 @@ namespace Snppts.Snippets
 
         public IList<Category> Categories => new List<Category>
         {
-            Category.ACTIVITYFEEDS, Category.NAVIGATIONS, Category.SIDEBARS
+            Category.ACTIVITYFEEDS, Category.NAVIGATIONS, Category.SIDEBARS, Category.APPCLONE
         };
 
         public Uri ExternalUri => new Uri("https://www.thewissen.io/kickass-ui-xamarin-forms-twitter");

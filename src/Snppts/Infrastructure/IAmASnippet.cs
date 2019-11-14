@@ -55,7 +55,8 @@ namespace Snppts.Infrastructure
         WALKTHROUGHS = 31,
         WIDGETS = 32,
         DATAGRID = 33,
-        ARTICLES = 34,
-        ERRORS = 35,
+        APPCLONE = 34,
+        ARTICLES = 35,
+        ERRORS = 36,
     }
 }
