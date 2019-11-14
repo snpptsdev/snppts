@@ -37,6 +37,6 @@ namespace Snppts.Snippets
             Category.CHARTS, Category.DATAGRID, Category.CALCULATORS
         };
 
-        public Uri ExternalUri => null;
+        public Uri ExternalUri => new Uri("https://www.syncfusion.com/xamarin-ui-controls");
     }
 }
