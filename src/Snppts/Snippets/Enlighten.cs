@@ -14,7 +14,7 @@ namespace Snppts.Snippets
         public string Title => "Enlighten";
         public string GithubRepoName => "devoirtechsandip/SnpptsChallenge";
         public bool ContainsAndroidSample => true;
-        public bool ContainsiOSSample => true;
+        public bool ContainsiOSSample => false;
         public bool ContainsUWPSample => false;
 
         public string Description => "A Xamarin.Forms application for Students.";
