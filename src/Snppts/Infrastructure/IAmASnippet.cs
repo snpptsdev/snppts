@@ -56,5 +56,7 @@ namespace Snppts.Infrastructure
         WIDGETS = 32,
         DATAGRID = 33,
         APPCLONE = 34,
+        ARTICLES = 35,
+        ERRORS = 36,
     }
 }
