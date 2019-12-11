@@ -1,0 +1,32 @@
+﻿using System;
+using System.Collections.Generic;
+using Snppts.Authors;
+using Snppts.Infrastructure;
+
+namespace Snppts.Snippets
+{
+    public class SimplestWeather : IAmASnippet
+    {
+        public string Slug => "simplest-weather";
+
+        public string Title => "Weather--";
+
+        public string Description => "This is an educational app showcasing a GraphQL Weather API consumed by a Xamarin Forms app. This repository can be used as a template for a modern Xamarin Forms 4.3 app with clean and testable architecture consuming a GraphQL endpoint.";
+
+        public string GithubRepoName => "Sankra/GraphQLDotNet";
+
+        public Uri ExternalUri => new Uri("https://hjerpbakk.com");
+
+        public bool ContainsAndroidSample => true;
+
+        public bool ContainsiOSSample => true;
+
+        public bool ContainsUWPSample => false;
+
+        public IAmAnAuthor AuthorInfo => new RunarOvesenHjerpbakk();
+
+        public IEnumerable<Uri> ImageUris => new [] { new Uri("https://raw.githubusercontent.com/Sankra/GraphQLDotNet/master/screens.PNG") };
+
+        public IList<Category> Categories => new[] { Category.TABBARS, Category.APPCLONE, Category.FILTER, Category.DATAGRID, Category.LISTS };
+    }
+}
