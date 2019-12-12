@@ -25,7 +25,13 @@ namespace Snppts.Snippets
 
         public IAmAnAuthor AuthorInfo => new RunarOvesenHjerpbakk();
 
-        public IEnumerable<Uri> ImageUris => new [] { new Uri("https://raw.githubusercontent.com/Sankra/GraphQLDotNet/master/screens.PNG") };
+        public IEnumerable<Uri> ImageUris => new [] 
+        { 
+            new Uri("https://raw.githubusercontent.com/Sankra/GraphQLDotNet/master/locations-light.PNG"),
+            new Uri("https://raw.githubusercontent.com/Sankra/GraphQLDotNet/master/locations-dark.PNG"),
+            new Uri("https://raw.githubusercontent.com/Sankra/GraphQLDotNet/master/weather-dark.PNG"),
+            new Uri("https://raw.githubusercontent.com/Sankra/GraphQLDotNet/master/add-location-dark.PNG") 
+        };
 
         public IList<Category> Categories => new[] { Category.TABBARS, Category.APPCLONE, Category.FILTER, Category.DATAGRID, Category.LISTS };
     }
