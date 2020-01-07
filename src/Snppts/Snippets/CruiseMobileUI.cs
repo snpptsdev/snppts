@@ -29,8 +29,8 @@ namespace Snppts.Snippets
 
         public IEnumerable<Uri> ImageUris => new List<Uri>
         {
-            new Uri("https://github.com/andreas-nesheim/CruiseMobileUI/blob/master/Screenshots/screenshot1.png"),
-            new Uri("https://github.com/andreas-nesheim/CruiseMobileUI/blob/master/Screenshots/screenshot2.png")
+            new Uri("https://github.com/andreas-nesheim/CruiseMobileUI/raw/master/Screenshots/screenshot1.png"),
+            new Uri("https://github.com/andreas-nesheim/CruiseMobileUI/raw/master/Screenshots/screenshot2.png")
         };
 
         public IList<Category> Categories => new List<Category>
