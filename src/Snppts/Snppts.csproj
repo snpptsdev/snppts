@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
@@ -14,7 +14,6 @@
 
   <ItemGroup>
     <Folder Include="Views\Snippets\" />
-    <Folder Include="Snippets\" />
     <Folder Include="Infrastructure\" />
     <Folder Include="Extensions\" />
     <Folder Include="AutofacModules\" />
@@ -24,6 +23,7 @@
     <Folder Include="Views\Shared\Components\PopularCategories\" />
     <Folder Include="Views\Shared\Components\AllCategories\" />
     <Folder Include="Views\Shared\Components\RandomSnippets\" />
+    <Folder Include="Snippets\" />
     <Folder Include="Authors\" />
   </ItemGroup>
 </Project>
