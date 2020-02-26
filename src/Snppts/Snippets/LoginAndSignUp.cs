@@ -26,7 +26,7 @@ namespace Snppts.Snippets
 
         public IList<Category> Categories => new List<Category>
         {
-            Category.Login, Category.CARDS
+            Category.LOGIN, Category.CARDS,Category.SIGNUPS
         };
 
         public Uri ExternalUri => new Uri("https://github.com/logeshpalani98/Xamarin_UI");
