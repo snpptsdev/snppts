@@ -24,5 +24,6 @@
     <Folder Include="Views\Shared\Components\AllCategories\" />
     <Folder Include="Views\Shared\Components\RandomSnippets\" />
     <Folder Include="Snippets\" />
+    <Folder Include="Authors\" />
   </ItemGroup>
 </Project>
