@@ -10,7 +10,7 @@
 
     var author = Model?.FirstOrDefault()?.AuthorInfo;
 
-    ViewData["Title"] = "By " + author.FirstName + " " + author.LastName;
+    ViewData["Title"] = string.IsNullOrEmpty(author?.FirstName) ? "Author not found" : "By " + author?.FirstName + " " + author.LastName;
 
     var authorLinks = "";
 
@@ -87,12 +87,12 @@ else
 {
     <div class="row">
         <div class="main col-md-6 col-md-offset-3 pv-40">
-            <h2>Oops... No author found!</h2>
+            <h2>Oops... Author not found!</h2>
             <p>
-                We searched high and low but absolutely no snippets were found. You can always submit your own snippets!
+                You can always submit your own snippets!
                 Want to know how? Learn more on our "How to Contribute" page.
             </p>
-            <a asp-area="" asp-controller="Index" asp-action="Contributing" class="btn btn-default btn-animated">Contribute <i class="fa fa-edit"></i></a>
+            <a href="/how-to-contribute" class="btn btn-default btn-animated">Contribute <i class="fa fa-edit"></i></a>
         </div>
     </div>
 }
