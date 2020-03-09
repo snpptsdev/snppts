@@ -23,5 +23,6 @@
     <Folder Include="Views\Shared\Components\PopularCategories\" />
     <Folder Include="Views\Shared\Components\AllCategories\" />
     <Folder Include="Views\Shared\Components\RandomSnippets\" />
+    <Folder Include="Snippets\" />
   </ItemGroup>
 </Project>
