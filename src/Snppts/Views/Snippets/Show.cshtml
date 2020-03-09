@@ -21,7 +21,7 @@
                 <img src="@Model.AuthorInfo.GravatarImage()" class="circle pull-left author__gravatar" />
                 <div class="snppts-meta">
                     <span class="createdby">Created by</span>
-                    <span class="author">@Model.AuthorInfo.FirstName @Model.AuthorInfo.LastName</span>
+                    <a href="/author/@Model.AuthorInfo.GitHubHandle"><span class="author">@Model.AuthorInfo.FirstName @Model.AuthorInfo.LastName</span></a>
                 </div>
             </div>
         </div>
