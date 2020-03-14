@@ -24,6 +24,14 @@ namespace Snppts.Controllers
             return View(viewModel);
         }
 
+        [Route("author/{githubhandle}")]
+        public IActionResult Author(string gitHubHandle, int? page)
+        {
+            var pageNumber = page ?? 1;
+            var viewModel = _snippets.Where(x => x.AuthorInfo.GitHubHandle.ToLower().Equals(gitHubHandle.ToLower())).ToPagedList(pageNumber, 9);
+            return View(viewModel);
+        }
+
         [Route("random")]
         public IActionResult Random()
         {
