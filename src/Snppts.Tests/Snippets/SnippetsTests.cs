@@ -35,12 +35,29 @@ namespace Snppts.Tests.Snippets
             }
         }
 
+        [Test]
+        public void InvalidRepositoryShouldBeNotFound()
+        {
+            var invalidUrl = $"{GITHUB_BASE_URL}/invalid/repository-for-testing";
+
+            var statusCode = GetStatusCodeFromUrl(invalidUrl);
+
+            Assert.AreEqual(HttpStatusCode.NotFound, statusCode);
+        }
+
         private HttpStatusCode GetStatusCodeFromUrl(string url)
         {
-            var request = WebRequest.Create(url);
-            request.Method = "HEAD";
-            var response = request.GetResponse() as HttpWebResponse;
-            return response.StatusCode;
+            try
+            {
+                var request = WebRequest.Create(url);
+                request.Method = "HEAD";
+                var response = request.GetResponse() as HttpWebResponse;
+                return response.StatusCode;
+            }
+            catch (WebException webException)
+            {
+                return ((HttpWebResponse)webException.Response).StatusCode;
+            }
         }
     }
 }
