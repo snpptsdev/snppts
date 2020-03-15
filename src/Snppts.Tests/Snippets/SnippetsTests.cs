@@ -45,6 +45,21 @@ namespace Snppts.Tests.Snippets
             Assert.AreEqual(HttpStatusCode.NotFound, statusCode);
         }
 
+        [Test]
+        public void ImagesShouldBeReachable()
+        {
+            foreach (var type in _types)
+            {
+                var snippetInstance = Activator.CreateInstance(type) as IAmASnippet;
+                foreach (var uri in snippetInstance.ImageUris)
+                {
+                    var statusCode = GetStatusCodeFromUri(uri);
+
+                    Assert.AreEqual(HttpStatusCode.OK, statusCode);
+                }
+            }
+        }
+
         private HttpStatusCode GetStatusCodeFromUri(string uri)
         {
             return GetStatusCodeFromUri(new Uri(uri));
