@@ -49,11 +49,11 @@ namespace Snppts.Extensions
             switch (sortType)
             {
                 case SortType.stars:
-                    return members.OrderByDescending(x => x.GitHubRepoInfo.GetRepoInfo(GitHubRepos).Stars).ToList();
+                    return members.OrderByDescending(x => x.GitHubRepoInfo.GetRepoInfoFromService(GitHubRepos).Stars).ToList();
 
                 case SortType.updated:
                 default:
-                    return members.OrderByDescending(x => x.GitHubRepoInfo.GetRepoInfo(GitHubRepos).UpdatedAt).ToList();
+                    return members.OrderByDescending(x => x.GitHubRepoInfo.GetRepoInfoFromService(GitHubRepos).UpdatedAt).ToList();
             }
         }
     }
@@ -140,7 +140,7 @@ namespace Snppts.Extensions
         [JsonProperty("pushed_at")]
         public virtual DateTime UpdatedAt { get; private set; }
 
-        public GitHubRepoInfo GetRepoInfo(List<GitHubRepoInfo> repoListFromService)
+        public GitHubRepoInfo GetRepoInfoFromService(List<GitHubRepoInfo> repoListFromService)
         {
             if (repoListFromService == null || repoListFromService.Count.Equals(0))
                 return this;

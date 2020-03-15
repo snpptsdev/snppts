@@ -26,9 +26,9 @@
         {
             <i class="fa fa-windows"></i>
         }
-        @if (Model.GitHubRepoInfo.GetRepoInfo(Snppts.Extensions.SortExtention.GitHubRepos)?.Stars > 0)
+        @if (Model.GitHubRepoInfo.GetRepoInfoFromService(Snppts.Extensions.SortExtention.GitHubRepos)?.Stars > 0)
         {
-            <i class="fa fa-star" style="color: #f1c40f"> @Model.GitHubRepoInfo.GetRepoInfo(Snppts.Extensions.SortExtention.GitHubRepos).Stars</i>
+            <i class="fa fa-star" style="color: #f1c40f"> @Model.GitHubRepoInfo.GetRepoInfoFromService(Snppts.Extensions.SortExtention.GitHubRepos).Stars</i>
         }
         @*@if (Model.GitHubRepoInfo.GetRepoInfo(Snppts.Extensions.SortExtention.GitHubRepos)?.UpdatedAt != null)
         {

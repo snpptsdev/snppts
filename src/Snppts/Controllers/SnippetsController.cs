@@ -38,8 +38,8 @@ namespace Snppts.Controllers
         public async Task<IActionResult> Sort(SortType sortType, int? page)
         {
             var pageNumber = page ?? 1;
-            var sort = await _snippets.SortSnippets(sortType);
-            var viewModel = sort.ToPagedList(pageNumber, 30);
+            var sort = await _snippets.SortSnippets(sortType, pageNumber);
+            var viewModel = new StaticPagedList<IAmASnippet>(sort, pageNumber, 30, sort.Count); //sort.ToPagedList(pageNumber + 1, sort.Count);
             return View(viewModel);
         }
 
