@@ -36,64 +36,25 @@ namespace Snppts.Extensions
                             break;
                     }
 
-                    api += "&page="+ page;
+                    api += "&page=" + page;
                 }
             }
 
             var list = await SortService.Get(api);
             GitHubRepos = list.Items;
 
+            var allNameRepoService = GitHubRepos.Select(x => x.FullName.ToLower());
+            members = members.Where(x => allNameRepoService.Contains(x.GitHubRepoInfo.GitHubRepoName.ToLower())).ToList();
+
             switch (sortType)
             {
                 case SortType.stars:
-                    return members.OrderStar().Select(x => x.Snippet).ToList();
+                    return members.OrderByDescending(x => x.GitHubRepoInfo.GetRepoInfo(GitHubRepos).Stars).ToList();
 
                 case SortType.updated:
                 default:
-                    return members.OrderUpdated().Select(x => x.Snippet).ToList();
+                    return members.OrderByDescending(x => x.GitHubRepoInfo.GetRepoInfo(GitHubRepos).UpdatedAt).ToList();
             }
-        }
-
-        public static List<SnpptsWithGitHubValues> OrderUpdated(this IList<IAmASnippet> items)
-        {
-            var listReturn = new List<SnpptsWithGitHubValues>();
-
-            foreach (var item in items)
-            {
-                var model = GitHubRepos.FirstOrDefault(x => x.FullName.ToLower().Equals(item.GitHubRepoInfo.GitHubRepoName.ToLower()));
-
-                if (!string.IsNullOrEmpty(model?.FullName))
-                {
-                    listReturn.Add(new SnpptsWithGitHubValues
-                    {
-                        Snippet = item,
-                        Update = model.UpdatedAt
-                    });
-                }
-            }
-
-            return listReturn.OrderByDescending(x => x.Update).ToList();
-        }
-
-        public static List<SnpptsWithGitHubValues> OrderStar(this IList<IAmASnippet> items)
-        {
-            var listReturn = new List<SnpptsWithGitHubValues>();
-
-            foreach (var item in items)
-            {
-                var model = GitHubRepos.FirstOrDefault(x => x.FullName.ToLower().Equals(item.GitHubRepoInfo.GitHubRepoName.ToLower()));
-
-                if (!string.IsNullOrEmpty(model?.FullName))
-                {
-                    listReturn.Add(new SnpptsWithGitHubValues
-                    {
-                        Snippet = item,
-                        Stars = model.Stars
-                    });
-                }
-            }
-
-            return listReturn.OrderByDescending(x => x.Stars).ToList();
         }
     }
 
@@ -165,18 +126,32 @@ namespace Snppts.Extensions
         //public string Name { get; private set; }
 
         [JsonProperty("full_name")]
-        public string FullName { get; private set; }
+        public virtual string FullName { get; private set; }
 
         [JsonProperty("description")]
-        public string Description { get; private set; }
+        public virtual string Description { get; private set; }
 
         [JsonProperty("stargazers_count")]
-        public int Stars { get; private set; }
+        public virtual int Stars { get; private set; }
 
         [JsonProperty("forks_count")]
-        public int Forks { get; private set; }
+        public virtual int Forks { get; private set; }
 
         [JsonProperty("pushed_at")]
-        public DateTime UpdatedAt { get; private set; }
+        public virtual DateTime UpdatedAt { get; private set; }
+
+        public GitHubRepoInfo GetRepoInfo(List<GitHubRepoInfo> repoListFromService)
+        {
+            if (repoListFromService == null || repoListFromService.Count.Equals(0))
+                return this;
+
+            var obj = repoListFromService.FirstOrDefault(x => x.FullName.ToLower().Equals(this.GitHubRepoName.ToLower()));
+
+            if (string.IsNullOrEmpty(obj?.FullName))
+                return this;
+
+            obj.GitHubRepoName = this.GitHubRepoName;
+            return obj;
+        }
     }
 }
