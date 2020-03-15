@@ -47,6 +47,11 @@ namespace Snppts.Tests.Snippets
 
         private HttpStatusCode GetStatusCodeFromUri(string uri)
         {
+            return GetStatusCodeFromUri(new Uri(uri));
+        }
+
+        private HttpStatusCode GetStatusCodeFromUri(Uri uri)
+        {
             try
             {
                 var request = WebRequest.Create(uri);
