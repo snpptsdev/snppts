@@ -39,7 +39,7 @@ namespace Snppts.Controllers
         {
             var pageNumber = page ?? 1;
             var sort = await _snippets.SortSnippets(sortType, pageNumber);
-            var viewModel = new StaticPagedList<IAmASnippet>(sort, pageNumber, 30, sort.Count); //sort.ToPagedList(pageNumber + 1, sort.Count);
+            var viewModel = new StaticPagedList<IAmASnippet>(sort, pageNumber, 30, sort.Count);
             return View(viewModel);
         }
 
