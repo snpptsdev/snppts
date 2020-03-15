@@ -44,7 +44,7 @@ public class PinBasedLogin : IAmASnippet
 {
     public string Slug => "pin-based-login";
     public string Title => "PIN-based Login";
-    public string GithubRepoName => "snpptsio/Snppts.PinBasedLogin";
+    public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("snpptsio/Snppts.PinBasedLogin");
     public bool ContainsAndroidSample => true;
     public bool ContainsiOSSample => true;
     public bool ContainsUWPSample => false;
