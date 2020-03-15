@@ -15,4 +15,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Snppts\Snppts.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Snippets\" />
+  </ItemGroup>
 </Project>
