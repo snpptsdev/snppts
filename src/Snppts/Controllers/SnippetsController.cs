@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Snppts.Extensions;
 using Snppts.Infrastructure;
 using X.PagedList;
 
@@ -29,6 +31,15 @@ namespace Snppts.Controllers
         {
             var pageNumber = page ?? 1;
             var viewModel = _snippets.Where(x => x.AuthorInfo.GitHubHandle.ToLower().Equals(gitHubHandle.ToLower())).ToPagedList(pageNumber, 9);
+            return View(viewModel);
+        }
+
+        [Route("sort/{sorttype}")]
+        public async Task<IActionResult> Sort(SortType sortType, int? page)
+        {
+            var pageNumber = page ?? 1;
+            var sort = await _snippets.SortSnippets(sortType);
+            var viewModel = sort.ToPagedList(pageNumber, 30);
             return View(viewModel);
         }
 

@@ -1,13 +1,14 @@
 using System;
 using System.Collections.Generic;
 using Snppts.Authors;
+using Snppts.Extensions;
 using Snppts.Infrastructure;
 
 public class XamTranslator : IAmASnippet
 {
     public string Slug => "xam-translator";
     public string Title => "Xam Translator";
-    public string GithubRepoName => "aimore/XamUI";
+    public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("aimore/XamUI");
     public bool ContainsAndroidSample => true;
     public bool ContainsiOSSample => true;
     public bool ContainsUWPSample => false;

@@ -1,4 +1,5 @@
 using Snppts.Authors;
+using Snppts.Extensions;
 using Snppts.Infrastructure;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Snppts.Snippets
     {
         public string Slug => "fashion-store-ui";
         public string Title => "Fashion Store UI";
-        public string GithubRepoName => "valentineg8/FashionStore";
+        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("valentineg8/FashionStore");
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;

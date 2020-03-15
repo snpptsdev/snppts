@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Snppts.Authors;
+using Snppts.Extensions;
 using Snppts.Infrastructure;
 
 namespace Snppts.Snippets
@@ -9,7 +10,7 @@ namespace Snppts.Snippets
     {
         public string Slug => "chameleon";
         public string Title => "Chameleon";
-        public string GithubRepoName => "sthewissen/KickassUI.Chameleon";
+        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("sthewissen/KickassUI.Chameleon");
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;

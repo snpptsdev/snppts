@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Snppts.Authors;
+using Snppts.Extensions;
 using Snppts.Infrastructure;
 
 namespace Snppts.Snippets
@@ -9,7 +10,9 @@ namespace Snppts.Snippets
     {
         public string Slug => "ui-app-login";
         public string Title => "UI App Login";
-        public string GithubRepoName => "CrossGeeks/Xamarin.Forms.UI";
+
+        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("CrossGeeks/Xamarin.Forms.UI");
+
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;
