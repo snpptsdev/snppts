@@ -27,9 +27,9 @@ namespace Snppts.Tests.Snippets
             foreach (var type in _types)
             {
                 var snippetInstance = Activator.CreateInstance(type) as IAmASnippet;
-                var repositoryUrl = $"{GITHUB_BASE_URL}/{snippetInstance.GithubRepoName}";
+                var repositoryUri = $"{GITHUB_BASE_URL}/{snippetInstance.GithubRepoName}";
 
-                var statusCode = GetStatusCodeFromUrl(repositoryUrl);
+                var statusCode = GetStatusCodeFromUri(repositoryUri);
 
                 Assert.AreEqual(HttpStatusCode.OK, statusCode);
             }
@@ -38,18 +38,18 @@ namespace Snppts.Tests.Snippets
         [Test]
         public void InvalidRepositoryShouldBeNotFound()
         {
-            var invalidUrl = $"{GITHUB_BASE_URL}/invalid/repository-for-testing";
+            var invalidUri = $"{GITHUB_BASE_URL}/invalid/repository-for-testing";
 
-            var statusCode = GetStatusCodeFromUrl(invalidUrl);
+            var statusCode = GetStatusCodeFromUri(invalidUri);
 
             Assert.AreEqual(HttpStatusCode.NotFound, statusCode);
         }
 
-        private HttpStatusCode GetStatusCodeFromUrl(string url)
+        private HttpStatusCode GetStatusCodeFromUri(string uri)
         {
             try
             {
-                var request = WebRequest.Create(url);
+                var request = WebRequest.Create(uri);
                 request.Method = "HEAD";
                 var response = request.GetResponse() as HttpWebResponse;
                 return response.StatusCode;
