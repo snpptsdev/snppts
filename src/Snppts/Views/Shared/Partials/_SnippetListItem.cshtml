@@ -28,7 +28,7 @@
         }
         @if (Model.GitHubRepoInfo.GetRepoInfoFromService(Snppts.Extensions.SortExtention.GitHubRepos)?.Stars > 0)
         {
-            <i class="fa fa-star"> <b class="text">@Model.GitHubRepoInfo.GetRepoInfoFromService(Snppts.Extensions.SortExtention.GitHubRepos).Stars</b></i>
+            <i class="fa fa-star"></i><b class="text">@Model.GitHubRepoInfo.GetRepoInfoFromService(Snppts.Extensions.SortExtention.GitHubRepos).Stars</b>
         }
         @*@if (Model.GitHubRepoInfo.GetRepoInfo(Snppts.Extensions.SortExtention.GitHubRepos)?.UpdatedAt != null)
             {
