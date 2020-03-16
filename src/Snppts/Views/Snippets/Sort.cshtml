@@ -1,24 +1,24 @@
 ﻿@using X.PagedList.Mvc.Core;
 @using X.PagedList.Mvc.Common
 @using X.PagedList;
+@using Snppts.Controllers;
 
-@model IEnumerable<Snppts.Infrastructure.IAmASnippet>
+@model SnpptsControllerAux
 
 @{
-    ViewBag.Title = "Welcome to Snppts";
-    ViewBag.Description = "A selection of Xamarin.Forms UI snippets for use in your own apps!";
+    ViewBag.Title = Model.TitlePage;
 }
 
-@if (Model.Count() > 0)
+@if (Model.Snppets.Count() > 0)
 {
     <div class="row">
-        <h3 class="title">Stars snippets</h3>
+        <h3 class="title">@Model.TitlePage</h3>
         @{
             var count = 0;
         }
 
         <div class="row">
-            @foreach (var item in Model)
+            @foreach (var item in Model.Snppets)
             {
                 if (count % 3 == 0)
                 {
@@ -32,7 +32,7 @@
         </div>
     </div>
     <div class="row pager">
-        @Html.PagedListPager((IPagedList)Model, page => Url.Action("Sort", new { page }), new PagedListRenderOptions()
+        @Html.PagedListPager((IPagedList)Model.Snppets, page => Url.Action("Sort", new { page }), new PagedListRenderOptions()
         {
             LinkToNextPageFormat = "»",
             LinkToPreviousPageFormat = "«",

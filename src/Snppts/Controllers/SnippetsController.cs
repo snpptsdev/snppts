@@ -40,7 +40,25 @@ namespace Snppts.Controllers
             var pageNumber = page ?? 1;
             var sort = await _snippets.SortSnippets(sortType, pageNumber);
             var viewModel = new StaticPagedList<IAmASnippet>(sort, pageNumber, 30, sort.Count);
-            return View(viewModel);
+
+            var title = "Snppets by ";
+
+            switch (sortType)
+            {
+                case SortType.stars:
+                    title += "stars";
+                    break;
+                case SortType.updated:
+                default:
+                    title += "recents";
+                    break;
+            }
+
+            return View(new SnpptsControllerAux
+            {
+                Snppets = viewModel,
+                TitlePage = title
+            });
         }
 
         [Route("random")]
@@ -67,5 +85,12 @@ namespace Snppts.Controllers
             // No luck, so back home.
             return RedirectToAction("Index", "Home");
         }
+    }
+
+    public class SnpptsControllerAux
+    {
+        public IEnumerable<IAmASnippet> Snppets { get; set; }
+
+        public string TitlePage { get; set; }
     }
 }
