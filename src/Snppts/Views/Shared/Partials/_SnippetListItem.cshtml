@@ -26,5 +26,15 @@
         {
             <i class="fa fa-windows"></i>
         }
+        @if (Model.GitHubRepoInfo.GetRepoInfoFromService(Snppts.Extensions.SortExtention.GitHubRepos)?.Stars > 0)
+        {
+            <i class="fa fa-star"></i><b class="text">@Model.GitHubRepoInfo.GetRepoInfoFromService(Snppts.Extensions.SortExtention.GitHubRepos).Stars</b>
+        }
+        @*@if (Model.GitHubRepoInfo.GetRepoInfo(Snppts.Extensions.SortExtention.GitHubRepos)?.UpdatedAt != null)
+            {
+                <p>
+                    <span style="text-transform:uppercase; font-weight:bold; font-size:xx-small"> @Model.GitHubRepoInfo.GetRepoInfo(Snppts.Extensions.SortExtention.GitHubRepos).UpdatedAt.ToString("MMM/yyyy")</span>
+                </p>
+            }*@
     </div>
 </div>

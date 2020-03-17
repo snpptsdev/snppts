@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Snppts.Authors;
+using Snppts.Extensions;
 using Snppts.Infrastructure;
 
 namespace Snppts.Snippets
@@ -15,7 +16,7 @@ namespace Snppts.Snippets
         public string Description =>
             "This app was created to easily manage my plants in my house. The idea is to add your plants, provide a watering frequency and when you last gave your plant water. When the plants need water, the app will notify you and you will have to tell the app that you have watered it.";
 
-        public string GithubRepoName => "haavamoa/Plantish";
+        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("haavamoa/Plantish");
         public Uri ExternalUri => null;
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => false;

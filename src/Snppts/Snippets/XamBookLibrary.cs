@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Snppts.Authors;
+using Snppts.Extensions;
 using Snppts.Infrastructure;
 
 namespace Snppts.Snippets
@@ -9,7 +10,8 @@ namespace Snppts.Snippets
     {
         public string Slug => "xam-book-library";
         public string Title => "Awesome UI - Book Library";
-        public string GithubRepoName => "shanranm/XamBookLibrary";
+
+        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("shanranm/XamBookLibrary");
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;

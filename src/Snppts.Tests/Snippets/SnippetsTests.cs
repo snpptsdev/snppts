@@ -27,7 +27,7 @@ namespace Snppts.Tests.Snippets
             foreach (var type in _types)
             {
                 var snippetInstance = Activator.CreateInstance(type) as IAmASnippet;
-                var repositoryUri = $"{GITHUB_BASE_URL}/{snippetInstance.GithubRepoName}";
+                var repositoryUri = $"{GITHUB_BASE_URL}/{snippetInstance.GitHubRepoInfo.GitHubRepoName}";
 
                 var statusCode = GetStatusCodeFromUri(repositoryUri);
 

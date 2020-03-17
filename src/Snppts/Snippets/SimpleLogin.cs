@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Snppts.Extensions;
 using Snppts.Infrastructure;
 
 namespace Snppts.Snippets
@@ -9,7 +10,9 @@ namespace Snppts.Snippets
         public string Slug => "simple-login";
         public string Title => "Simple Login";
         public string Description => "A simple login with option to continue as guest.";
-        public string GithubRepoName => "leijae/SimpleLogin";
+
+        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("leijae/SimpleLogin");
+
         public Uri ExternalUri { get; }
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;

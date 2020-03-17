@@ -1,4 +1,5 @@
 ﻿using Snppts.Authors;
+using Snppts.Extensions;
 using Snppts.Infrastructure;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ namespace Snppts.Snippets
     {
         public string Slug => "Listview-Item-Template";
         public string Title => "Listview General Item Template";
-        public string GithubRepoName => "attrib75/ListViewTemplate";
+        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("attrib75/ListViewTemplate");
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;
