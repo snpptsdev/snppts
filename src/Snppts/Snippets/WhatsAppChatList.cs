@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Snppts.Authors;
+using Snppts.Extensions;
 using Snppts.Infrastructure;
 
 namespace Snppts.Snippets
@@ -15,7 +16,8 @@ namespace Snppts.Snippets
         	"in separator inset. To show correct colours of the badges, was created color in resource dictionary with different values for each platform. To show correct date time information, was created " +
         	"a converter to parse DateTime object and transform in string.";
 
-        public string GithubRepoName => "ionixjunior/xamarin-forms-interfaces";
+        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("ionixjunior/xamarin-forms-interfaces");
+
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;

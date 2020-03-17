@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Snppts.Authors;
+using Snppts.Extensions;
 using Snppts.Infrastructure;
 
 namespace Snppts.Snippets
@@ -9,7 +10,7 @@ namespace Snppts.Snippets
     {
         public string Slug => "netflix-clone";
         public string Title => "Netflix Clone";
-        public string GithubRepoName => "jsuarezruiz/xamarin-forms-netflix-sample";
+        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("jsuarezruiz/xamarin-forms-netflix-sample");
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;

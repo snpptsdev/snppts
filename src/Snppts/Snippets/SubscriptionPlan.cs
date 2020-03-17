@@ -1,4 +1,5 @@
 ﻿using Snppts.Authors;
+using Snppts.Extensions;
 using Snppts.Infrastructure;
 using System;
 using System.Collections.Generic;
@@ -15,7 +16,7 @@ namespace Snppts.Snippets
 
         public string Description => "A simple subscription plan page";
 
-        public string GithubRepoName => "alexandresanlim/SubscriptionPlan.XamarinUI";
+        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("alexandresanlim/SubscriptionPlan.XamarinUI");
 
         public Uri ExternalUri => null;
 

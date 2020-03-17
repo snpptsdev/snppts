@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Snppts.Authors;
+using Snppts.Extensions;
 using Snppts.Infrastructure;
 
 namespace Snppts.Snippets
@@ -13,7 +14,7 @@ namespace Snppts.Snippets
 
         public string Description => "This is an educational app showcasing a GraphQL Weather API consumed by a Xamarin Forms app. This repository can be used as a template for a modern Xamarin Forms 4.3 app with clean and testable architecture consuming a GraphQL endpoint.";
 
-        public string GithubRepoName => "Sankra/GraphQLDotNet";
+        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("Sankra/GraphQLDotNet");
 
         public Uri ExternalUri => new Uri("https://hjerpbakk.com");
 

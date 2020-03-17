@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Snppts.Authors;
+using Snppts.Extensions;
 using Snppts.Infrastructure;
 
 namespace Snppts.Snippets
@@ -9,7 +10,7 @@ namespace Snppts.Snippets
     {
         public string Slug => "pin-based-login";
         public string Title => "PIN-based Login";
-        public string GithubRepoName => "snpptsdev/Snppts.PinBasedLogin";
+        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("snpptsdev/Snppts.PinBasedLogin");
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;

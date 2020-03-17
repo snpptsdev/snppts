@@ -1,4 +1,5 @@
 ﻿using Snppts.Authors;
+using Snppts.Extensions;
 using Snppts.Infrastructure;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,9 @@ namespace Snppts.Snippets
     {
         public string Slug => "whatsapp-ui";
         public string Title => "WhatsApp UI Clone";
-        public string GithubRepoName => "egbakou/WhatsAppUI";
+
+        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("egbakou/WhatsAppUI");
+
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;

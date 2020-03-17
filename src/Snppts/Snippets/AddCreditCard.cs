@@ -1,4 +1,5 @@
 ﻿using Snppts.Authors;
+using Snppts.Extensions;
 using Snppts.Infrastructure;
 using System;
 using System.Collections.Generic;
@@ -15,7 +16,7 @@ namespace Snppts.Snippets
 
         public string Description => "Add a credit card from user";
 
-        public string GithubRepoName => "alexandresanlim/XamarinUI.AddCreditCard";
+        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("alexandresanlim/XamarinUI.AddCreditCard");
 
         public Uri ExternalUri => null;
 

@@ -1,4 +1,5 @@
 ﻿using Snppts.Authors;
+using Snppts.Extensions;
 using Snppts.Infrastructure;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Snppts.Snippets
     {
         public string Slug => "credit-card-checkout";
         public string Title => "Credit Card Checkout";
-        public string GithubRepoName => "egbakou/CreditCardCheckout";
+        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("egbakou/CreditCardCheckout");
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;

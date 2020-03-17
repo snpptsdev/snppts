@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Snppts.Authors;
+using Snppts.Extensions;
 using Snppts.Infrastructure;
 
 namespace Snppts.Snippets
@@ -10,7 +11,9 @@ namespace Snppts.Snippets
         public string Slug => "soundcloud-clone";
         public string Title => "SoundCloud Clone";
         public string Description => "A clone of the SoundCloud app made with Xamarin.Forms. At moment, this app contains the albums page only.";
-        public string GithubRepoName => "ionixjunior/SoundCloudClone";
+
+        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("ionixjunior/SoundCloudClone");
+
         public Uri ExternalUri => new Uri("https://www.youtube.com/playlist?list=PL6M6J_6V_um8IzRN4lgRUEWrPWC6iQfiq");
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
