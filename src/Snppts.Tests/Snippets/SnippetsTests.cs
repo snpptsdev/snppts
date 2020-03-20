@@ -81,7 +81,10 @@ namespace Snppts.Tests.Snippets
                     return ((HttpWebResponse)webException.Response).StatusCode;
                 }
                 
-                throw;
+                new Exception($"Exception for URL {uri} Message: {webException.Message}")
+                {
+                    InnerException = webException
+                };
             }
         }
     }
