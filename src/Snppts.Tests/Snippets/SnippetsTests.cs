@@ -76,7 +76,12 @@ namespace Snppts.Tests.Snippets
             }
             catch (WebException webException)
             {
-                return ((HttpWebResponse)webException.Response).StatusCode;
+                if (e.Status == WebExceptionStatus.ProtocolError)
+                {
+                    return ((HttpWebResponse)webException.Response).StatusCode;
+                }
+                
+                throw;
             }
         }
     }
