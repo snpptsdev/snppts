@@ -10,7 +10,7 @@ namespace Snppts.Snippets
     {
         public string Slug => "soundcloud-clone";
         public string Title => "SoundCloud Clone";
-        public string Description => "A clone of the SoundCloud app made with Xamarin.Forms. At moment, this app contains the albums page only.";
+        public string Description => "A clone of the SoundCloud app made with Xamarin.Forms. At moment, this app contains the albums and streamings screen only.";
 
         public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("ionixjunior/SoundCloudClone");
 
@@ -24,14 +24,17 @@ namespace Snppts.Snippets
         public IEnumerable<Uri> ImageUris => new List<Uri>
         {
             new Uri("https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/android_home_1.png"),
-            new Uri("https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/ios_home_1.png")
+            new Uri("https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/android_stream_1.png"),
+            new Uri("https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/ios_home_1.png"),
+            new Uri("https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/ios_stream_1.png")
         };
 
         public IList<Category> Categories => new List<Category>
         {
             Category.APPCLONE,
             Category.LISTS,
-            Category.TABBARS
+            Category.TABBARS,
+            Category.ACTIVITYFEEDS
         };
     }
 }
