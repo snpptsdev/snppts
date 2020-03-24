@@ -41,16 +41,16 @@ namespace Snppts.Controllers
             var sort = await _snippets.SortSnippets(sortType, pageNumber);
             var viewModel = new StaticPagedList<IAmASnippet>(sort, pageNumber, 30, sort.Count);
 
-            var title = "Snppets by ";
+            var title = "";
 
             switch (sortType)
             {
                 case SortType.stars:
-                    title += "stars";
+                    title = "Most starred";
                     break;
                 case SortType.updated:
                 default:
-                    title += "recents";
+                    title = "Most recent";
                     break;
             }
 
