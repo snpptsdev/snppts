@@ -31,9 +31,9 @@ namespace Snppts.Snippets
             new Uri("https://raw.githubusercontent.com/AnthonyLatty/Covid19.Forms/master/Artwork/artwork_droid_3.jpg"),
             new Uri("https://raw.githubusercontent.com/AnthonyLatty/Covid19.Forms/master/Artwork/artwork_droid_1.jpg"),
             new Uri("https://raw.githubusercontent.com/AnthonyLatty/Covid19.Forms/master/Artwork/artwork_droid_2.jpg"),
-            new Uri("https://raw.githubusercontent.com/AnthonyLatty/Covid19.Forms/master/Artwork/artwork_ios_3.jpg"),
-            new Uri("https://raw.githubusercontent.com/AnthonyLatty/Covid19.Forms/master/Artwork/artwork_ios_1.jpg"),
-            new Uri("https://raw.githubusercontent.com/AnthonyLatty/Covid19.Forms/master/Artwork/artwork_ios_2.jpg")
+            new Uri("https://raw.githubusercontent.com/AnthonyLatty/Covid19.Forms/master/Artwork/artwork_ios_3.png"),
+            new Uri("https://raw.githubusercontent.com/AnthonyLatty/Covid19.Forms/master/Artwork/artwork_ios_1.png"),
+            new Uri("https://raw.githubusercontent.com/AnthonyLatty/Covid19.Forms/master/Artwork/artwork_ios_2.png")
         };
 
         public IList<Category> Categories => new List<Category>
