@@ -12,7 +12,7 @@ namespace Snppts.Snippets
         public string GithubRepoName => "leomarisreyes/FaceBookUISample";
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
-        public bool ContainsUWPSample => true;
+        public bool ContainsUWPSample => false;
 
         public string Description => "It's the replica of Facebook App.";
 
