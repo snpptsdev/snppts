@@ -13,4 +13,5 @@ namespace Snppts.Authors
         public string EmailAddress => "lreyes@stemelle.com";
         public string GravatarHash => "ae78e84a683611c7b72c9ba829c125e0";
     }
+
 }
