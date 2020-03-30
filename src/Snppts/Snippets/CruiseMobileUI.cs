@@ -1,4 +1,5 @@
 ﻿using Snppts.Authors;
+using Snppts.Extensions;
 using Snppts.Infrastructure;
 using System;
 using System.Collections.Generic;
@@ -15,7 +16,7 @@ namespace Snppts.Snippets
 
         public string Description => "A Xamarin.Forms UI Challenge based on a Behance design.";
 
-        public string GithubRepoName => "andreas-nesheim/CruiseMobileUI";
+        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("andreas-nesheim/CruiseMobileUI");
 
         public Uri ExternalUri => new Uri("https://www.andreasnesheim.no/xamarin-ui-challenge-cruise-mobile-ui-part-1/");
 

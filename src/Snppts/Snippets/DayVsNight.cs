@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Snppts.Authors;
+using Snppts.Extensions;
 using Snppts.Infrastructure;
 
 namespace Snppts.Snippets
@@ -9,7 +10,7 @@ namespace Snppts.Snippets
     {
         public string Slug => "day-vs-night";
         public string Title => "Day Vs Night";
-        public string GithubRepoName => "kphillpotts/DayVsNight";
+        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("kphillpotts/DayVsNight");
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;

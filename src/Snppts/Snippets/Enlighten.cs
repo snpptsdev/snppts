@@ -1,4 +1,5 @@
 ﻿using Snppts.Authors;
+using Snppts.Extensions;
 using Snppts.Infrastructure;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,7 @@ namespace Snppts.Snippets
     {
         public string Slug => "Enlighten";
         public string Title => "Enlighten";
-        public string GithubRepoName => "devoirtechsandip/SnpptsChallenge";
+        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("devoirtechsandip/SnpptsChallenge");
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;

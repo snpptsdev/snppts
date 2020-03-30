@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Snppts.Authors;
+using Snppts.Extensions;
 using Snppts.Infrastructure;
 
 namespace Snppts.Snippets
@@ -9,7 +10,7 @@ namespace Snppts.Snippets
     {
         public string Slug => "marvel-cards";
         public string Title => "Marvel Cards";
-        public string GithubRepoName => "kphillpotts/MarvelCards";
+        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("kphillpotts/MarvelCards");
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;

@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Snppts.Extensions;
 using Snppts.Infrastructure;
 using X.PagedList;
 
@@ -32,6 +34,33 @@ namespace Snppts.Controllers
             return View(viewModel);
         }
 
+        [Route("sort/{sorttype}")]
+        public async Task<IActionResult> Sort(SortType sortType, int? page)
+        {
+            var pageNumber = page ?? 1;
+            var sort = await _snippets.SortSnippets(sortType, pageNumber);
+            var viewModel = new StaticPagedList<IAmASnippet>(sort, pageNumber, 30, sort.Count);
+
+            var title = "";
+
+            switch (sortType)
+            {
+                case SortType.stars:
+                    title = "Most starred";
+                    break;
+                case SortType.updated:
+                default:
+                    title = "Most recent";
+                    break;
+            }
+
+            return View(new SnpptsControllerAux
+            {
+                Snppets = viewModel,
+                TitlePage = title
+            });
+        }
+
         [Route("random")]
         public IActionResult Random()
         {
@@ -56,5 +85,12 @@ namespace Snppts.Controllers
             // No luck, so back home.
             return RedirectToAction("Index", "Home");
         }
+    }
+
+    public class SnpptsControllerAux
+    {
+        public IEnumerable<IAmASnippet> Snppets { get; set; }
+
+        public string TitlePage { get; set; }
     }
 }

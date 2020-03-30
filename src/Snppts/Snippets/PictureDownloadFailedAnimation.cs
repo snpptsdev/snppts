@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Snppts.Authors;
+using Snppts.Extensions;
 using Snppts.Infrastructure;
 
 namespace Snppts.Snippets
@@ -9,7 +10,7 @@ namespace Snppts.Snippets
     {
         public string Slug => "picture-download-failed-animation";
         public string Title => "Picture Download Failed Animation";
-        public string GithubRepoName => "DanielCauser/XamarinFFImageLoadingAndLottie";
+        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("DanielCauser/XamarinFFImageLoadingAndLottie");
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Snppts.Authors;
+using Snppts.Extensions;
 using Snppts.Infrastructure;
 
 namespace Snppts.Snippets
@@ -9,7 +10,7 @@ namespace Snppts.Snippets
     {
         public string Slug => "loan-calculator";
         public string Title => "Loan Calculator";
-        public string GithubRepoName => "syncfusion/xamarin-showcase-emi-calculator";
+        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("syncfusion/xamarin-showcase-emi-calculator");
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;
