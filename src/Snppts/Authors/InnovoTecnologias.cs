@@ -11,5 +11,6 @@ namespace Snppts.Authors
         public string TwitterHandle => "";
         public string GitHubHandle => "InnovoTecnologias";
         public string GravatarHash => "";
+        public string EmailAddress => "info@innovotecnologias.com.ar";
     }
 }
