@@ -16,7 +16,7 @@ namespace Snppts.Snippets
 
         public string Description => "A simple subscription plan page";
 
-        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("alexandresanlim/SubscriptionPlan.XamarinUI");
+        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("alexandresanlim/XamarinUI.SubscriptionPlan");
 
         public Uri ExternalUri => null;
 
