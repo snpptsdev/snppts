@@ -76,7 +76,12 @@ namespace Snppts.Tests.Snippets
             }
             catch (WebException webException)
             {
-                return ((HttpWebResponse)webException.Response).StatusCode;
+                if (webException.Status == WebExceptionStatus.ProtocolError)
+                {
+                    return ((HttpWebResponse)webException.Response).StatusCode;
+                }
+                
+                throw new Exception($"Exception for URL {uri} Message: {webException.Message}", webException);
             }
         }
     }
