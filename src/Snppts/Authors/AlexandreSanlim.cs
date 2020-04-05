@@ -12,7 +12,7 @@ namespace Snppts.Authors
 
         public string LastName => "Sanlim";
 
-        public Uri Website => null;
+        public Uri Website => new Uri("https://alexandresanlim.github.io/");
 
         public string TwitterHandle => "alexandresanlim";
 
