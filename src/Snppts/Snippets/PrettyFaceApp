@@ -8,10 +8,12 @@ public class PrettyFaceApp : IAmASnippet
     public bool ContainsUWPSample => false;
 
     public string Description => "This snippet was created to give you a complete starting point for your app.";
+    
+    public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("InnovoTecnologias/PrettyFaceApp");
 
     public IAmAnAuthor AuthorInfo => new InnovoTecnologias();
     
-    public Uri ExternalUri => new Uri("https://github.com/InnovoTecnologias/PrettyFaceApp");
+    public Uri ExternalUri => new Uri("https://www.innovotecnologias.com.ar");
 
     public IEnumerable<Uri> ImageUris => new List<Uri>
     {
