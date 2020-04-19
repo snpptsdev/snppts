@@ -11,7 +11,7 @@ namespace Snppts.Snippets
         public string Slug => "covid19-live";
         public string Title => "Covid-19 Live";
         public string Description => "Developed in XamarinForms with the aim of tracking Covid-19 cases with data from affected countries, including Brazil.";
-        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("https://github.com/Altevir/xamarinforms-covid19");
+        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("Altevir/xamarinforms-covid19");
         public Uri ExternalUri => null;
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
