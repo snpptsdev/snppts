@@ -16,7 +16,7 @@ namespace Snppts.Snippets
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;
-        public IAmAnAuthor AuthorInfo => new AltevirCardosoNeto();
+        public IAmAnAuthor AuthorInfo => new UfukHawk();
 
         public IEnumerable<Uri> ImageUris => new List<Uri>
         {
