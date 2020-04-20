@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace Snppts.Snippets
 {
-    public class PhotoStockUIDesign : IAmASnippet
+    public class XamLoginUI : IAmASnippet
     {
         public string Slug => "Xam-Login-UI-Demo";
         public string Title => "XamLogin UI Demo";
