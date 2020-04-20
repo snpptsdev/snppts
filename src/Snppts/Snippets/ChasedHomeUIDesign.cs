@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Snppts.Snippets
 {
-    public class PhotoStockUIDesign : IAmASnippet
+    public class ChasedHomeUI : IAmASnippet
     {
         public string Slug => "Chased-Home-UI-Design";
         public string Title => "Chased Home UI Design";
