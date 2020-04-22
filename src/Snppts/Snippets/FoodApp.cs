@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using Snppts.Authors;
 using Snppts.Infrastructure;
@@ -9,7 +9,7 @@ namespace Snppts.Snippets
     {
         public string Slug => "foodapp";
         public string Title => "foodapp";
-        public string GithubRepoName => "monetelli/XF_FoodApp";
+        public string GithubRepoName => "danielmonettelli/XF_FoodApp";
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => true;
