@@ -1,4 +1,5 @@
 ﻿using Snppts.Authors;
+using Snppts.Extensions;
 using Snppts.Infrastructure;
 using System;
 using System.Collections.Generic;
@@ -15,7 +16,7 @@ namespace Snppts.Snippets
 
         public string Description => "Custom control for Android and/or iOS showing the initials of a provided name within a colorful circle.";
 
-        public string GithubRepoName => "tsjdev-apps/xf-initialsview";
+        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("tsjdev-apps/xf-initialsview");
 
         public Uri ExternalUri => new Uri("https://medium.com/@tsjdevapps/xamarin-forms-how-to-create-an-intials-view-as-custom-control-for-android-and-ios-e9b09223ed53");
 

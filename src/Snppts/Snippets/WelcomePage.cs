@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Snppts.Authors;
+using Snppts.Extensions;
 using Snppts.Infrastructure;
 
 namespace Snppts.Snippets
@@ -10,7 +11,9 @@ namespace Snppts.Snippets
         public string Slug => "welcome-page";
         public string Title => "Welcome Page";
         public string Description => "Example of a welcome page with Xamarin.Forms.";
-        public string GithubRepoName => "TBertuzzi/PaginaIIntroducaoExemplo";
+
+        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("TBertuzzi/PaginaIIntroducaoExemplo");
+
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;

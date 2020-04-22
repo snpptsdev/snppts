@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Snppts.Authors;
+using Snppts.Extensions;
 using Snppts.Infrastructure;
 
 namespace Snppts.Snippets
@@ -9,7 +10,7 @@ namespace Snppts.Snippets
     {
         public string Slug => "nubank-clone";
         public string Title => "NuBank Clone";
-        public string GithubRepoName => "felipebaltazar/Xam-Nubank";
+        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("felipebaltazar/Xam-Nubank");
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;

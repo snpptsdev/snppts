@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Snppts.Extensions;
+using System;
 using System.Collections.Generic;
 
 namespace Snppts.Infrastructure
@@ -6,10 +7,12 @@ namespace Snppts.Infrastructure
     public interface IAmASnippet
     {
         string Slug { get; }
+
         string Title { get; }
+
         string Description { get; }
 
-        string GithubRepoName { get; }
+        GitHubRepoInfo GitHubRepoInfo { get; }
         Uri ExternalUri { get; }
         bool ContainsAndroidSample { get; }
         bool ContainsiOSSample { get; }
@@ -56,5 +59,8 @@ namespace Snppts.Infrastructure
         WIDGETS = 32,
         DATAGRID = 33,
         APPCLONE = 34,
+        ARTICLES = 35,
+        ERRORS = 36,
+        STORES = 37
     }
 }
