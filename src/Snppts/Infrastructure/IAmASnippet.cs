@@ -62,5 +62,6 @@ namespace Snppts.Infrastructure
         ARTICLES = 35,
         ERRORS = 36,
         STORES = 37
+        NEOMORPHISM = 38
     }
 }
