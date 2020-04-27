@@ -30,8 +30,8 @@ namespace Snppts.Snippets
 
         public IEnumerable<Uri> ImageUris => new List<Uri>
         {
-            new Uri("https://github.com/DamienDoumer/freechat/blob/master/images/freechatAndroidDemo.gif"),
-            new Uri("https://github.com/DamienDoumer/freechat/blob/master/images/freechatiOSDemo.gif")
+            new Uri("https://raw.githubusercontent.com/DamienDoumer/freechat/master/images/freechatAndroidDemo.gif"),
+            new Uri("https://raw.githubusercontent.com/DamienDoumer/freechat/master/images/freechatiOSDemo.gif")
         };
 
         public IList<Category> Categories => new List<Category>
