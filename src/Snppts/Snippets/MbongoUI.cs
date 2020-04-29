@@ -25,11 +25,9 @@ namespace Snppts.Snippets
         };
 
         public IList<Category> Categories => new List<Category>
-        {
-                     
-			
+        {                    			
             Category.WIDGETS,
-			Category.LAUNCHSCREEN
+			Category.LAUNCHSCREEN,
             Category.LISTS
         };
     }
