@@ -28,12 +28,11 @@ namespace Snppts.Snippets
         };
 
         public IList<Category> Categories => new List<Category>
-        {                    			
+        {
+            Category.FILTER,
             Category.WIDGETS,
 			Category.LAUNCHSCREEN,
-            Category.LISTS,
-			Categories.FILTER,
-			Categories.SEARCH
+            Category.LISTS
         };
     }
 }
