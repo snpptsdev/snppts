@@ -22,16 +22,16 @@ namespace Snppts.Snippets
         {
             new Uri("https://raw.githubusercontent.com/Amaro96/CovidTrack/master/Screenshots/ligthModeFirstScreen.PNG"),
             new Uri("https://raw.githubusercontent.com/Amaro96/CovidTrack/master/Screenshots/light.PNG"),
-			new Uri("https://raw.githubusercontent.com/Amaro96/CovidTrack/master/Screenshots/darkModeFirstScreen.png"),
+            new Uri("https://raw.githubusercontent.com/Amaro96/CovidTrack/master/Screenshots/darkModeFirstScreen.png"),
             new Uri("https://raw.githubusercontent.com/Amaro96/CovidTrack/master/Screenshots/tela.PNG"),
-			 new Uri("https://raw.githubusercontent.com/Amaro96/CovidTrack/master/Screenshots/mycountry.PNG"),
+            new Uri("https://raw.githubusercontent.com/Amaro96/CovidTrack/master/Screenshots/mycountry.PNG"),
         };
 
         public IList<Category> Categories => new List<Category>
         {
             Category.FILTER,
             Category.WIDGETS,
-			Category.LAUNCHSCREEN,
+            Category.LAUNCHSCREEN,
             Category.LISTS
         };
     }
