@@ -61,6 +61,8 @@ namespace Snppts.Infrastructure
         APPCLONE = 34,
         ARTICLES = 35,
         ERRORS = 36,
-        STORES = 37
+        STORES = 37,
+        NEOMORPHISM = 38,
+        SOCIALNETWORK = 39
     }
 }
