@@ -58,7 +58,8 @@ namespace Snppts.Snippets
             Category.APPCLONE,
             Category.LISTS,
             Category.TABBARS,
-            Category.ACTIVITYFEEDS
+            Category.ACTIVITYFEEDS,
+            Category.SEARCH
         };
     }
 }
