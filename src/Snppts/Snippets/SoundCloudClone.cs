@@ -10,7 +10,7 @@ namespace Snppts.Snippets
     {
         public string Slug => "soundcloud-clone";
         public string Title => "SoundCloud Clone";
-        public string Description => "A clone of the SoundCloud app made with Xamarin.Forms. At moment, this app contains the albums and streamings screen only.";
+        public string Description => "A clone of the SoundCloud app made with Xamarin.Forms. At moment this app contains the albums, streamings, search and library screens, both in light and dark mode.";
 
         public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("ionixjunior/SoundCloudClone");
 
