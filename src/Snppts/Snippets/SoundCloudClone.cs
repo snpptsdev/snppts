@@ -10,7 +10,7 @@ namespace Snppts.Snippets
     {
         public string Slug => "soundcloud-clone";
         public string Title => "SoundCloud Clone";
-        public string Description => "A clone of the SoundCloud app made with Xamarin.Forms. At moment, this app contains the albums and streamings screen only.";
+        public string Description => "A clone of the SoundCloud app made with Xamarin.Forms. At moment this app contains the albums, streamings, search and library screens, both in light and dark mode.";
 
         public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("ionixjunior/SoundCloudClone");
 
@@ -23,10 +23,34 @@ namespace Snppts.Snippets
 
         public IEnumerable<Uri> ImageUris => new List<Uri>
         {
-            new Uri("https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/android_home_1.png"),
-            new Uri("https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/android_stream_1.png"),
-            new Uri("https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/ios_home_1.png"),
-            new Uri("https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/ios_stream_1.png")
+            new Uri("https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/android_home_1_light.png"),
+            new Uri("https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/android_home_1_dark.png"),
+            new Uri("https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/android_stream_1_light.png"),
+            new Uri("https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/android_stream_1_dark.png"),
+            new Uri("https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/android_search_1_light.png"),
+            new Uri("https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/android_search_1_dark.png"),
+            new Uri("https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/android_search_2_light.png"),
+            new Uri("https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/android_search_2_dark.png"),
+            new Uri("https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/android_search_3_light.png"),
+            new Uri("https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/android_search_3_dark.png"),
+            new Uri("https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/android_library_1_light.png"),
+            new Uri("https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/android_library_1_dark.png"),
+            new Uri("https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/android_library_2_light.png"),
+            new Uri("https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/android_library_2_dark.png"),
+            new Uri("https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/ios_home_1_light.png"),
+            new Uri("https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/ios_home_1_dark.png"),
+            new Uri("https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/ios_stream_1_light.png"),
+            new Uri("https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/ios_stream_1_dark.png"),
+            new Uri("https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/ios_search_1_light.png"),
+            new Uri("https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/ios_search_1_dark.png"),
+            new Uri("https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/ios_search_2_light.png"),
+            new Uri("https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/ios_search_2_dark.png"),
+            new Uri("https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/ios_search_3_light.png"),
+            new Uri("https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/ios_search_3_dark.png"),
+            new Uri("https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/ios_library_1_light.png"),
+            new Uri("https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/ios_library_1_dark.png"),
+            new Uri("https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/ios_library_2_light.png"),
+            new Uri("https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/ios_library_2_dark.png")
         };
 
         public IList<Category> Categories => new List<Category>
@@ -34,7 +58,8 @@ namespace Snppts.Snippets
             Category.APPCLONE,
             Category.LISTS,
             Category.TABBARS,
-            Category.ACTIVITYFEEDS
+            Category.ACTIVITYFEEDS,
+            Category.SEARCH
         };
     }
 }
