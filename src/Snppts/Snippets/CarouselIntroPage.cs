@@ -11,7 +11,7 @@ namespace Snppts.Snippets
         public string Slug => "carousel-intro-page";
         public string Title => "Carousel Intro Page";
 
-        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("LucioMSP/CarouselIntroPage");
+        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("LucioMSP/Xamarin.Forms.Examples/tree/master/CarouselIntroPage");
 
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
@@ -23,9 +23,9 @@ namespace Snppts.Snippets
 
         public IEnumerable<Uri> ImageUris => new List<Uri>
         {
-            new Uri("https://raw.githubusercontent.com/luciomsp/CarouselIntroPage/master/ScreenShots/ScreenShot01.png"),
-            new Uri("https://raw.githubusercontent.com/luciomsp/CarouselIntroPage/master/103/ScreenShot02.png"),
-            new Uri("https://raw.githubusercontent.com/luciomsp/CarouselIntroPage/master/103/ScreenShot03.png"),
+            new Uri("https://github.com/LucioMSP/Xamarin.Forms.Examples/blob/master/CarouselIntroPage/ScreenShots/ScreenShot01.png"),
+            new Uri("https://github.com/LucioMSP/Xamarin.Forms.Examples/blob/master/CarouselIntroPage/ScreenShots/ScreenShot02.png"),
+            new Uri("https://github.com/LucioMSP/Xamarin.Forms.Examples/blob/master/CarouselIntroPage/ScreenShots/ScreenShot03.png"),
         }
 
         public IList<Category> Categories => new List<Category>
