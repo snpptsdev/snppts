@@ -3,7 +3,7 @@ using Snppts.Infrastructure;
 
 namespace Snppts.Authors
 {
-    public class RendyDelRosario : IAmAnAuthor
+    public class VicenteGuzman : IAmAnAuthor
     {
         public string FirstName => "Vicente";
         public string LastName => "Guzmán";
