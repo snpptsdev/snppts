@@ -23,7 +23,10 @@ namespace Snppts.Snippets
 
         public IEnumerable<Uri> ImageUris => new List<Uri>
         {
-            new Uri("https://github.com/LucioMSP/Xamarin.Forms.Examples/blob/master/CarouselIntroPage/ScreenShots/")
+            new Uri("https://raw.githubusercontent.com/LucioMSP/Xamarin.Forms.Examples/master/CarouselIntroPage/ScreenShots/CarouselIntroPage.gif"),
+            new Uri("https://raw.githubusercontent.com/LucioMSP/Xamarin.Forms.Examples/master/CarouselIntroPage/ScreenShots/ScreenShot01.png"),
+            new Uri("https://raw.githubusercontent.com/LucioMSP/Xamarin.Forms.Examples/master/CarouselIntroPage/ScreenShots/ScreenShot02.png"),
+            new Uri("https://raw.githubusercontent.com/LucioMSP/Xamarin.Forms.Examples/master/CarouselIntroPage/ScreenShots/ScreenShot03.png")
         };
 
         public IList<Category> Categories => new List<Category>
