@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Snppts.Snippets
 {
-    public class XamCall : IAmASnippet
+    public class DarkStore : IAmASnippet
     {
         public string Slug => "Dark-Store";
         public string Title => "DarkStore";
