@@ -1,10 +1,11 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json;
 using Snppts.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
+using System.Text.Json.Serialization;
 
 namespace Snppts.Extensions
 {
@@ -89,7 +90,8 @@ namespace Snppts.Extensions
 
             if (response.IsSuccessStatusCode)
             {
-                ghModel = await response.Content.ReadAsAsync<GitHubModel>();
+                
+                ghModel = await JsonSerializer.DeserializeAsync<GitHubModel>(await response.Content.ReadAsStreamAsync());
             }
 
             return ghModel;
@@ -102,16 +104,18 @@ namespace Snppts.Extensions
         {
             Items = new List<GitHubRepoInfo>();
         }
+        
+        [JsonPropertyName("total_count")]
+        public int TotalCount { get; set; }
 
-        [JsonProperty("total_count")]
-        public int TotalCount { get; private set; }
-
-        [JsonProperty("items")]
-        public List<GitHubRepoInfo> Items { get; private set; }
+        [JsonPropertyName("items")]
+        public List<GitHubRepoInfo> Items { get; set; }
     }
 
     public class GitHubRepoInfo
     {
+        public GitHubRepoInfo() { }
+
         public GitHubRepoInfo(string _gitHubRepoName)
         {
             GitHubRepoName = _gitHubRepoName;
@@ -125,20 +129,20 @@ namespace Snppts.Extensions
         //[JsonProperty("name")]
         //public string Name { get; private set; }
 
-        [JsonProperty("full_name")]
-        public virtual string FullName { get; private set; }
+        [JsonPropertyName("full_name")]
+        public virtual string FullName { get; set; }
 
-        [JsonProperty("description")]
-        public virtual string Description { get; private set; }
+        [JsonPropertyName("description")]
+        public virtual string Description { get; set; }
 
-        [JsonProperty("stargazers_count")]
-        public virtual int Stars { get; private set; }
+        [JsonPropertyName("stargazers_count")]
+        public virtual int Stars { get; set; }
 
-        [JsonProperty("forks_count")]
-        public virtual int Forks { get; private set; }
+        [JsonPropertyName("forks_count")]
+        public virtual int Forks { get; set; }
 
-        [JsonProperty("pushed_at")]
-        public virtual DateTime UpdatedAt { get; private set; }
+        [JsonPropertyName("pushed_at")]
+        public virtual DateTime UpdatedAt { get; set; }
 
         public GitHubRepoInfo GetRepoInfoFromService(List<GitHubRepoInfo> repoListFromService)
         {
