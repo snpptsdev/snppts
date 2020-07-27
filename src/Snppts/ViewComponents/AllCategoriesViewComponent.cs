@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Snppts.Infrastructure;
 
@@ -16,7 +14,7 @@ namespace Snppts.ViewComponents
             _snippets = snippets.ToArray();
         }
 
-        public async Task<IViewComponentResult> InvokeAsync()
+        public IViewComponentResult Invoke()
         {
             var categories = _snippets.Select(x => x.Categories).SelectMany(i => i);
             var groupedSorted = categories.GroupBy(n => n).OrderBy(g => g.FirstOrDefault().ToString());
