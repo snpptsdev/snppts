@@ -1,20 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Snppts.AutofacModules;
-using Snppts.Extensions;
-using Snppts.Infrastructure;
+using Microsoft.Extensions.Hosting;
 
 namespace Snppts
 {
@@ -39,20 +34,22 @@ namespace Snppts
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            var mvcBuilder = services.AddMvc();
+            mvcBuilder.SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+            mvcBuilder.AddMvcOptions((o) => o.EnableEndpointRouting = false);
 
             // Create the container builder.
             var builder = new ContainerBuilder();
             builder.Populate(services);
             builder.RegisterModule(new SnippetModule());
-
+            
             Container = builder.Build();
 
             return new AutofacServiceProvider(this.Container);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
