@@ -36,9 +36,10 @@ namespace Snppts.Snippets
         };
 
         public IList<Category> Categories => new List<Category>
-        { 
+        {
             Category.CARDS,
-            Category.LISTS
+            Category.LISTS,
+            Category.CAROUSEL
         };
     }
 }
