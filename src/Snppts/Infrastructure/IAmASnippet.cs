@@ -63,6 +63,7 @@ namespace Snppts.Infrastructure
         ERRORS = 36,
         STORES = 37,
         NEOMORPHISM = 38,
-        SOCIALNETWORK = 39
+        SOCIALNETWORK = 39,
+        CAROUSEL = 40
     }
 }
