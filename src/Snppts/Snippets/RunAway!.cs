@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Snppts.Authors;
+using Snppts.Extensions;
 using Snppts.Infrastructure;
 
 namespace Snppts.Snippets
@@ -9,7 +10,7 @@ namespace Snppts.Snippets
     {
         public string Slug => "RunAway!";
         public string Title => "RunAway!";
-        public string GithubRepoName => "roubachof/SkiaSharpnado";
+        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("roubachof/SkiaSharpnado");
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => true;

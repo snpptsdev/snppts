@@ -1,4 +1,5 @@
 ﻿using Snppts.Authors;
+using Snppts.Extensions;
 using Snppts.Infrastructure;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,9 @@ namespace Snppts.Snippets
     {
         public string Slug => "timeline-with-images";
         public string Title => "Timeline With Images";
-        public string GithubRepoName => "egbakou/Timeline";
+
+        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("egbakou/Timeline");
+
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Snppts.Authors;
+using Snppts.Extensions;
 using Snppts.Infrastructure;
 
 namespace Snppts.Snippets
@@ -9,7 +10,7 @@ namespace Snppts.Snippets
     {
         public string Slug => "simple-listview-with-cards";
         public string Title => "Simple ListView with Cards";
-        public string GithubRepoName => "WashingtonMorais/Xamarin-Forms-Cards";
+        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("WashingtonMorais/Xamarin-Forms-Cards");
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;

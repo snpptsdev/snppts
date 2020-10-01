@@ -1,4 +1,5 @@
 ﻿using Snppts.Authors;
+using Snppts.Extensions;
 using Snppts.Infrastructure;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Snppts.Snippets
     {
         public string Slug => "concentric-onboarding";
         public string Title => "Concentric OnBoarding";
-        public string GithubRepoName => "felipebaltazar/Xam-ConcentricOnboarding";
+        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("felipebaltazar/Xam-ConcentricOnboarding");
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;

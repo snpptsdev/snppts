@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Snppts.Authors;
+using Snppts.Extensions;
 using Snppts.Infrastructure;
 
 namespace Snppts.Snippets
@@ -9,7 +10,9 @@ namespace Snppts.Snippets
     {
         public string Slug => "uber-clone";
         public string Title => "Uber Clone";
-        public string GithubRepoName => "CrossGeeks/xUber";
+
+        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("CrossGeeks/xUber");
+
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;

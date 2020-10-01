@@ -1,4 +1,5 @@
 ﻿using Snppts.Authors;
+using Snppts.Extensions;
 using Snppts.Infrastructure;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Snppts.Snippets
     {
         public string Slug => "facebook-mobile-app-login-ui-clone";
         public string Title => "Facebook Mobile App Login UI Clone";
-        public string GithubRepoName => "SRKYousafzaiPK/FacebookMobileAppLoginUIClone";
+        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("SRKYousafzaiPK/FacebookMobileAppLoginUIClone");
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => false;
         public bool ContainsUWPSample => false;
