@@ -21,8 +21,8 @@ namespace Snppts.Snippets
         public IEnumerable<Uri> ImageUris => new List<Uri>
         {
             new Uri("https://raw.githubusercontent.com/RadekVyM/Gadgets-Store-App/main/Images/flyout-min.gif"),
-            new Uri("https://raw.githubusercontent.com/RadekVyM/Gadgets-Store-App/main/Images/home-min.gif"),
-            new Uri("https://raw.githubusercontent.com/RadekVyM/Gadgets-Store-App/main/Images/productdetail-min.gif"),
+            new Uri("https://raw.githubusercontent.com/RadekVyM/Gadgets-Store-App/main/Images/home.jpg"),
+            new Uri("https://raw.githubusercontent.com/RadekVyM/Gadgets-Store-App/main/Images/productdetail.jpg"),
         };
 
         public IList<Category> Categories => new List<Category>
