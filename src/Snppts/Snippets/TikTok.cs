@@ -27,7 +27,7 @@ namespace Snppts.Snippets
 
         public IList<Category> Categories => new List<Category>
         {
-            Category.LOGIN
+            Category.CAROUSEL
         };
 
         public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("ValonK/Xamarin.Forms.TikTok")
