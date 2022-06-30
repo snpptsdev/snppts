@@ -4,7 +4,7 @@
 
 Hi! Welcome to Snppts.dev!
 
-If you create cool UIs in Xamarin, this is the place to be! You're welcome to add your created UIs and become part of our ever-growing library of content! Please keep in mind that what you are sharing does not violate the community [code of conduct](https://github.com/snpptsdev/snppts/blob/master/CODE_OF_CONDUCT.md).
+If you create cool UIs in .NET MAUI (or still in Xamarin!), this is the place to be! You're welcome to add your created UIs and become part of our ever-growing library of content! Please keep in mind that what you are sharing does not violate the community [code of conduct](https://github.com/snpptsdev/snppts/blob/master/CODE_OF_CONDUCT.md).
 
 # Add yourself as an author
 
