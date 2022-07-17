@@ -21,8 +21,8 @@ namespace Snppts.Snippets
 
         public IEnumerable<Uri> ImageUris => new List<Uri>
         {
-            new Uri("https://github.com/ValonK/Xamarin.Forms.TikTok/raw/main/assets/1.jpg?raw=true"),
-            new Uri("https://github.com/ValonK/Xamarin.Forms.TikTok/raw/main/assets/2.jpg?raw=true")
+            new Uri("https://github.com/ValonK/Xamarin.Forms.TikTok/raw/main/assets/1.png?raw=true"),
+            new Uri("https://github.com/ValonK/Xamarin.Forms.TikTok/raw/main/assets/2.png?raw=true")
         };
 
         public IList<Category> Categories => new List<Category>
