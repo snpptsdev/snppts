@@ -74,9 +74,9 @@ A few pointers:
 - Choose one or more appropriate categories for your creation. If there's no existing category that fits your creation you're allowed to add one but it will be reviewed upon submitting your PR.
 - With `ImageUris` you can supply one or more URIs showing off screenshots of your creation. Please make sure that these screenshots are all of a single screen, so no compilations.
 
-# Just Xamarin please
+# Just .NET MAUI and Xamarin please
 
-This site is dedicated to Xamarin, so samples in Swift, Java, Objective-C and the likes will not be accepted. Since we will be looking at each PR we will reject any that are not about Xamarin.
+This site is dedicated to .NET MAUI and Xamarin, so samples in Swift, Java, Objective-C and the likes will not be accepted. Since we will be looking at each PR we will reject any that are not about .NET MAUI or Xamarin.
 
 # The last step...
 
