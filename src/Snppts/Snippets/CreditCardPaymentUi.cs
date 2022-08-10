@@ -26,7 +26,7 @@ namespace Snppts.Snippets
 
         public IList<Category> Categories => new List<Category>
         {
-            Category.WALKTHROUGHS, Category.CARDS
+            Category.WALKTHROUGHS, Category.CARDS, Category.NAVIGATIONS,
         };
 
         public Uri ExternalUri => new Uri("https://github.com/DamianSuess/Learn.MauiPaymentUi");
