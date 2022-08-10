@@ -6,7 +6,7 @@ using Snppts.Infrastructure;
 
 namespace Snppts.Snippets
 {
-    public class ParallaxCarousel : IAmASnippet
+    public class CreditCardpaymentUi : IAmASnippet
     {
         public string Slug => "credit-card-payment-ui";
         public string Title => "MAUI Credit Card Payment UI";
