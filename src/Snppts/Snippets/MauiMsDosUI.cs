@@ -22,8 +22,8 @@ namespace Snppts.Snippets
         public IEnumerable<Uri> ImageUris => new List<Uri>
         {
             //Mobile
-            new Uri("https://github.com/jm-parent/MSDos4Ever/blob/master/MSDos4Ever/SnpptsImages/msdos_ios_landscape.png?raw=true"),
             new Uri("https://github.com/jm-parent/MSDos4Ever/blob/master/MSDos4Ever/SnpptsImages/msdos_ios_portrait.png?raw=true"),
+            new Uri("https://github.com/jm-parent/MSDos4Ever/blob/master/MSDos4Ever/SnpptsImages/msdos_ios_landscape.png?raw=true"),
             //Windows
             new Uri("https://github.com/jm-parent/MSDos4Ever/blob/master/MSDos4Ever/SnpptsImages/msdos_windows.png?raw=true")
 
