@@ -21,8 +21,8 @@ namespace Snppts.Snippets
 
         public IEnumerable<Uri> ImageUris => new List<Uri>
         {
-            new Uri("https://github.com/sattasundar/maui-starbucks-ui/blob/main/images/android_splash.png"),
             new Uri("https://github.com/sattasundar/maui-starbucks-ui/blob/main/images/android_home.png"),
+            new Uri("https://github.com/sattasundar/maui-starbucks-ui/blob/main/images/android_splash.png"),
             new Uri("https://github.com/sattasundar/maui-starbucks-ui/blob/main/images/android_detail.png"),
         };
 
