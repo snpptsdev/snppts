@@ -22,8 +22,8 @@ namespace Snppts.Snippets
         public IEnumerable<Uri> ImageUris => new List<Uri>
         {
             new Uri("https://raw.githubusercontent.com/sattasundar/maui-starbucks-ui/main/images/android_home.png"),
-            new Uri("https://raw.githubusercontent.com/sattasundar/maui-starbucks-ui/blob/main/images/android_detail.png"),
-            new Uri("https://raw.githubusercontent.com/sattasundar/maui-starbucks-ui/blob/main/images/android_splash.png"),
+            new Uri("https://raw.githubusercontent.com/sattasundar/maui-starbucks-ui/main/images/android_detail.png"),
+            new Uri("https://raw.githubusercontent.com/sattasundar/maui-starbucks-ui/main/images/android_splash.png"),
         };
 
         public IList<Category> Categories => new List<Category>
