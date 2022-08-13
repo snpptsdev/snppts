@@ -1,14 +1,14 @@
-<img src="https://raw.githubusercontent.com/snpptsdev/snppts/master/src/Snppts/wwwroot/img/snppts_logo.png" width="300px" />
+<img src="https://raw.githubusercontent.com/snpptsdev/snppts/main/src/Snppts/wwwroot/img/snppts_logo.png" width="300px" />
 
 # Welcome
 
 Hi! Welcome to Snppts.dev!
 
-If you create cool UIs in Xamarin, this is the place to be! You're welcome to add your created UIs and become part of our ever-growing library of content! Please keep in mind that what you are sharing does not violate the community [code of conduct](https://github.com/snpptsdev/snppts/blob/master/CODE_OF_CONDUCT.md).
+If you create cool UIs in .NET MAUI (or still in Xamarin!), this is the place to be! You're welcome to add your created UIs and become part of our ever-growing library of content! Please keep in mind that what you are sharing does not violate the community [code of conduct](https://github.com/snpptsdev/snppts/blob/main/CODE_OF_CONDUCT.md).
 
 # Add yourself as an author
 
-To add yourself as a Snppts author you can fork this project, add yourself to the [authors folder](https://github.com/snpptsdev/snppts/tree/master/src/Snppts/Authors) as a class, implementing the `IAmAnAuthor` interface.
+To add yourself as a Snppts author you can fork this project, add yourself to the [authors folder](https://github.com/snpptsdev/snppts/tree/main/src/Snppts/Authors) as a class, implementing the `IAmAnAuthor` interface.
 
 The result should look something like this:
 
@@ -35,7 +35,7 @@ A few pointers:
 
 # Add your first snippet
 
-To add a snippet you can fork this project, add your snippet to the [Snippets folder](https://github.com/snpptsdev/snppts/tree/master/src/Snppts/Snippets) as a class, implementing the `IAmASnippet` interface.
+To add a snippet you can fork this project, add your snippet to the [Snippets folder](https://github.com/snpptsdev/snppts/tree/main/src/Snppts/Snippets) as a class, implementing the `IAmASnippet` interface.
 
 The result should look something like this:
 
@@ -55,8 +55,8 @@ public class PinBasedLogin : IAmASnippet
 
     public IEnumerable<Uri> ImageUris => new List<Uri>
     {
-        new Uri("https://raw.githubusercontent.com/snpptsio/MigratedImages/master/18/60.jpg"),
-        new Uri("https://raw.githubusercontent.com/snpptsio/MigratedImages/master/18/61.jpg")
+        new Uri("https://raw.githubusercontent.com/snpptsio/MigratedImages/main/18/60.jpg"),
+        new Uri("https://raw.githubusercontent.com/snpptsio/MigratedImages/main/18/61.jpg")
     };
 
     public IList<Category> Categories => new List<Category>
@@ -74,9 +74,9 @@ A few pointers:
 - Choose one or more appropriate categories for your creation. If there's no existing category that fits your creation you're allowed to add one but it will be reviewed upon submitting your PR.
 - With `ImageUris` you can supply one or more URIs showing off screenshots of your creation. Please make sure that these screenshots are all of a single screen, so no compilations.
 
-# Just Xamarin please
+# Just .NET MAUI and Xamarin please
 
-This site is dedicated to Xamarin, so samples in Swift, Java, Objective-C and the likes will not be accepted. Since we will be looking at each PR we will reject any that are not about Xamarin.
+This site is dedicated to .NET MAUI and Xamarin, so samples in Swift, Java, Objective-C and the likes will not be accepted. Since we will be looking at each PR we will reject any that are not about .NET MAUI or Xamarin.
 
 # The last step...
 
@@ -88,4 +88,4 @@ Don't forget to incorporate the Featured on Snppts badge on your blog and link b
 
 # Acknowledgements
 * Thanks to [PlanetXamarin](https://www.planetxamarin.com) for the inspiration on how to create Snppts.
-* Thanks to [our awesome contributors](https://github.com/snpptsdev/snppts/graphs/contributors) and our [community of authors](https://github.com/snpptsdev/snppts/tree/master/src/Snppts/Authors) who make this all possible.
+* Thanks to [our awesome contributors](https://github.com/snpptsdev/snppts/graphs/contributors) and our [community of authors](https://github.com/snpptsdev/snppts/tree/main/src/Snppts/Authors) who make this all possible.

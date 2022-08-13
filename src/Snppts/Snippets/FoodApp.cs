@@ -10,7 +10,7 @@ namespace Snppts.Snippets
     {
         public string Slug => "foodapp";
         public string Title => "foodapp";
-        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("danielmonettelli/XF_FoodApp");
+        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("danimonettelli/XF_FoodApp");
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => true;
@@ -51,6 +51,6 @@ namespace Snppts.Snippets
             Category.PRODUCTS, Category.CARDS, Category.PHOTOS, Category.PROFILES
         };
 
-        public Uri ExternalUri => new Uri("https://danielmonetelli.azurewebsites.net/creating-a-clean-style-library-for-xamarin-forms-v1-0/");
+        public Uri ExternalUri => new Uri("https://danimonettelli.github.io/");
     }
 }

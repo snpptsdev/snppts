@@ -15,7 +15,7 @@ namespace Snppts.Snippets
         public bool ContainsiOSSample => false;
         public bool ContainsUWPSample => false;
 
-        public string Description => "StarbucksRedisgn App UI build in all new .NET MAUI ";
+        public string Description => "StarbucksRedesign App UI build in all new .NET MAUI ";
 
         public IAmAnAuthor AuthorInfo => new SattaSundar();
 
