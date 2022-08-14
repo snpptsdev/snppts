@@ -8,6 +8,7 @@ namespace Snppts.Authors
         public string FirstName => "Vladislav";
         public string LastName => "Antonyuk";
         public Uri Website => new Uri("https://vladislavantonyuk.azurewebsites.net/");
+        public string TwitterHandle => string.Empty;
         public string GitHubHandle => "VladislavAntonyuk";
         public string GravatarHash => "c0b401631d8b65318905a76d8c643bad";
     }
