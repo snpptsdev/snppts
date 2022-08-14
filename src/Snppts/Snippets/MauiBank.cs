@@ -6,7 +6,7 @@ using Snppts.Extensions;
 
 namespace Snppts.Snippets
 {
-    public class MauiMsDosUI : IAmASnippet
+    public class MauiBank : IAmASnippet
     {
         public string Slug => "dotnet-maui-bank";
         public string Title => ".NET MAUI Bank app";
