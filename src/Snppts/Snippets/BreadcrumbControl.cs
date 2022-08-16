@@ -15,7 +15,7 @@ namespace Snppts.Snippets
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;
 
-        public string Description => "This is a breadcrumb navigation control https://www.surveymonkey.com/r/maui-ui-challengethat is completely automatic and uses the Navigation stack to get the page titles to generate the breadcrumbs.";
+        public string Description => "This is a breadcrumb navigation control that is completely automatic and uses the Navigation stack to get the page titles to generate the breadcrumbs.";
 
         public IAmAnAuthor AuthorInfo => new IeuanWalker();
 
