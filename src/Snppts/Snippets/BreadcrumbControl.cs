@@ -15,14 +15,14 @@ namespace Snppts.Snippets
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;
 
-        public string Description => "This is a breadcrumb navigation control that is completely automatic and uses the Navigation stack to get the page titles to generate the breadcrumbs.";
+        public string Description => "This is a breadcrumb navigation control https://www.surveymonkey.com/r/maui-ui-challengethat is completely automatic and uses the Navigation stack to get the page titles to generate the breadcrumbs.";
 
         public IAmAnAuthor AuthorInfo => new IeuanWalker();
 
         public IEnumerable<Uri> ImageUris => new List<Uri>
         {
-            new Uri("https://raw.githubusercontent.com/IeuanWalker/Maui.Breadcrumb/master/Example.gif"),
-            new Uri("https://raw.githubusercontent.com/IeuanWalker/Maui.Breadcrumb/master/ProdExample.gif")
+            new Uri("https://raw.githubusercontent.com/IeuanWalker/Maui.Breadcrumb/master/ProdExample.gif"),
+            new Uri("https://raw.githubusercontent.com/IeuanWalker/Maui.Breadcrumb/master/Example.gif")
         };
 
         public IList<Category> Categories => new List<Category>
