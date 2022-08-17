@@ -1,9 +1,3 @@
-using System;
-using System.Collections.Generic;
-using Snppts.Authors;
-using Snppts.Extensions;
-using Snppts.Infrastructure;
-
 public class HealthTracker : IAmASnippet
 {
     public string Slug => "health-tracker";

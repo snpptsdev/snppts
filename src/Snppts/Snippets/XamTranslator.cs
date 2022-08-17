@@ -1,9 +1,3 @@
-using System;
-using System.Collections.Generic;
-using Snppts.Authors;
-using Snppts.Extensions;
-using Snppts.Infrastructure;
-
 public class XamTranslator : IAmASnippet
 {
     public string Slug => "xam-translator";

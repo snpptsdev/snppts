@@ -6,7 +6,7 @@
 
 @{ 
     ViewBag.Title = "Welcome to Snppts";
-    ViewBag.Description = "A selection of Xamarin.Forms UI snippets for use in your own apps!";
+ViewBag.Description = "A selection of Xamarin.Forms UI snippets for use in your own apps!";
 }
 
 @if (Model.Count() > 0)
@@ -14,35 +14,35 @@
     <div class="row">
         <h3 class="title">Our snippets</h3>
         @{
-            var count = 0;
-        }
+        var count = 0;
+    }
 
         <div class="row">
             @foreach (var item in Model)
+        {
+            if (count % 3 == 0)
             {
-                if (count % 3 == 0)
-                {
-                    @Html.Raw("</div><div class=\"row\">")
-                }
-
-                count += 1;
-
-                <partial name="Partials/_SnippetListItem" model="@item" />
+                @Html.Raw("</div><div class=\"row\">")
             }
+
+            count += 1;
+
+            <partial name="Partials/_SnippetListItem" model="@item" />
+        }
         </div>
     </div>
     <div class="row pager">
         @Html.PagedListPager((IPagedList)Model, page => Url.Action("Category", new { page }), new PagedListRenderOptions()
-        {
-            LinkToNextPageFormat = "»",
-            LinkToPreviousPageFormat = "«",
-            DisplayLinkToFirstPage = PagedListDisplayMode.Never,
-            DisplayLinkToPreviousPage = PagedListDisplayMode.IfNeeded,
-            DisplayLinkToLastPage = PagedListDisplayMode.Never,
-            DisplayLinkToNextPage = PagedListDisplayMode.IfNeeded,
-            MaximumPageNumbersToDisplay = 0,
-            DisplayEllipsesWhenNotShowingAllPageNumbers = false
-        })
+    {
+        LinkToNextPageFormat = "»",
+        LinkToPreviousPageFormat = "«",
+        DisplayLinkToFirstPage = PagedListDisplayMode.Never,
+        DisplayLinkToPreviousPage = PagedListDisplayMode.IfNeeded,
+        DisplayLinkToLastPage = PagedListDisplayMode.Never,
+        DisplayLinkToNextPage = PagedListDisplayMode.IfNeeded,
+        MaximumPageNumbersToDisplay = 0,
+        DisplayEllipsesWhenNotShowingAllPageNumbers = false
+    })
     </div> 
 }
 else

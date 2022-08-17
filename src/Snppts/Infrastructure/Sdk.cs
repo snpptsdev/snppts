@@ -1,8 +1,7 @@
-namespace Snppts.Infrastructure
+namespace Snppts.Infrastructure;
+
+public enum Sdk
 {
-    public enum Sdk
-    {
-        XamarinForms,
-        Maui
-    }
+    XamarinForms,
+    Maui
 }

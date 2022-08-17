@@ -1,9 +1,3 @@
-using System;
-using System.Collections.Generic;
-using Snppts.Authors;
-using Snppts.Extensions;
-using Snppts.Infrastructure;
-
 public class BottomAppBar : IAmASnippet
 {
     public string Slug => "bottomappbar-material";

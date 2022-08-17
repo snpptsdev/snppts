@@ -1,15 +1,11 @@
-﻿using System;
-using Snppts.Infrastructure;
+﻿namespace Snppts.Authors;
 
-namespace Snppts.Authors
+public class KymPhillpotts : IAmAnAuthor
 {
-    public class KymPhillpotts : IAmAnAuthor
-    {
-        public string FirstName => "Kym";
-        public string LastName => "Phillpotts";
-        public Uri Website => new Uri("https://kymphillpotts.com");
-        public string TwitterHandle => "kphillpotts";
-        public string GitHubHandle => "kphillpotts";
-        public string GravatarHash => "3218e66502c6f0836dfd0f02f210ba0b";
-    }
+    public string FirstName => "Kym";
+    public string LastName => "Phillpotts";
+    public Uri Website => new Uri("https://kymphillpotts.com");
+    public string TwitterHandle => "kphillpotts";
+    public string GitHubHandle => "kphillpotts";
+    public string GravatarHash => "3218e66502c6f0836dfd0f02f210ba0b";
 }
