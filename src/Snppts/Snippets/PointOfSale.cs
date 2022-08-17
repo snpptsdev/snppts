@@ -23,4 +23,6 @@ public class PointOfSale : IAmASnippet
     {
         Category.STORES
     };
+    
+    public Uri ExternalUri => null;
 }
