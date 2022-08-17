@@ -14,6 +14,7 @@ namespace Snppts.Snippets
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;
+        public Sdk BuiltWith => Sdk.XamarinForms;
 
         public string Description => "Inspired in NuBank app, a simple timeline implementation using ListView with ViewCells and header.\n\nSome details about implementation:\n\nListView header was made using CarouselView.FormsPlugin to show some informations.\nFor a better aspect, the fonts was changed to Gotham-Bold and Gotham-Light.\nTo show correct date time information, was created a converter to parse DateTime object and transform in string.";
 

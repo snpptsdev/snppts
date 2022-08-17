@@ -15,6 +15,8 @@ namespace Snppts.Snippets
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;
 
+        public Sdk BuiltWith => Sdk.XamarinForms;
+        
         public string Description => "The Loan Calculator is an application developed using Xamarin.Forms and <a href=\"https://www.syncfusion.com/xamarin-ui-controls\" target=\"_blank\">Syncfusion</a> controls to calculate the EMI with the given details of principal amount, tenure, and interest";
 
         public IAmAnAuthor AuthorInfo => new Syncfusion();

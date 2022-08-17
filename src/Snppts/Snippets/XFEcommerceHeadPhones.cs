@@ -9,13 +9,14 @@ namespace Snppts.Snippets
     public class XFEcommerceHeadPhones : IAmASnippet
     {
         public string Slug => "xamarinforms-ecommerce-headphones";
-        public string Title => "XamarinForms Headphones e-commerce concept";
-        public string Description => "Headset e-commerce concept developed at XamarinForms";
+        public string Title => "Xamarin.Forms Headphones e-commerce concept";
+        public string Description => "Headset e-commerce concept developed at Xamarin.Forms";
         public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("Altevir/xamarinforms-ecommerce-headphones");
         public Uri ExternalUri => null;
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;
+        public Sdk BuiltWith => Sdk.XamarinForms;
         public IAmAnAuthor AuthorInfo => new AltevirCardosoNeto();
 
         public IEnumerable<Uri> ImageUris => new List<Uri>

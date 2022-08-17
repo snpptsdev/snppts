@@ -16,8 +16,9 @@ namespace Snppts.Snippets
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;
+        public Sdk BuiltWith => Sdk.XamarinForms;
 
-        public string Description => "Simple Login UI. Direct GitHub link: <a href=\"https://github.com/CrossGeeks/Xamarin.Forms.UI/blob/master/UISampleApp/Views/Logins/LoginPage.xaml\" target=\"_blank\">https://github.com/CrossGeeks/Xamarin.Forms.UI/blob/master/UISampleApp/Views/Logins/LoginPage.xaml</a>. NOTE: Check I'm using an effect for line border entry, the implementation is in the Android/iOS project.";
+        public string Description => "Simple Login UI. NOTE: Check I'm using an effect for line border entry, the implementation is in the Android/iOS project.";
 
         public IAmAnAuthor AuthorInfo => new CharlinAgramonte();
 

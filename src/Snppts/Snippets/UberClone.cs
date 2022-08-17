@@ -16,6 +16,7 @@ namespace Snppts.Snippets
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;
+        public Sdk BuiltWith => Sdk.XamarinForms;
 
         public string Description => "A Xamarin.Forms version of the Uber App to prove you can create goodlooking UI with Xamarin.Forms.";
 

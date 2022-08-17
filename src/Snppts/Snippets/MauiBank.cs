@@ -13,6 +13,7 @@ namespace Snppts.Snippets
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => true;
+        public Sdk BuiltWith => Sdk.Maui;
 
         public string Description => "Replicate Monobank design.";
 

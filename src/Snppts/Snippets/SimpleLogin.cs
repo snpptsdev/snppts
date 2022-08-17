@@ -17,6 +17,7 @@ namespace Snppts.Snippets
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;
+        public Sdk BuiltWith => Sdk.XamarinForms;
         public IAmAnAuthor AuthorInfo => new EricLeija();
         public IEnumerable<Uri> ImageUris => new List<Uri> { new Uri("https://raw.githubusercontent.com/leijae/SimpleLogin/master/SimpleLogin/SimpleLogin/SimpleLogin/Screenshot/login.png") };
         public IList<Category> Categories => new List<Category> { Category.LOGIN };

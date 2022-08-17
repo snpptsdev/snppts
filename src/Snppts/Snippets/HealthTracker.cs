@@ -11,6 +11,7 @@ public class HealthTracker : IAmASnippet
     public bool ContainsAndroidSample => true;
     public bool ContainsiOSSample => true;
     public bool ContainsUWPSample => false;
+    public Sdk BuiltWith => Sdk.Maui;
 
     public string Description => "A Health Tracker app that helps keep weight goals.";
 

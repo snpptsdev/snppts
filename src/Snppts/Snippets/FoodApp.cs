@@ -14,6 +14,7 @@ namespace Snppts.Snippets
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => true;
+        public Sdk BuiltWith => Sdk.XamarinForms;
 
         public string Description => "FoodApp is an application focused on good practices that should be in the Styles of Xamarin.Forms.";
 

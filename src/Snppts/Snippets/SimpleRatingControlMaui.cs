@@ -23,6 +23,8 @@ namespace Snppts.Snippets
         public bool ContainsiOSSample => true;
 
         public bool ContainsUWPSample => true;
+        
+        public Sdk BuiltWith => Sdk.Maui;
 
         public IAmAnAuthor AuthorInfo => new SebastianJensen();
 

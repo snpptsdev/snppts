@@ -15,6 +15,8 @@ namespace Snppts.Snippets
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;
 
+        public Sdk BuiltWith => Sdk.XamarinForms;
+
         public string Description => "Login UI. NOTE: Check I'm using a custom renderer, the implementation is in the Android/iOS project.";
 
         public IAmAnAuthor AuthorInfo => new CharlinAgramonte();
