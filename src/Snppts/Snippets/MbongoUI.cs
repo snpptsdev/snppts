@@ -10,12 +10,13 @@ namespace Snppts.Snippets
     {
         public string Slug => "MbongoUI";
         public string Title => "MbongoUI";
-        public string Description => "Developed in XamarinForms to show how we can develop beatiful screens with XamarinForms";
+        public string Description => "Developed in Xamarin.Forms to show how we can develop beatiful screens with XamarinForms";
         public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("Amaro96/MbongoUIApp");
         public Uri ExternalUri => null;
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => false;
         public bool ContainsUWPSample => false;
+        public Sdk BuiltWith => Sdk.XamarinForms;
         public IAmAnAuthor AuthorInfo => new AmaroManungu();
 
         public IEnumerable<Uri> ImageUris => new List<Uri>

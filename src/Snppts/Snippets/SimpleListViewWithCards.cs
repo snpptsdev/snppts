@@ -14,6 +14,7 @@ namespace Snppts.Snippets
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;
+        public Sdk BuiltWith => Sdk.XamarinForms;
 
         public string Description => "A very simple example demonstrating how to create Cards using Xamarin Forms with Xaml.";
 

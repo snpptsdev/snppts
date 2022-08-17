@@ -26,6 +26,8 @@ namespace Snppts.Snippets
 
         public bool ContainsUWPSample => false;
 
+        public Sdk BuiltWith => Sdk.XamarinForms;
+
         public IAmAnAuthor AuthorInfo => new SebastianJensen();
 
         public IEnumerable<Uri> ImageUris => new List<Uri> { new Uri("https://raw.githubusercontent.com/tsjdev-apps/xf-initialsview/master/Docs/InitialsView.gif") };

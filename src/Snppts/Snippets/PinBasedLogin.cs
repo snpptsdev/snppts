@@ -14,6 +14,7 @@ namespace Snppts.Snippets
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;
+        public Sdk BuiltWith => Sdk.XamarinForms;
 
         public string Description => "This snippet was created to demonstrate a simple PIN-based login screen. It uses buttons and images to create the numpad control. Tapping on a number adds the number to a property bound to the interface. Also contains some simple length checks (max. 6 characters) for the PIN code and uses Fresh MVVM for its page models.";
 

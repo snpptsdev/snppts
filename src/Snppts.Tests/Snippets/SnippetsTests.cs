@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Linq;
 using System.Net;
+using System.Threading.Tasks;
 using NUnit.Framework;
 using Snppts.Infrastructure;
 
@@ -11,6 +13,7 @@ namespace Snppts.Tests.Snippets
     {
         private const string GITHUB_BASE_URL = "https://github.com";
         private IEnumerable<Type> _types;
+        private readonly HttpClient _httpClient = new HttpClient();
 
         [SetUp]
         public void SetUp()
@@ -22,66 +25,72 @@ namespace Snppts.Tests.Snippets
         }
 
         [Test]
-        public void RepositoriesShouldBeReachable()
+        public async Task RepositoriesShouldBeReachable()
         {
             foreach (var type in _types)
             {
                 var snippetInstance = Activator.CreateInstance(type) as IAmASnippet;
                 var repositoryUri = $"{GITHUB_BASE_URL}/{snippetInstance.GitHubRepoInfo.GitHubRepoName}";
 
-                var statusCode = GetStatusCodeFromUri(repositoryUri);
+                var statusCode = await GetStatusCodeFromUri(repositoryUri);
 
-                Assert.AreEqual(HttpStatusCode.OK, statusCode);
+                Assert.AreEqual(HttpStatusCode.OK, statusCode, $"{repositoryUri} is not reachable");
             }
         }
 
         [Test]
-        public void InvalidRepositoryShouldBeNotFound()
+        public async Task InvalidRepositoryShouldBeNotFound()
         {
             var invalidUri = $"{GITHUB_BASE_URL}/invalid/repository-for-testing";
 
-            var statusCode = GetStatusCodeFromUri(invalidUri);
+            var statusCode = await GetStatusCodeFromUri(invalidUri);
 
             Assert.AreEqual(HttpStatusCode.NotFound, statusCode);
         }
 
         [Test]
-        public void ImagesShouldBeReachable()
+        public async Task ImagesShouldBeReachable()
         {
             foreach (var type in _types)
             {
                 var snippetInstance = Activator.CreateInstance(type) as IAmASnippet;
                 foreach (var uri in snippetInstance.ImageUris)
                 {
-                    var statusCode = GetStatusCodeFromUri(uri);
+                    var statusCode = await GetStatusCodeFromUri(uri);
 
-                    Assert.AreEqual(HttpStatusCode.OK, statusCode);
+                    Assert.AreEqual(HttpStatusCode.OK, statusCode, $"Image {uri} is not reachable");
                 }
             }
         }
 
-        private HttpStatusCode GetStatusCodeFromUri(string uri)
+        private Task<HttpStatusCode> GetStatusCodeFromUri(string uri)
         {
             return GetStatusCodeFromUri(new Uri(uri));
         }
 
-        private HttpStatusCode GetStatusCodeFromUri(Uri uri)
+        private async Task<HttpStatusCode> GetStatusCodeFromUri(Uri uri)
         {
             try
             {
-                var request = WebRequest.Create(uri);
-                request.Method = "HEAD";
-                var response = request.GetResponse() as HttpWebResponse;
+                var response = await _httpClient.SendAsync(new HttpRequestMessage(HttpMethod.Head, uri));
+
+                if (response.StatusCode == HttpStatusCode.TooManyRequests)
+                {
+                    await TestContext.Out.WriteLineAsync("Hit HTTP 429, trying to get retry-after value...");
+
+                    var delay = response.Headers.RetryAfter.Delta ?? TimeSpan.FromSeconds(10);
+                    
+                    await TestContext.Out.WriteLineAsync($"Waiting for {delay.Seconds}");
+                    await Task.Delay(delay.Seconds);
+                    
+                    return await GetStatusCodeFromUri(uri);
+                }
+
                 return response.StatusCode;
             }
-            catch (WebException webException)
-            {
-                if (webException.Status == WebExceptionStatus.ProtocolError)
-                {
-                    return ((HttpWebResponse)webException.Response).StatusCode;
-                }
-                
-                throw new Exception($"Exception for URL {uri} Message: {webException.Message}", webException);
+            catch (HttpRequestException exception)
+            {                
+                throw new Exception($"Exception for URL {uri} Message: {exception.Message}", exception);
             }
         }
     }

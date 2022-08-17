@@ -16,6 +16,7 @@ namespace Snppts.Snippets
         public bool ContainsAndroidSample => false;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;
+        public Sdk BuiltWith => Sdk.XamarinForms;
 
         public string Description => "Xamarin Forms iOS Maps, CustomMarkers, Polylines, Clusters and CollectionView!";
 

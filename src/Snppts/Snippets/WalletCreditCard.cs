@@ -10,12 +10,13 @@ namespace Snppts.Snippets
     {
         public string Slug => "xamarinforms-wallet-creditcard";
         public string Title => "XanarinForms Wallet Credit Card";
-        public string Description => "Concept of Wallet Credit Card App developed with Xamarin Forms.";
+        public string Description => "Concept of Wallet Credit Card App developed with Xamarin.Forms.";
         public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("Altevir/xamarinforms-wallet-creditcard");
         public Uri ExternalUri => null;
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;
+        public Sdk BuiltWith => Sdk.XamarinForms;
         public IAmAnAuthor AuthorInfo => new AltevirCardosoNeto();
 
         public IEnumerable<Uri> ImageUris => new List<Uri>

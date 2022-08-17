@@ -14,6 +14,7 @@ namespace Snppts.Snippets
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => true;
+        public Sdk BuiltWith => Sdk.Maui;
 
         public string Description => "A sample credit card payment screen written using .NET MAUI and the Prism Library which runs on Windows, Android, iOS and Tizen.";
 

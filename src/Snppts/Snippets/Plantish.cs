@@ -21,6 +21,7 @@ namespace Snppts.Snippets
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => false;
         public bool ContainsUWPSample => false;
+        public Sdk BuiltWith => Sdk.XamarinForms;
         public IAmAnAuthor AuthorInfo => new HavardMoas();
         public IEnumerable<Uri> ImageUris => new List<Uri>()
         {

@@ -11,11 +11,12 @@ namespace Snppts.Snippets
         public string Slug => "smoothies";
         public string Title => "Smoothies";
 
-        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("sthewissen/KickassUI.Runkeeper");
+        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("snpptsdev/Snppts.Foodies");
 
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;
+        public Sdk BuiltWith => Sdk.XamarinForms;
 
         public string Description => "Recently we've seen an increase in the amount of smoothies created at the office. Apparently they are the hype object of the month. So without further ado we bring you a sample product overview of smoothies. Yuk! This uses a simple hamburger menu (to counter the health level of these smoothies), a search bar and some custom fonts.";
 

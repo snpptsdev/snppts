@@ -10,10 +10,10 @@ namespace Snppts.Snippets
     {
         public string Slug => "dotnet-maui-bank";
         public string Title => ".NET MAUI Bank app";
-        public string GithubRepoName => "VladislavAntonyuk/MauiSamples";
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => true;
+        public Sdk BuiltWith => Sdk.Maui;
 
         public string Description => "Replicate Monobank design.";
 
@@ -31,7 +31,7 @@ namespace Snppts.Snippets
             Category.APPCLONE, Category.CARDS, Category.LOGIN, Category.SHOPPINGCART
         };
 
-        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("VladislavAntonyuk/MauiBank");
+        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("VladislavAntonyuk/MauiSamples/tree/main/MauiBank");
 
         public Uri ExternalUri => null;
     }

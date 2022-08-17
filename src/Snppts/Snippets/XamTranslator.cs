@@ -12,6 +12,7 @@ public class XamTranslator : IAmASnippet
     public bool ContainsAndroidSample => true;
     public bool ContainsiOSSample => true;
     public bool ContainsUWPSample => false;
+    public Sdk BuiltWith => Sdk.XamarinForms;
 
     public string Description => "This snippet was created to reproduce an Dictionary/Translator App using some Material design components.";
 

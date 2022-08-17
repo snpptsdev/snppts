@@ -16,6 +16,7 @@ namespace Snppts.Snippets
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => true;
+        public Sdk BuiltWith => Sdk.XamarinForms;
 
         public string Description => "A simple Social Network profile type page in Xamarin.Forms.";
 

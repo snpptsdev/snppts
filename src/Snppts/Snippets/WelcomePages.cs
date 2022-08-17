@@ -16,6 +16,7 @@ namespace Snppts.Snippets
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;
+        public Sdk BuiltWith => Sdk.XamarinForms;
 
         public string Description => "Template app with a few unused Welcome Pages. I'm also using Carousel on a few pages. And yes the text is slidable.";
 
