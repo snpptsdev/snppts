@@ -14,6 +14,7 @@ namespace Snppts.Snippets
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => false;
         public bool ContainsUWPSample => false;
+        public Sdk BuiltWith => Sdk.Maui;
 
         public string Description => "StarbucksRedesign App UI build in all new .NET MAUI ";
 

@@ -24,6 +24,8 @@ namespace Snppts.Snippets
 
         public bool ContainsUWPSample => false;
 
+        public Sdk BuiltWith => Sdk.XamarinForms;
+
         public IAmAnAuthor AuthorInfo => new MarcAnthonyLatty();
 
         public IEnumerable<Uri> ImageUris => new List<Uri>

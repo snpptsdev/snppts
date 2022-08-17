@@ -14,6 +14,7 @@ namespace Snppts.Snippets
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;
+        public Sdk BuiltWith => Sdk.XamarinForms;
 
         public string Description => "This is a sample uses Lottie lib to bring awesome animations to FFImageLoading images lib for Loading indicators and faulted download!! ListView that will download pictures from a URL. While downloading the pictures it will display a loading animation. If download succeeds, it will display and cache the image (FFIMageLoader). If it fails, it will display a failed download animation.";
 

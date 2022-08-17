@@ -14,6 +14,7 @@ namespace Snppts.Snippets
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => true;
+        public Sdk BuiltWith => Sdk.XamarinForms;
 
         public string Description => "Free and beautiful XAML pages for Xamarin.Forms apps by <a href=\"https://www.syncfusion.com/xamarin-ui-controls\" target=\"_blank\">Syncfusion</a>";
 

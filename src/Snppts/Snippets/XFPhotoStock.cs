@@ -9,13 +9,14 @@ namespace Snppts.Snippets
     public class PhotoStockUIDesign : IAmASnippet
     {
         public string Slug => "XamarinForms-PhotoStock-UI-Design";
-        public string Title => "Xamarin Forms PhotoStock UI Design";
-        public string Description => "Xamarin Forms photo stock application design.";
+        public string Title => "Xamarin.Forms PhotoStock UI Design";
+        public string Description => "Xamarin.Forms photo stock application design.";
         public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("ufukhawk/XamarinForms-PhotoStock-UI-Design");
         public Uri ExternalUri => null;
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;
+        public Sdk BuiltWith => Sdk.XamarinForms;
         public IAmAnAuthor AuthorInfo => new UfukHawk();
 
         public IEnumerable<Uri> ImageUris => new List<Uri>

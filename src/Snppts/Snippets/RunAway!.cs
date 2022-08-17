@@ -14,6 +14,7 @@ namespace Snppts.Snippets
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => true;
+        public Sdk BuiltWith => Sdk.XamarinForms;
 
         public string Description => "Something like a Xamarin.Forms Runtastic-like training sessions viewer, displaying gradient lines on top of Google Maps with SkiaSharp";
 

@@ -24,6 +24,8 @@ namespace Snppts.Snippets
 
         public bool ContainsUWPSample => false;
 
+        public Sdk BuiltWith => Sdk.Maui;
+
         public IAmAnAuthor AuthorInfo => new AndreasNesheim();
 
         public IEnumerable<Uri> ImageUris => new List<Uri>

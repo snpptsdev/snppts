@@ -12,7 +12,7 @@ namespace Snppts.Snippets
 
         public string Title => "Weather--";
 
-        public string Description => "This is an educational app showcasing a GraphQL Weather API consumed by a Xamarin Forms app. This repository can be used as a template for a modern Xamarin Forms 4.3 app with clean and testable architecture consuming a GraphQL endpoint.";
+        public string Description => "This is an educational app showcasing a GraphQL Weather API consumed by a Xamarin.Forms app. This repository can be used as a template for a modern Xamarin.Forms 4.3 app with clean and testable architecture consuming a GraphQL endpoint.";
 
         public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("Sankra/GraphQLDotNet");
 
@@ -23,6 +23,8 @@ namespace Snppts.Snippets
         public bool ContainsiOSSample => true;
 
         public bool ContainsUWPSample => false;
+
+        public Sdk BuiltWith => Sdk.XamarinForms;
 
         public IAmAnAuthor AuthorInfo => new RunarOvesenHjerpbakk();
 
