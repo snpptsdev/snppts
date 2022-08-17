@@ -35,7 +35,6 @@ namespace Snppts
             });
 
             var mvcBuilder = services.AddMvc();
-            mvcBuilder.SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
             mvcBuilder.AddMvcOptions((o) => o.EnableEndpointRouting = false);
 
             // Create the container builder.
