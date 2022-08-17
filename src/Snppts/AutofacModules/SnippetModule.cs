@@ -1,19 +1,16 @@
-﻿using System;
-using Autofac;
-using Snppts.Infrastructure;
+﻿using Autofac;
 
-namespace Snppts.AutofacModules
+namespace Snppts.AutofacModules;
+
+public class SnippetModule : Module
 {
-    public class SnippetModule : Module
+    protected override void Load(ContainerBuilder builder)
     {
-        protected override void Load(ContainerBuilder builder)
-        {
-            base.Load(builder);
+        base.Load(builder);
 
-            builder.RegisterAssemblyTypes(ThisAssembly)
-                   .Where(t => t.IsAssignableTo<IAmASnippet>())
-                   .AsImplementedInterfaces()
-                   .SingleInstance();
-        }
+        builder.RegisterAssemblyTypes(ThisAssembly)
+               .Where(t => t.IsAssignableTo<IAmASnippet>())
+               .AsImplementedInterfaces()
+               .SingleInstance();
     }
 }

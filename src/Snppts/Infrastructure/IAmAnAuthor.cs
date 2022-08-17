@@ -1,13 +1,11 @@
-﻿using System;
-namespace Snppts.Infrastructure
+﻿namespace Snppts.Infrastructure;
+
+public interface IAmAnAuthor
 {
-    public interface IAmAnAuthor
-    {
-        string FirstName { get; }
-        string LastName { get; }
-        Uri Website { get; }
-        string TwitterHandle { get; }
-        string GitHubHandle { get; }
-        string GravatarHash { get; }
-    }
+    string FirstName { get; }
+    string LastName { get; }
+    Uri Website { get; }
+    string TwitterHandle { get; }
+    string GitHubHandle { get; }
+    string GravatarHash { get; }
 }

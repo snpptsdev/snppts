@@ -1,16 +1,12 @@
-﻿using System;
-using Snppts.Infrastructure;
+﻿namespace Snppts.Authors;
 
-namespace Snppts.Authors
+public class RadekVymetalik : IAmAnAuthor
 {
-    public class RadekVymetalik : IAmAnAuthor
-    {
-        public string FirstName => "Radek";
-        public string LastName => "Vymětalík";
-        public Uri Website => new Uri("https://github.com/RadekVyM");
-        public string TwitterHandle => "";
-        public string GitHubHandle => "RadekVyM";
-        public string EmailAddress => "rvymetalik@email.cz";
-        public string GravatarHash => "";
-    }
+    public string FirstName => "Radek";
+    public string LastName => "Vymětalík";
+    public Uri Website => new Uri("https://github.com/RadekVyM");
+    public string TwitterHandle => "";
+    public string GitHubHandle => "RadekVyM";
+    public string EmailAddress => "rvymetalik@email.cz";
+    public string GravatarHash => "";
 }

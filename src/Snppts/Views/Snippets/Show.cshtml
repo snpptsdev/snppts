@@ -4,7 +4,7 @@
 
 @{
     ViewBag.Title = Model.Title;
-    ViewBag.Description = string.Format("Details of the '{0}' snippet", Model.Title);
+ViewBag.Description = string.Format("Details of the '{0}' snippet", Model.Title);
 }
 
 <div class="row">
@@ -32,25 +32,25 @@
         <div class="description__section">
             <h5>Platforms</h5>
             @if (Model.ContainsAndroidSample)
-            {
-                <i class="fa fa-android fa-2x"></i>
-            }
+        {
+            <i class="fa fa-android fa-2x"></i>
+        }
             @if (Model.ContainsiOSSample)
-            {
-                <i class="fa fa-apple fa-2x"></i>
-            }
+        {
+            <i class="fa fa-apple fa-2x"></i>
+        }
             @if (Model.ContainsUWPSample)
-            {
-                <i class="fa fa-windows fa-2x"></i>
-            }
+        {
+            <i class="fa fa-windows fa-2x"></i>
+        }
         </div>
         @if (Model.ExternalUri != null)
-        {
-            <div class="description__section">
+    {
+        <div class="description__section">
                 <h5>External link</h5>
                 <a href="@Model.ExternalUri.AbsoluteUri" target="_blank">Read more about this Snippet</a>
             </div>
-        }
+    }
         <div class="description__section">
             <h5> Check out the code</h5>
             <div class="github-widget" data-repo="@Model.GitHubRepoInfo.GitHubRepoName">
