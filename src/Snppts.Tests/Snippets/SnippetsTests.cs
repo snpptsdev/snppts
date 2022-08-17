@@ -74,6 +74,18 @@ namespace Snppts.Tests.Snippets
             {
                 var response = await _httpClient.SendAsync(new HttpRequestMessage(HttpMethod.Head, uri));
 
+                if (response.StatusCode == HttpStatusCode.TooManyRequests)
+                {
+                    await TestContext.Out.WriteLineAsync("Hit HTTP 429, trying to get retry-after value...");
+
+                    var delay = response.Headers.RetryAfter.Delta ?? TimeSpan.FromSeconds(10);
+                    
+                    await TestContext.Out.WriteLineAsync($"Waiting for {delay.Seconds}");
+                    await Task.Delay(delay.Seconds);
+                    
+                    return await GetStatusCodeFromUri(uri);
+                }
+
                 return response.StatusCode;
             }
             catch (HttpRequestException exception)
