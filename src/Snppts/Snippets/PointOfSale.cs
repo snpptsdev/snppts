@@ -2,7 +2,7 @@ public class PointOfSale : IAmASnippet
 {
     public string Slug => "point-of-sale";
     public string Title => "Point of Sale";
-    public string GithubRepoName => "snpptsio/Snppts.PointOfSale";
+    public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("dotnet/maui-samples/tree/main/6.0/Apps/PointOfSale");
     public bool ContainsAndroidSample => true;
     public bool ContainsiOSSample => true;
     public bool ContainsUWPSample => true;
