@@ -31,7 +31,7 @@ namespace Snppts.Tests.Snippets
 
                 var statusCode = GetStatusCodeFromUri(repositoryUri);
 
-                Assert.AreEqual(HttpStatusCode.OK, statusCode);
+                Assert.AreEqual(HttpStatusCode.OK, statusCode, $"{repositoryUri} is not reachable");
             }
         }
 
@@ -55,7 +55,7 @@ namespace Snppts.Tests.Snippets
                 {
                     var statusCode = GetStatusCodeFromUri(uri);
 
-                    Assert.AreEqual(HttpStatusCode.OK, statusCode);
+                    Assert.AreEqual(HttpStatusCode.OK, statusCode, $"Image {uri} is not reachable");
                 }
             }
         }
