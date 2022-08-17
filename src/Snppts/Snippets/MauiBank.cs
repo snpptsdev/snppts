@@ -31,7 +31,7 @@ namespace Snppts.Snippets
             Category.APPCLONE, Category.CARDS, Category.LOGIN, Category.SHOPPINGCART
         };
 
-        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("VladislavAntonyuk/MauiBank");
+        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("VladislavAntonyuk/MauiSamples");
 
         public Uri ExternalUri => null;
     }
