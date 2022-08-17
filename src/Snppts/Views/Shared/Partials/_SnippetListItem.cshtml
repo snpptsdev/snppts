@@ -3,9 +3,9 @@
 <div class="col-lg-4 col-md-4 col-sm-6 margin-bottom-20 snppt">
 
     @if (Model.ImageUris.Any())
-    {
-        <a asp-area="" asp-controller="Snippets" asp-action="Show" asp-route-slug="@Model.Slug"><img class="snippet__img" src="@Model.ImageUris.FirstOrDefault().AbsoluteUri" /></a>
-    }
+{
+    <a asp-area="" asp-controller="Snippets" asp-action="Show" asp-route-slug="@Model.Slug"><img class="snippet__img" src="@Model.ImageUris.FirstOrDefault().AbsoluteUri" /></a>
+}
 
     <h4 class="text-center"><a asp-area="" asp-controller="Snippets" asp-action="Show" asp-route-slug="@Model.Slug">@Model.Title</a></h4>
 
@@ -15,22 +15,22 @@
 
     <div class="text-center margin-bottom-20 platform-icons">
         @if (Model.ContainsiOSSample)
-        {
-            <i class="fa fa-apple"></i>
-        }
+    {
+        <i class="fa fa-apple"></i>
+    }
         @if (Model.ContainsAndroidSample)
-        {
-            <i class="fa fa-android"></i>
-        }
+    {
+        <i class="fa fa-android"></i>
+    }
         @if (Model.ContainsUWPSample)
-        {
-            <i class="fa fa-windows"></i>
-        }
+    {
+        <i class="fa fa-windows"></i>
+    }
         @if (Model.GitHubRepoInfo.GetRepoInfoFromService(Snppts.Extensions.SortExtention.GitHubRepos)?.Stars > 0)
-        {
-            <i class="fa fa-star"></i><b class="text">@Model.GitHubRepoInfo.GetRepoInfoFromService(Snppts.Extensions.SortExtention.GitHubRepos).Stars</b>
-        }
-        @*@if (Model.GitHubRepoInfo.GetRepoInfo(Snppts.Extensions.SortExtention.GitHubRepos)?.UpdatedAt != null)
+    {
+        <i class="fa fa-star"></i><b class="text">@Model.GitHubRepoInfo.GetRepoInfoFromService(Snppts.Extensions.SortExtention.GitHubRepos).Stars</b>
+    }
+    @*@if (Model.GitHubRepoInfo.GetRepoInfo(Snppts.Extensions.SortExtention.GitHubRepos)?.UpdatedAt != null)
             {
                 <p>
                     <span style="text-transform:uppercase; font-weight:bold; font-size:xx-small"> @Model.GitHubRepoInfo.GetRepoInfo(Snppts.Extensions.SortExtention.GitHubRepos).UpdatedAt.ToString("MMM/yyyy")</span>

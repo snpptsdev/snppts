@@ -7,8 +7,8 @@
 <nav>
     <ul class="nav nav-pills nav-stacked nav-small">
         @foreach (var item in Model)
-        {
-            <li><a asp-area="" asp-controller="Snippets" asp-action="Category" asp-route-id="@((int)item)">@item.ToString().ToUpper()</a></li>
-        }
+    {
+        <li><a asp-area="" asp-controller="Snippets" asp-action="Category" asp-route-id="@((int)item)">@item.ToString().ToUpper()</a></li>
+    }
     </ul>
 </nav>
