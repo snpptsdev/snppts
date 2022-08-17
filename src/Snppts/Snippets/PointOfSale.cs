@@ -7,6 +7,7 @@ public class PointOfSale : IAmASnippet
     public bool ContainsiOSSample => true;
     public bool ContainsUWPSample => true;
     public bool ContainsmacOSSample => true;
+    public Sdk BuiltWith => Sdk.Maui;
 
     public string Description => "This snippet shows using .NET MAUI and a variety of community libraries to create a beautiful Point of Sale app suite featuring a desktop/tablet UI and mobile UI.";
 
