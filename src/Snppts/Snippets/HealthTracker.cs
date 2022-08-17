@@ -29,7 +29,7 @@ public class HealthTracker : IAmASnippet
         Category.DASHBOARD,
     };
 
-    public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("https://github.com/nicholostyler/Health-Tracker");
+    public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("nicholostyler/Health-Tracker");
 
     public Uri ExternalUri => new Uri("https://github.com/nicholostyler/Health-Tracker");
 }
