@@ -1,5 +1,3 @@
-using System;
-using Snppts.Infrastructure;
 public class UfukHawk : IAmAnAuthor
 {
     public string FirstName => "Ufuk";

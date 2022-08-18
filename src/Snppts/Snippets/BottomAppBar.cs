@@ -1,9 +1,3 @@
-using System;
-using System.Collections.Generic;
-using Snppts.Authors;
-using Snppts.Extensions;
-using Snppts.Infrastructure;
-
 public class BottomAppBar : IAmASnippet
 {
     public string Slug => "bottomappbar-material";
@@ -12,6 +6,7 @@ public class BottomAppBar : IAmASnippet
     public bool ContainsAndroidSample => true;
     public bool ContainsiOSSample => true;
     public bool ContainsUWPSample => false;
+    public Sdk BuiltWith => Sdk.XamarinForms;
 
     public string Description => "This snippet was created to reproduce the Material BottomAppBar, originally from android using custom renderers and Xamarin.Forms Visual.Material.";
 

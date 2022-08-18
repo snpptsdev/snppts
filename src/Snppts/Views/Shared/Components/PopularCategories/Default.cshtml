@@ -4,9 +4,9 @@
 
 <div class="tags-cloud">
     @foreach (var item in Model)
-    {
-        <div class="tag">
+{
+    <div class="tag">
             <a asp-area="" asp-controller="Snippets" asp-action="Category" asp-route-id="@((int)item)">@item.ToString().ToLower()</a>
         </div>
-    }
+}
 </div>

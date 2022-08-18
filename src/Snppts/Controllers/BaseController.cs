@@ -1,10 +1,7 @@
-﻿using System;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Filters;
+﻿using Microsoft.AspNetCore.Mvc;
 
-namespace Snppts.Controllers
+namespace Snppts.Controllers;
+
+public class BaseController : Controller
 {
-    public class BaseController : Controller
-    {
-    }
 }

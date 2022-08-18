@@ -1,88 +1,96 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Linq;
 using System.Net;
+using System.Threading.Tasks;
 using NUnit.Framework;
 using Snppts.Infrastructure;
 
-namespace Snppts.Tests.Snippets
+namespace Snppts.Tests.Snippets;
+
+public class SnippetsTests
 {
-    public class SnippetsTests
+    private const string GITHUB_BASE_URL = "https://github.com";
+    private IEnumerable<Type> _types;
+    private readonly HttpClient _httpClient = new HttpClient();
+
+    [SetUp]
+    public void SetUp()
     {
-        private const string GITHUB_BASE_URL = "https://github.com";
-        private IEnumerable<Type> _types;
+        _types = typeof(Program).Assembly
+            .GetLoadableTypes()
+            .Where(x => typeof(IAmASnippet).IsAssignableFrom(x))
+            .Where(x => !x.IsInterface);
+    }
 
-        [SetUp]
-        public void SetUp()
+    [Test]
+    public async Task RepositoriesShouldBeReachable()
+    {
+        foreach (var type in _types)
         {
-            _types = typeof(Program).Assembly
-                .GetLoadableTypes()
-                .Where(x => typeof(IAmASnippet).IsAssignableFrom(x))
-                .Where(x => !x.IsInterface);
+            var snippetInstance = Activator.CreateInstance(type) as IAmASnippet;
+            var repositoryUri = $"{GITHUB_BASE_URL}/{snippetInstance.GitHubRepoInfo.GitHubRepoName}";
+
+            var statusCode = await GetStatusCodeFromUri(repositoryUri);
+
+            Assert.AreEqual(HttpStatusCode.OK, statusCode, $"{repositoryUri} is not reachable");
         }
+    }
 
-        [Test]
-        public void RepositoriesShouldBeReachable()
+    [Test]
+    public async Task InvalidRepositoryShouldBeNotFound()
+    {
+        var invalidUri = $"{GITHUB_BASE_URL}/invalid/repository-for-testing";
+
+        var statusCode = await GetStatusCodeFromUri(invalidUri);
+
+        Assert.AreEqual(HttpStatusCode.NotFound, statusCode);
+    }
+
+    [Test]
+    public async Task ImagesShouldBeReachable()
+    {
+        foreach (var type in _types)
         {
-            foreach (var type in _types)
+            var snippetInstance = Activator.CreateInstance(type) as IAmASnippet;
+            foreach (var uri in snippetInstance.ImageUris)
             {
-                var snippetInstance = Activator.CreateInstance(type) as IAmASnippet;
-                var repositoryUri = $"{GITHUB_BASE_URL}/{snippetInstance.GitHubRepoInfo.GitHubRepoName}";
+                var statusCode = await GetStatusCodeFromUri(uri);
 
-                var statusCode = GetStatusCodeFromUri(repositoryUri);
-
-                Assert.AreEqual(HttpStatusCode.OK, statusCode);
+                Assert.AreEqual(HttpStatusCode.OK, statusCode, $"Image {uri} is not reachable");
             }
         }
+    }
 
-        [Test]
-        public void InvalidRepositoryShouldBeNotFound()
+    private Task<HttpStatusCode> GetStatusCodeFromUri(string uri)
+    {
+        return GetStatusCodeFromUri(new Uri(uri));
+    }
+
+    private async Task<HttpStatusCode> GetStatusCodeFromUri(Uri uri)
+    {
+        try
         {
-            var invalidUri = $"{GITHUB_BASE_URL}/invalid/repository-for-testing";
+            var response = await _httpClient.SendAsync(new HttpRequestMessage(HttpMethod.Head, uri));
 
-            var statusCode = GetStatusCodeFromUri(invalidUri);
-
-            Assert.AreEqual(HttpStatusCode.NotFound, statusCode);
-        }
-
-        [Test]
-        public void ImagesShouldBeReachable()
-        {
-            foreach (var type in _types)
+            if (response.StatusCode == HttpStatusCode.TooManyRequests)
             {
-                var snippetInstance = Activator.CreateInstance(type) as IAmASnippet;
-                foreach (var uri in snippetInstance.ImageUris)
-                {
-                    var statusCode = GetStatusCodeFromUri(uri);
+                await TestContext.Out.WriteLineAsync("Hit HTTP 429, trying to get retry-after value...");
 
-                    Assert.AreEqual(HttpStatusCode.OK, statusCode);
-                }
-            }
-        }
-
-        private HttpStatusCode GetStatusCodeFromUri(string uri)
-        {
-            return GetStatusCodeFromUri(new Uri(uri));
-        }
-
-        private HttpStatusCode GetStatusCodeFromUri(Uri uri)
-        {
-            try
-            {
-                var request = WebRequest.Create(uri);
-                request.Method = "HEAD";
-                var response = request.GetResponse() as HttpWebResponse;
-                return response.StatusCode;
-            }
-            catch (WebException webException)
-            {
-                if (webException.Status == WebExceptionStatus.ProtocolError)
-                {
-                    return ((HttpWebResponse)webException.Response).StatusCode;
-                }
+                var delay = response.Headers.RetryAfter.Delta ?? TimeSpan.FromSeconds(10);
                 
-                throw new Exception($"Exception for URL {uri} Message: {webException.Message}", webException);
+                await TestContext.Out.WriteLineAsync($"Waiting for {delay.Seconds}");
+                await Task.Delay(delay.Seconds);
+                
+                return await GetStatusCodeFromUri(uri);
             }
+
+            return response.StatusCode;
+        }
+        catch (HttpRequestException exception)
+        {                
+            throw new Exception($"Exception for URL {uri} Message: {exception.Message}", exception);
         }
     }
 }

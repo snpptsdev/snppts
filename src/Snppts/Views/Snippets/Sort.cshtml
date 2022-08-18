@@ -1,5 +1,4 @@
 ﻿@using X.PagedList.Mvc.Core;
-@using X.PagedList.Mvc.Core.Common;
 @using X.PagedList.Web.Common;
 @using X.PagedList;
 @using Snppts.Controllers;
@@ -15,35 +14,35 @@
     <div class="row">
         <h3 class="title">@Model.TitlePage</h3>
         @{
-            var count = 0;
-        }
+        var count = 0;
+    }
 
         <div class="row">
             @foreach (var item in Model.Snppets)
+        {
+            if (count % 3 == 0)
             {
-                if (count % 3 == 0)
-                {
-                    @Html.Raw("</div><div class=\"row\">")
-                }
-
-                count += 1;
-
-                <partial name="Partials/_SnippetListItem" model="@item" />
+                @Html.Raw("</div><div class=\"row\">")
             }
+
+            count += 1;
+
+            <partial name="Partials/_SnippetListItem" model="@item" />
+        }
         </div>
     </div>
     <div class="row pager">
         @Html.PagedListPager((IPagedList)Model.Snppets, page => Url.Action("Sort", new { page }), new PagedListRenderOptions()
-        {
-            LinkToNextPageFormat = "»",
-            LinkToPreviousPageFormat = "«",
-            DisplayLinkToFirstPage = PagedListDisplayMode.Never,
-            DisplayLinkToPreviousPage = PagedListDisplayMode.IfNeeded,
-            DisplayLinkToLastPage = PagedListDisplayMode.Never,
-            DisplayLinkToNextPage = PagedListDisplayMode.IfNeeded,
-            MaximumPageNumbersToDisplay = 0,
-            DisplayEllipsesWhenNotShowingAllPageNumbers = false
-        })
+    {
+        LinkToNextPageFormat = "»",
+        LinkToPreviousPageFormat = "«",
+        DisplayLinkToFirstPage = PagedListDisplayMode.Never,
+        DisplayLinkToPreviousPage = PagedListDisplayMode.IfNeeded,
+        DisplayLinkToLastPage = PagedListDisplayMode.Never,
+        DisplayLinkToNextPage = PagedListDisplayMode.IfNeeded,
+        MaximumPageNumbersToDisplay = 0,
+        DisplayEllipsesWhenNotShowingAllPageNumbers = false
+    })
     </div>
 }
 else

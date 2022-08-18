@@ -1,17 +1,11 @@
-using System;
-using System.Collections.Generic;
-using Snppts.Authors;
-using Snppts.Extensions;
-using Snppts.Infrastructure;
-
 public class HealthTracker : IAmASnippet
 {
     public string Slug => "health-tracker";
     public string Title => "Health Tracker";
-    public string GithubRepoName => "https://github.com/nicholostyler/Health-Tracker";
     public bool ContainsAndroidSample => true;
     public bool ContainsiOSSample => true;
     public bool ContainsUWPSample => false;
+    public Sdk BuiltWith => Sdk.Maui;
 
     public string Description => "A Health Tracker app that helps keep weight goals.";
 
@@ -29,7 +23,7 @@ public class HealthTracker : IAmASnippet
         Category.DASHBOARD,
     };
 
-    public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("https://github.com/nicholostyler/Health-Tracker");
+    public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("nicholostyler/Health-Tracker");
 
     public Uri ExternalUri => new Uri("https://github.com/nicholostyler/Health-Tracker");
 }

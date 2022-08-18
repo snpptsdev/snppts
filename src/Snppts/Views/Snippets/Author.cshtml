@@ -1,5 +1,4 @@
 ﻿@using X.PagedList.Mvc.Core;
-@using X.PagedList.Mvc.Core.Common;
 @using X.PagedList.Web.Common
 @using X.PagedList;
 @using Snppts.Extensions;
@@ -11,24 +10,24 @@
 
     var author = Model?.FirstOrDefault()?.AuthorInfo;
 
-    ViewData["Title"] = string.IsNullOrEmpty(author?.FirstName) ? "Author not found" : "By " + author?.FirstName + " " + author.LastName;
+ViewData["Title"] = string.IsNullOrEmpty(author?.FirstName) ? "Author not found" : "By " + author?.FirstName + " " + author.LastName;
 
-    var authorLinks = "";
+var authorLinks = "";
 
-    if (!string.IsNullOrEmpty(author?.Website?.Host))
-    {
-        authorLinks += "<a href='" + author.Website.AbsoluteUri + "' target='_blank'><i class='fa fa-globe'></i> " + author.Website.Host + "</a> | ";
-    }
+if (!string.IsNullOrEmpty(author?.Website?.Host))
+{
+    authorLinks += "<a href='" + author.Website.AbsoluteUri + "' target='_blank'><i class='fa fa-globe'></i> " + author.Website.Host + "</a> | ";
+}
 
-    if (!string.IsNullOrEmpty(author?.GitHubHandle))
-    {
-        authorLinks += "<a href='https://github.com/" + author.GitHubHandle + "' target='_blank'><i class='fa fa-github'></i> " + author.GitHubHandle + "</a> | ";
-    }
+if (!string.IsNullOrEmpty(author?.GitHubHandle))
+{
+    authorLinks += "<a href='https://github.com/" + author.GitHubHandle + "' target='_blank'><i class='fa fa-github'></i> " + author.GitHubHandle + "</a> | ";
+}
 
-    if (!string.IsNullOrEmpty(author?.TwitterHandle))
-    {
-        authorLinks += "<a href='https://twitter.com/" + author.TwitterHandle + "' target='_blank'><i class='fa fa-twitter'></i> " + author.TwitterHandle + "</a>";
-    }
+if (!string.IsNullOrEmpty(author?.TwitterHandle))
+{
+    authorLinks += "<a href='https://twitter.com/" + author.TwitterHandle + "' target='_blank'><i class='fa fa-twitter'></i> " + author.TwitterHandle + "</a>";
+}
 }
 
 @if (Model.Count() > 0)
@@ -42,46 +41,46 @@
             <h5 class="title">Snippets by @author.FirstName @author.LastName</h5>
 
             @if (!string.IsNullOrEmpty(authorLinks))
-            {
-                <h6>
+        {
+            <h6>
                     @Html.Raw(authorLinks)
                 </h6>
-            }
+        }
             <div class="separator-2"></div>
 
         </div>
 
 
         @{
-            var count = 0;
-        }
+        var count = 0;
+    }
 
         <div class="row">
             @foreach (var item in Model)
+        {
+            if (count % 3 == 0)
             {
-                if (count % 3 == 0)
-                {
-                    @Html.Raw("</div><div class=\"row\">")
-                }
-
-                count += 1;
-
-                <partial name="Partials/_SnippetListItem" model="@item" />
+                @Html.Raw("</div><div class=\"row\">")
             }
+
+            count += 1;
+
+            <partial name="Partials/_SnippetListItem" model="@item" />
+        }
         </div>
     </div>
     <div class="row pager">
         @Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page }), new PagedListRenderOptions()
-        {
-            LinkToNextPageFormat = "»",
-            LinkToPreviousPageFormat = "«",
-            DisplayLinkToFirstPage = PagedListDisplayMode.Never,
-            DisplayLinkToPreviousPage = PagedListDisplayMode.IfNeeded,
-            DisplayLinkToLastPage = PagedListDisplayMode.Never,
-            DisplayLinkToNextPage = PagedListDisplayMode.IfNeeded,
-            MaximumPageNumbersToDisplay = 0,
-            DisplayEllipsesWhenNotShowingAllPageNumbers = false
-        })
+    {
+        LinkToNextPageFormat = "»",
+        LinkToPreviousPageFormat = "«",
+        DisplayLinkToFirstPage = PagedListDisplayMode.Never,
+        DisplayLinkToPreviousPage = PagedListDisplayMode.IfNeeded,
+        DisplayLinkToLastPage = PagedListDisplayMode.Never,
+        DisplayLinkToNextPage = PagedListDisplayMode.IfNeeded,
+        MaximumPageNumbersToDisplay = 0,
+        DisplayEllipsesWhenNotShowingAllPageNumbers = false
+    })
     </div>
 }
 else

@@ -1,6 +1,3 @@
-using System;
-using Snppts.Infrastructure;
-
 public class NicholosTyler : IAmAnAuthor
 {
     public string FirstName => "Nicholos";

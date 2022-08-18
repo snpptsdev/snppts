@@ -1,9 +1,3 @@
-using System;
-using System.Collections.Generic;
-using Snppts.Authors;
-using Snppts.Extensions;
-using Snppts.Infrastructure;
-
 public class XamTranslator : IAmASnippet
 {
     public string Slug => "xam-translator";
@@ -12,6 +6,7 @@ public class XamTranslator : IAmASnippet
     public bool ContainsAndroidSample => true;
     public bool ContainsiOSSample => true;
     public bool ContainsUWPSample => false;
+    public Sdk BuiltWith => Sdk.XamarinForms;
 
     public string Description => "This snippet was created to reproduce an Dictionary/Translator App using some Material design components.";
 
