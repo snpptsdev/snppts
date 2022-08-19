@@ -15,17 +15,16 @@
         public IAmAnAuthor AuthorInfo => new IeuanWalker();
 
         public IEnumerable<Uri> ImageUris => new List<Uri>
-    {
-        new Uri("https://raw.githubusercontent.com/IeuanWalker/Maui.Breadcrumb/master/ProdExample.gif"),
-        new Uri("https://raw.githubusercontent.com/IeuanWalker/Maui.Breadcrumb/master/Example.gif")
-    };
+        {
+            new Uri("https://raw.githubusercontent.com/IeuanWalker/Maui.StateButton/master/Example.gif")
+        };
 
         public IList<Category> Categories => new List<Category>
     {
         Category.NAVIGATIONS, Category.SIDEBARS
     };
 
-        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("IeuanWalker/Maui.Breadcrumb");
+        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("IeuanWalker/Maui.StateButton");
 
         public Uri ExternalUri => null;
     }
