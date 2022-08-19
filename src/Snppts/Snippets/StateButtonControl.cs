@@ -20,9 +20,9 @@
         };
 
         public IList<Category> Categories => new List<Category>
-    {
-        Category.NAVIGATIONS, Category.SIDEBARS
-    };
+        {
+            Category.NAVIGATIONS, Category.PROFILES, Category.SHARE, Category.CARDS
+        };
 
         public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("IeuanWalker/Maui.StateButton");
 
