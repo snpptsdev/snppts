@@ -1,6 +1,6 @@
 ﻿namespace Snppts.Snippets;
 
-public class SpotifyClone : IAmASnippet
+public class MauiMudBlazor : IAmASnippet
 {
     public string Slug => "MauiBlazorWeb";
     public string Title => "Maui Mud Blazor";
