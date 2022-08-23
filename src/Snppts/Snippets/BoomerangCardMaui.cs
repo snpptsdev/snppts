@@ -24,7 +24,7 @@ namespace Snppts.Snippets
 
         public IEnumerable<Uri> ImageUris => new List<Uri>
         {
-            new Uri("https://github.com/shawyunz/BoomerangCard.Maui/blob/main/demo/demo.gif")
+            new Uri("https://github.com/shawyunz/BoomerangCard.Maui/blob/main/demo/demo.gif?raw=true")
         };
 
         public IList<Category> Categories => new List<Category>
