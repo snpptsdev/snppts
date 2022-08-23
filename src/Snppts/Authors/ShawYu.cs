@@ -7,7 +7,7 @@ namespace Snppts.Authors
     {
         public string FirstName => "Shaw";
         public string LastName => "Yu";
-        public Uri Website => "https://www.youtube.com/channel/UCmgk0PHlIvJ6TYt54VUEgHQ";
+        public Uri Website => new Uri("https://www.youtube.com/channel/UCmgk0PHlIvJ6TYt54VUEgHQ");
         public string TwitterHandle => "shawyunz";
         public string GitHubHandle => "shawyunz";
         public string GravatarHash => "aae1466b6e1a7a850d961fe13dbf4ad9";
