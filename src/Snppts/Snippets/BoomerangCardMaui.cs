@@ -11,6 +11,7 @@ namespace Snppts.Snippets
         public string Slug => "maui-boomerang-card";
         public string Title => "Maui Boomerang Card";
         public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("shawyunz/BoomerangCard.Maui");
+        public Uri ExternalUri => null;
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;
