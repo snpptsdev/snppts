@@ -8,7 +8,7 @@ public class MauiLogBook : IAmASnippet
 
     public string Description => "Logbook for collecting all trips";
 
-    public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("https://github.com/nehl-it/MauiLogbook");
+    public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("nehl-it/MauiLogbook");
 
     public Uri ExternalUri => null;
 
