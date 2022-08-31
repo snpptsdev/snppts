@@ -24,7 +24,7 @@ public class TodoMe : IAmASnippet
 
     public IEnumerable<Uri> ImageUris => new List<Uri>
     {
-        new Uri("https://github.com/behl1anmol/Todo.me/blob/master/Screenshots/Maui_app_todo.gif"),
+        new Uri("https://raw.githubusercontent.com/behl1anmol/Todo.me/master/Screenshots/Maui_app_todo.gif"),
         new Uri("https://raw.githubusercontent.com/behl1anmol/Todo.me/master/Screenshots/TodoView.jpg"),
         new Uri("https://raw.githubusercontent.com/behl1anmol/Todo.me/master/Screenshots/TodoDetailsView.jpg")
     };
