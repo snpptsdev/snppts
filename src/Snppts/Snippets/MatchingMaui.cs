@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Snppts.Snippets
 {
-    public class BoomerangCardMaui : IAmASnippet
+    public class MatchingMaui : IAmASnippet
     {
         public string Slug => "maui-matching-game";
         public string Title => "Maui Matching Game";
