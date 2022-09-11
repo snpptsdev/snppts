@@ -29,7 +29,7 @@ namespace Snppts.Snippets
 
         public IList<Category> Categories => new List<Category>
         {
-            Category.ANIMATION, Category.CARDS, Category.WIDGETS
+            Category.CARDS, Category.WIDGETS
         };
     }
 }
