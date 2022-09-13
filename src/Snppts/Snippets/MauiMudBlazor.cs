@@ -12,7 +12,7 @@ public class MauiMudBlazor : IAmASnippet
     public bool ContainsUWPSample => false;
     public Sdk BuiltWith => Sdk.Maui;
 
-    public string Description => "";
+    public string Description => "This repo is a Maui Blazor project pre-initalized with MudBlazor UI components with all their styles and layout, this repo helps you get started directly focusing on your code and your logic instead of gettings things ready that's related to the UI and other stuff.";
 
     public IAmAnAuthor AuthorInfo => new KevinMoens();
 
