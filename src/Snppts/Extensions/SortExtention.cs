@@ -7,48 +7,34 @@ public static class SortExtention
 {
     public static List<GitHubRepoInfo> GitHubRepos { get; set; }
 
-    public static async Task<IList<IAmASnippet>> SortSnippets(this IList<IAmASnippet> members, SortType sortType = SortType.stars, int page = 1)
+    public static async Task<IList<IAmASnippet>> SortSnippets(this IList<IAmASnippet> members, SortType sortType = SortType.stars, int page = 1, int per_page = 60)
     {
-        var api = "https://api.github.com/search/repositories?q=repo:";
+        var api = "https://api.github.com/search/repositories?q=";
 
-        var last = members.LastOrDefault();
+        api += string.Join('+', members.Select(x => $"repo:{x.GitHubRepoInfo.GitHubRepoName}"));
 
-        foreach (var item in members)
+        api += sortType switch
         {
-            if (!item.Equals(last))
-                api += item.GitHubRepoInfo.GitHubRepoName + "+repo:";
+            SortType.stars => "&sort=star",
+            _ => "&sort=updated",
+        };
 
-            else
-            {
-                switch (sortType)
-                {
-                    case SortType.stars:
-                        api += item + "&sort=star";
-                        break;
-                    case SortType.updated:
-                    default:
-                        api += item + "&sort=updated";
-                        break;
-                }
-
-                api += "&page=" + page;
-            }
-        }
+        api += $"&per_page={per_page}&page={page}";
 
         var list = await SortService.Get(api);
         GitHubRepos = list.Items;
 
         var allNameRepoService = GitHubRepos.Select(x => x.FullName.ToLower());
-        members = members.Where(x => allNameRepoService.Contains(x.GitHubRepoInfo.GitHubRepoName.ToLower())).ToList();
+        var result = members.Where(x => allNameRepoService.Contains(x.GitHubRepoInfo.GitHubRepoName.ToLower())).ToList();
 
         switch (sortType)
         {
             case SortType.stars:
-                return members.OrderByDescending(x => x.GitHubRepoInfo.GetRepoInfoFromService(GitHubRepos).Stars).ToList();
+                return result.OrderByDescending(x => x.GitHubRepoInfo.GetRepoInfoFromService(GitHubRepos).Stars).ToList();
 
             case SortType.updated:
             default:
-                return members.OrderByDescending(x => x.GitHubRepoInfo.GetRepoInfoFromService(GitHubRepos).UpdatedAt).ToList();
+                return result.OrderByDescending(x => x.GitHubRepoInfo.GetRepoInfoFromService(GitHubRepos).UpdatedAt).ToList();
         }
     }
 }
