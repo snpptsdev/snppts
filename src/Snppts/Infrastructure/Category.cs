@@ -41,5 +41,6 @@ public enum Category
     STORES = 37,
     NEOMORPHISM = 38,
     SOCIALNETWORK = 39,
-    CAROUSEL = 40
+    CAROUSEL = 40,
+    GAMES = 41
 }
