@@ -4,7 +4,7 @@
     {
         public string Slug => "StateButton-control";
         public string Title => "StateButton control";
-        public string GithubRepoName => "IeuanWalker/Maui.StateButton";
+        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("IeuanWalker/Maui.StateButton");
         public bool ContainsAndroidSample => true;
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => false;
@@ -23,9 +23,6 @@
         {
             Category.NAVIGATIONS, Category.PROFILES, Category.SHARE, Category.CARDS
         };
-
-        public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("IeuanWalker/Maui.StateButton");
-
         public Uri ExternalUri => null;
     }
 }
