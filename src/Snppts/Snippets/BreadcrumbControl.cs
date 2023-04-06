@@ -4,7 +4,7 @@ public class BreadcrumbControl : IAmASnippet
 {
     public string Slug => "breadcrumb-control";
     public string Title => "Breadcrumb control";
-    public string GithubRepoName => "IeuanWalker/Maui.Breadcrumb";
+    public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("IeuanWalker/Maui.Breadcrumb");
     public bool ContainsAndroidSample => true;
     public bool ContainsiOSSample => true;
     public bool ContainsUWPSample => false;
@@ -25,7 +25,6 @@ public class BreadcrumbControl : IAmASnippet
         Category.NAVIGATIONS, Category.SIDEBARS
     };
 
-    public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("IeuanWalker/Maui.Breadcrumb");
 
     public Uri ExternalUri => null;
 }
