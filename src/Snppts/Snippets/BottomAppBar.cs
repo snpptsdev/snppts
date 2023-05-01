@@ -16,8 +16,8 @@ public class BottomAppBar : IAmASnippet
 
     public IEnumerable<Uri> ImageUris => new List<Uri>
     {
-        new Uri("https://i.imgur.com/Q8cuoVf.png"),
-        new Uri("https://i.imgur.com/dXDg9xF.png")
+        new Uri("https://camo.githubusercontent.com/46611cb54cec1ef787e32c27248fa1ba6026f93990f64210cfa15696c3c49923/68747470733a2f2f692e696d6775722e636f6d2f5969696b564c502e706e67"),
+        new Uri("https://camo.githubusercontent.com/4812f8a75d90486ddbaedff2c0ca37ada7abe8c0cd6461696e65a1d912cf9263/68747470733a2f2f692e696d6775722e636f6d2f645844673978462e706e67")
     };
 
     public IList<Category> Categories => new List<Category>
