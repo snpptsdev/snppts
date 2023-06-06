@@ -8,7 +8,7 @@ public class InfiniteScrollWithBindableLayout : IAmASnippet
     public bool ContainsAndroidSample => true;
     public bool ContainsiOSSample => true;
     public bool ContainsUWPSample => false;
-    public Sdk BuiltWith => Sdk.Sdk.Maui;
+    public Sdk BuiltWith => Sdk.Maui;
 
     public string Description => "Infinite scroll with bindable layout.";
 
