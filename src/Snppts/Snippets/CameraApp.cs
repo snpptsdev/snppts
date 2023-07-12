@@ -15,7 +15,7 @@ public class CameraApp : IAmASnippet
 
     public IEnumerable<Uri> ImageUris => new List<Uri>
     {
-        new Uri("https://github.com/rretamal/MidjourneyCameraApp/blob/main/MidjourneyCameraApp/Images/1_mYN3aXSpY5v5QnJ_CKfaCw.png"),
+        new Uri("https://github.com/rretamal/MidjourneyCameraApp/blob/main/MidjourneyCameraApp/Images/1_mYN3aXSpY5v5QnJ_CKfaCw.png?raw=true"),
     };
 
     public IList<Category> Categories => new List<Category>
