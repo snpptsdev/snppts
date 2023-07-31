@@ -14,7 +14,7 @@ public class Finance : IAmASnippet
     public bool ContainsUWPSample => false;
     public Sdk BuiltWith => Sdk.Maui;
 
-    public IAmAnAuthor AuthorInfo => new YunusEmreAygun();
+    public IAmAnAuthor AuthorInfo => new YunusEmre();
 
     public IEnumerable<Uri> ImageUris => new List<Uri>
     {

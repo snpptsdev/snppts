@@ -1,9 +1,9 @@
 ﻿namespace Snppts.Authors;
 
-public class YunusEmreAygun : IAmAnAuthor
+public class YunusEmre : IAmAnAuthor
 {
     public string FirstName => "Yunus Emre";
-    public string LastName => "AYGÜN";
+    public string LastName => "";
     public Uri Website => new Uri("https://github.com/cemahseri");
     public string TwitterHandle => "";
     public string GitHubHandle => "cemahseri";
