@@ -9,6 +9,7 @@ namespace Snppts.Snippets
         public bool ContainsiOSSample => true;
         public bool ContainsUWPSample => true;
         public Sdk BuiltWith => Sdk.Maui;
+        public Uri ExternalUri => null;
 
         public string Description => "A simple, user-friendly .NET MAUI weight tracker app with a clean design for anyone looking to explore .NET MAUI development.";
 
