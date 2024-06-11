@@ -24,10 +24,13 @@ public class MAUIsland : IAmASnippet
 
     public IEnumerable<Uri> ImageUris => new List<Uri>
     {
-        new Uri("https://github.com/Strypper/mauisland/blob/main/showcases/Screenshot%202023-02-15%20052323.png?raw=true"),
-        new Uri("https://github.com/Strypper/mauisland/blob/main/showcases/Screenshot_1676259571.png?raw=true"),
-        new Uri("https://github.com/Strypper/mauisland/blob/main/showcases/Screenshot_1676259831.png?raw=true"),
-        new Uri("https://github.com/Strypper/mauisland/blob/main/showcases/projectmockup.png?raw=true"),
+        new Uri("https://raw.githubusercontent.com/Strypper/mauisland/main/showcases/version_2.0/Screenshot%202024-04-15%20091625.png"),
+        new Uri("https://github.com/Strypper/mauisland/blob/main/showcases/version_2.0/Screenshot%202024-04-15%20091700.png?raw=true"),
+        new Uri("https://github.com/Strypper/mauisland/blob/main/showcases/version_2.0/Screenshot%202024-04-15%20092455.png?raw=true"),
+        new Uri("https://github.com/Strypper/mauisland/blob/main/showcases/version_2.0/Screenshot%202024-04-15%20091726.png?raw=true"),
+        new Uri("https://github.com/Strypper/mauisland/blob/main/showcases/version_2.0/Screenshot%202024-04-15%20092638.png?raw=true"),
+        new Uri("https://github.com/Strypper/mauisland/blob/main/showcases/version_2.0/Screenshot%202024-04-15%20092715.png?raw=true"),
+        new Uri("https://github.com/Strypper/mauisland/blob/main/showcases/version_2.0/Screenshot%202024-04-15%20092926.png?raw=true"),
     };
 
 
