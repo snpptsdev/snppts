@@ -8,7 +8,7 @@ public class AuthenticatorClone : IAmASnippet
 
     public string Title => "Microsoft Authenticator Clone";
 
-    public string Description => "A clone of the microsoft authenticator com .NET Maui. At moment, app contains the splashscreen,  new account, list of accounts, verify ids  ";
+    public string Description => "A clone of the Microsoft Authenticator app. At the moment, the app contains the splash screen, new account screen, list of accounts, and verification of IDs";
 
     public GitHubRepoInfo GitHubRepoInfo => new GitHubRepoInfo("salesHgabriel/AuthenticatorClone-");
 
