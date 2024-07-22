@@ -34,7 +34,7 @@ public class SnippetsTests
 
             var statusCode = await GetStatusCodeFromUri(repositoryUri);
 
-            Assert.AreEqual(HttpStatusCode.OK, statusCode, $"{repositoryUri} is not reachable");
+            ClassicAssert.AreEqual(HttpStatusCode.OK, statusCode, $"{repositoryUri} is not reachable");
         }
     }
 
@@ -45,7 +45,7 @@ public class SnippetsTests
 
         var statusCode = await GetStatusCodeFromUri(invalidUri);
 
-        Assert.AreEqual(HttpStatusCode.NotFound, statusCode);
+        ClassicAssert.AreEqual(HttpStatusCode.NotFound, statusCode);
     }
 
     [Test]
@@ -58,7 +58,7 @@ public class SnippetsTests
             {
                 var statusCode = await GetStatusCodeFromUri(uri);
 
-                Assert.AreEqual(HttpStatusCode.OK, statusCode, $"Image {uri} is not reachable");
+                ClassicAssert.AreEqual(HttpStatusCode.OK, statusCode, $"Image {uri} is not reachable");
             }
         }
     }
