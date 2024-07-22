@@ -16,7 +16,7 @@ public class DisplayPDF : IAmASnippet
     public IAmAnAuthor AuthorInfo => new UmeshKamble();
     public IEnumerable<Uri> ImageUris => new List<Uri> 
     { 
-        new Uri("https://github.com/umeshkamble/PDFDisplay/assets/5494166/7f1dc279-5aff-49c2-87a2-1f7f84f5f4cc"),
+        //new Uri("https://github.com/umeshkamble/PDFDisplay/assets/5494166/7f1dc279-5aff-49c2-87a2-1f7f84f5f4cc"),
         new Uri("https://github.com/umeshkamble/PDFDisplay/assets/5494166/0269c152-7dd0-4478-8718-0c116de0aae3"),
         new Uri("https://github.com/umeshkamble/PDFDisplay/assets/5494166/803db9d2-f2bc-414e-b544-899091f7932b") 
     };
