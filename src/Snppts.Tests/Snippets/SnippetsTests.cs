@@ -34,7 +34,7 @@ public class SnippetsTests
 
             var statusCode = await GetStatusCodeFromUri(repositoryUri);
 
-            Assert.That(statusCode, Is.EqualTo(HttpStatusCode.OK), $"{repositoryUri} is not reachable"));
+            Assert.That(statusCode, Is.EqualTo(HttpStatusCode.OK), $"{repositoryUri} is not reachable");
         }
     }
 
